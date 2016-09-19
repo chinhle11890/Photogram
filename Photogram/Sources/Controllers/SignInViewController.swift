@@ -27,15 +27,19 @@ class SignInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func forgotPasswordButtonAction(sender: UIButton) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let signupVC : ForgotPasswordViewController = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
+        self.present(signupVC, animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func signInButtonAction(sender: UIButton) {
+        
+    }
+    
+    @IBAction func signupButtonAction(sender: UIButton) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let signupVC : SignupViewController = storyboard.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+        self.present(signupVC, animated: true, completion: nil)
+    }
 }
