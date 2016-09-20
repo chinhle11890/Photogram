@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import TextFieldEffects
 
 class ForgotPasswordViewController: UIViewController {
-    @IBOutlet weak var emailTextField: UITextField?
+    @IBOutlet weak var emailTextField: TextFieldEffects?
     @IBOutlet weak var sendButton: UIButton?
     
     override func viewDidLoad() {

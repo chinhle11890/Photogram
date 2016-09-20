@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		23B398D81D9163A7009236C3 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B398D71D9163A7009236C3 /* LaunchImage.png */; };
+		23CD513A1D9172EE0071301F /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 23CD51391D9172EE0071301F /* Background.png */; };
 		23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3241D901E370074B677 /* Photogram.xcdatamodeld */; };
 		23D9B3381D901ED50074B677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3371D901ED50074B677 /* AppDelegate.swift */; };
 		23D9B33A1D901EE20074B677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D9B3391D901EE20074B677 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 		23D9B3401D901F350074B677 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B33F1D901F350074B677 /* SignupViewController.swift */; };
 		23D9B3421D901F450074B677 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3411D901F450074B677 /* ForgotPasswordViewController.swift */; };
 		23D9B3441D90203F0074B677 /* IntroductionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3431D90203F0074B677 /* IntroductionPageViewController.swift */; };
+		5ADBD06D04AACEA615C5E893 /* Pods_Photogram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2150EE75A1E08DAE5B85D81F /* Pods_Photogram.framework */; };
 		DC46822C1D911A210078FDDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4682281D911A210078FDDB /* LaunchScreen.storyboard */; };
 		DC46822D1D911A210078FDDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC46822A1D911A210078FDDB /* Main.storyboard */; };
 		DC4682301D911A340078FDDB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC46822E1D911A340078FDDB /* Home.storyboard */; };
@@ -25,7 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2150EE75A1E08DAE5B85D81F /* Pods_Photogram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photogram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B398D71D9163A7009236C3 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		23CD51391D9172EE0071301F /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		23D9B31A1D901E370074B677 /* Photogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D9B3251D901E370074B677 /* Photogram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photogram.xcdatamodel; sourceTree = "<group>"; };
 		23D9B32C1D901E370074B677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +39,8 @@
 		23D9B33F1D901F350074B677 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		23D9B3411D901F450074B677 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		23D9B3431D90203F0074B677 /* IntroductionPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionPageViewController.swift; sourceTree = "<group>"; };
+		8503067DE8633FA6A027C322 /* Pods-Photogram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photogram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photogram/Pods-Photogram.debug.xcconfig"; sourceTree = "<group>"; };
+		C0D18B87750718C4E052B3D7 /* Pods-Photogram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photogram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Photogram/Pods-Photogram.release.xcconfig"; sourceTree = "<group>"; };
 		DC4682291D911A210078FDDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Photogram/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		DC46822B1D911A210078FDDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Photogram/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		DC46822F1D911A340078FDDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Photogram/Base.lproj/Home.storyboard; sourceTree = SOURCE_ROOT; };
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ADBD06D04AACEA615C5E893 /* Pods_Photogram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +67,8 @@
 			children = (
 				23D9B31C1D901E370074B677 /* Photogram */,
 				23D9B31B1D901E370074B677 /* Products */,
+				D46683E5C0201FD17EA51427 /* Pods */,
+				ABED00A989B6042705166C62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				23B398D71D9163A7009236C3 /* LaunchImage.png */,
+				23CD51391D9172EE0071301F /* Background.png */,
 				23D9B3391D901EE20074B677 /* Assets.xcassets */,
 				DC4682351D9127DB0078FDDB /* Photos.xcassets */,
 				DC4682371D9128F70078FDDB /* Images.xcassets */,
@@ -135,6 +145,23 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		ABED00A989B6042705166C62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2150EE75A1E08DAE5B85D81F /* Pods_Photogram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D46683E5C0201FD17EA51427 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8503067DE8633FA6A027C322 /* Pods-Photogram.debug.xcconfig */,
+				C0D18B87750718C4E052B3D7 /* Pods-Photogram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DCA6DEA91D914C25000DCE25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23D9B32F1D901E370074B677 /* Build configuration list for PBXNativeTarget "Photogram" */;
 			buildPhases = (
+				FEBAA4966630C9C7D7883C06 /* [CP] Check Pods Manifest.lock */,
 				23D9B3161D901E370074B677 /* Sources */,
 				23D9B3171D901E370074B677 /* Frameworks */,
 				23D9B3181D901E370074B677 /* Resources */,
+				BE03A8AEBA94EC06E7C26502 /* [CP] Embed Pods Frameworks */,
+				03C054FBCDBACCD5387467E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC46822D1D911A210078FDDB /* Main.storyboard in Resources */,
+				23CD513A1D9172EE0071301F /* Background.png in Resources */,
 				23D9B33A1D901EE20074B677 /* Assets.xcassets in Resources */,
 				DC46822C1D911A210078FDDB /* LaunchScreen.storyboard in Resources */,
 				23B398D81D9163A7009236C3 /* LaunchImage.png in Resources */,
@@ -221,6 +252,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03C054FBCDBACCD5387467E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photogram/Pods-Photogram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE03A8AEBA94EC06E7C26502 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photogram/Pods-Photogram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEBAA4966630C9C7D7883C06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23D9B3161D901E370074B677 /* Sources */ = {
@@ -361,6 +440,7 @@
 		};
 		23D9B3301D901E370074B677 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8503067DE8633FA6A027C322 /* Pods-Photogram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -375,6 +455,7 @@
 		};
 		23D9B3311D901E370074B677 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0D18B87750718C4E052B3D7 /* Pods-Photogram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

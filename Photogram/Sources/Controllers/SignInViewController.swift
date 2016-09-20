@@ -7,19 +7,20 @@
 //
 
 import UIKit
+import TextFieldEffects
+import QuartzCore
 
 class SignInViewController: UIViewController {
-    @IBOutlet weak var usernameTextField: UITextField?
-    @IBOutlet weak var passwordTextField: UITextField?
+    @IBOutlet weak var usernameTextField: TextFieldEffects?
+    @IBOutlet weak var passwordTextField: TextFieldEffects?
     @IBOutlet weak var signInButton: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         signInButton?.backgroundColor = UIColor.white
-//        signInButton?.layer.cornerRadius = (signInButton?.frame.width)!
-//        signInButton?.layer.borderWidth = 1
-//        signInButton?.layer.borderColor = UIColor.black.cgColor
+        signInButton?.layer.cornerRadius = (signInButton?.frame.width)!
+        signInButton?.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
