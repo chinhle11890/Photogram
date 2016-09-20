@@ -50,7 +50,6 @@ class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print(photoColectionView.frame.height)
         return CGSize(width: photoColectionView.frame.height, height: photoColectionView.frame.height)
     }
     
