@@ -15,6 +15,8 @@ class HomeTableViewController: UITableViewController, UINavigationControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.delegate = self
+        self.tableView.estimatedRowHeight = 516
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     // MARK: - Table view data source
@@ -27,6 +29,7 @@ class HomeTableViewController: UITableViewController, UINavigationControllerDele
 
         return cell
     }
+
 
     /*
     // Override to support conditional editing of the table view.

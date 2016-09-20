@@ -67,7 +67,7 @@
         <scene sceneID="ORY-AV-QqU">
             <objects>
                 <tableViewController id="gXQ-bH-Z1L" customClass="HomeTableViewController" customModule="Photogram" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="569" sectionHeaderHeight="28" sectionFooterHeight="28" id="uyx-6Q-oKq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="569" sectionHeaderHeight="28" sectionFooterHeight="28" id="uyx-6Q-oKq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,7 +76,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="516"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1cG-hA-unV" id="WTc-on-yiu">
-                                    <frame key="frameInset" width="375" height="515"/>
+                                    <frame key="frameInset" width="375" height="516"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxa-ML-QO2">
@@ -163,7 +163,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="VAc-rY-9GS">
-                                                            <rect key="frame" x="0.0" y="12" width="150" height="88"/>
+                                                            <rect key="frame" x="0.0" y="24" width="150" height="88"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="88"/>
@@ -194,20 +194,59 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-JP-egM">
-                                            <color key="backgroundColor" red="0.2666666667" green="0.74117647060000003" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyO-q5-Tm6">
+                                                    <state key="normal" title="24" image="icn_like">
+                                                        <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRw-T5-ctJ">
+                                                    <color key="backgroundColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="hRj-JZ-mI0"/>
+                                                    </constraints>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWr-HJ-Gsm">
+                                                    <state key="normal" title="24" image="icn_comment">
+                                                        <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
                                             <constraints>
+                                                <constraint firstItem="GRw-T5-ctJ" firstAttribute="top" secondItem="vN0-JP-egM" secondAttribute="top" id="1Xp-zt-HvD"/>
                                                 <constraint firstAttribute="height" constant="40" id="6GG-zS-IDR"/>
+                                                <constraint firstAttribute="bottom" secondItem="IyO-q5-Tm6" secondAttribute="bottom" id="7If-LZ-2Eg"/>
+                                                <constraint firstItem="IyO-q5-Tm6" firstAttribute="leading" secondItem="vN0-JP-egM" secondAttribute="leading" constant="16" id="RDh-69-ULT"/>
+                                                <constraint firstItem="IyO-q5-Tm6" firstAttribute="top" secondItem="GRw-T5-ctJ" secondAttribute="bottom" id="TrP-Gi-uh9"/>
+                                                <constraint firstItem="GRw-T5-ctJ" firstAttribute="leading" secondItem="vN0-JP-egM" secondAttribute="leading" id="W1Y-tj-J5t"/>
+                                                <constraint firstAttribute="trailing" secondItem="GRw-T5-ctJ" secondAttribute="trailing" id="WFp-sK-api"/>
+                                                <constraint firstItem="GWr-HJ-Gsm" firstAttribute="leading" secondItem="IyO-q5-Tm6" secondAttribute="trailing" constant="30" id="gHm-WO-MLb"/>
+                                                <constraint firstItem="GWr-HJ-Gsm" firstAttribute="top" secondItem="GRw-T5-ctJ" secondAttribute="bottom" id="kRo-OQ-ZGb"/>
+                                                <constraint firstAttribute="bottom" secondItem="GWr-HJ-Gsm" secondAttribute="bottom" id="zvM-h0-jrr"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mde-4s-5l2">
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Q5-jh-jUs">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Q5-jh-jUs">
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="zbluechler">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" Straight out of camera. Test shot for some wedding photos.">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.98823529409999999" green="0.30980392159999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="4Q5-jh-jUs" secondAttribute="bottom" id="LXE-Jv-ciu"/>
                                                 <constraint firstAttribute="trailing" secondItem="4Q5-jh-jUs" secondAttribute="trailing" constant="16" id="Rz3-WY-Lh8"/>
@@ -219,6 +258,7 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="gxa-ML-QO2" secondAttribute="trailing" id="1bj-fr-Fe5"/>
                                         <constraint firstItem="Mde-4s-5l2" firstAttribute="height" secondItem="gxa-ML-QO2" secondAttribute="height" id="3kb-gG-TOq"/>
+                                        <constraint firstAttribute="bottom" secondItem="vN0-JP-egM" secondAttribute="bottom" id="A7G-HH-F7s"/>
                                         <constraint firstItem="Mde-4s-5l2" firstAttribute="leading" secondItem="WTc-on-yiu" secondAttribute="leading" id="FZd-bz-Nsk"/>
                                         <constraint firstItem="gxa-ML-QO2" firstAttribute="leading" secondItem="WTc-on-yiu" secondAttribute="leading" id="HCh-6J-rEe"/>
                                         <constraint firstItem="mQN-nO-udE" firstAttribute="leading" secondItem="WTc-on-yiu" secondAttribute="leading" id="LzM-8c-AJI"/>
@@ -279,8 +319,10 @@
         <image name="10" width="213" height="320"/>
         <image name="icn_calendar" width="29" height="29"/>
         <image name="icn_camera" width="29" height="29"/>
+        <image name="icn_comment" width="29" height="29"/>
         <image name="icn_home_add" width="29" height="29"/>
         <image name="icn_home_top" width="331" height="64"/>
+        <image name="icn_like" width="29" height="29"/>
         <image name="icn_location" width="29" height="29"/>
     </resources>
 </document>
