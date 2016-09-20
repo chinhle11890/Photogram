@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23B398D81D9163A7009236C3 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B398D71D9163A7009236C3 /* LaunchImage.png */; };
 		23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3241D901E370074B677 /* Photogram.xcdatamodeld */; };
 		23D9B3381D901ED50074B677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3371D901ED50074B677 /* AppDelegate.swift */; };
 		23D9B33A1D901EE20074B677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D9B3391D901EE20074B677 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23B398D71D9163A7009236C3 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		23D9B31A1D901E370074B677 /* Photogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D9B3251D901E370074B677 /* Photogram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photogram.xcdatamodel; sourceTree = "<group>"; };
 		23D9B32C1D901E370074B677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		23D9B3331D901E7A0074B677 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				23B398D71D9163A7009236C3 /* LaunchImage.png */,
 				23D9B3391D901EE20074B677 /* Assets.xcassets */,
 				DC4682351D9127DB0078FDDB /* Photos.xcassets */,
 				DC4682371D9128F70078FDDB /* Images.xcassets */,
@@ -210,6 +213,7 @@
 				DC46822D1D911A210078FDDB /* Main.storyboard in Resources */,
 				23D9B33A1D901EE20074B677 /* Assets.xcassets in Resources */,
 				DC46822C1D911A210078FDDB /* LaunchScreen.storyboard in Resources */,
+				23B398D81D9163A7009236C3 /* LaunchImage.png in Resources */,
 				DC4682381D9128F70078FDDB /* Images.xcassets in Resources */,
 				DC4682361D9127DB0078FDDB /* Photos.xcassets in Resources */,
 				DC4682301D911A340078FDDB /* Home.storyboard in Resources */,
