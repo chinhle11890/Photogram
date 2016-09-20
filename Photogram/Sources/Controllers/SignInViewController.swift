@@ -21,11 +21,19 @@ class SignInViewController: UIViewController {
         signInButton?.backgroundColor = UIColor.white
         signInButton?.layer.cornerRadius = (signInButton?.frame.width)!
         signInButton?.clipsToBounds = true
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.handleTap))
+        self.view.addGestureRecognizer(tapRecognizer)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: Actions
+    func handleTap() {
+        self.view.endEditing(true)
     }
     
     @IBAction func forgotPasswordButtonAction(sender: UIButton) {
