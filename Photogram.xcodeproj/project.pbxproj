@@ -7,22 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23D9B3231D901E370074B677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D9B3211D901E370074B677 /* Main.storyboard */; };
 		23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3241D901E370074B677 /* Photogram.xcdatamodeld */; };
-		23D9B32B1D901E370074B677 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D9B3291D901E370074B677 /* LaunchScreen.storyboard */; };
 		23D9B3381D901ED50074B677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3371D901ED50074B677 /* AppDelegate.swift */; };
 		23D9B33A1D901EE20074B677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D9B3391D901EE20074B677 /* Assets.xcassets */; };
 		23D9B33E1D901F0C0074B677 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B33D1D901F0C0074B677 /* SignInViewController.swift */; };
 		23D9B3401D901F350074B677 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B33F1D901F350074B677 /* SignupViewController.swift */; };
 		23D9B3421D901F450074B677 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3411D901F450074B677 /* ForgotPasswordViewController.swift */; };
 		23D9B3441D90203F0074B677 /* IntroductionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3431D90203F0074B677 /* IntroductionPageViewController.swift */; };
+		DC46822C1D911A210078FDDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4682281D911A210078FDDB /* LaunchScreen.storyboard */; };
+		DC46822D1D911A210078FDDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC46822A1D911A210078FDDB /* Main.storyboard */; };
+		DC4682301D911A340078FDDB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC46822E1D911A340078FDDB /* Home.storyboard */; };
+		DC4682321D911B910078FDDB /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4682311D911B910078FDDB /* HomeTableViewController.swift */; };
+		DC4682361D9127DB0078FDDB /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4682351D9127DB0078FDDB /* Photos.xcassets */; };
+		DC4682381D9128F70078FDDB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4682371D9128F70078FDDB /* Images.xcassets */; };
+		DCA6DEAC1D914C45000DCE25 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6DEAB1D914C45000DCE25 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		23D9B31A1D901E370074B677 /* Photogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		23D9B3221D901E370074B677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23D9B3251D901E370074B677 /* Photogram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photogram.xcdatamodel; sourceTree = "<group>"; };
-		23D9B32A1D901E370074B677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23D9B32C1D901E370074B677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23D9B3371D901ED50074B677 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23D9B3391D901EE20074B677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +33,13 @@
 		23D9B33F1D901F350074B677 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		23D9B3411D901F450074B677 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		23D9B3431D90203F0074B677 /* IntroductionPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionPageViewController.swift; sourceTree = "<group>"; };
+		DC4682291D911A210078FDDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Photogram/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		DC46822B1D911A210078FDDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Photogram/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		DC46822F1D911A340078FDDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Photogram/Base.lproj/Home.storyboard; sourceTree = SOURCE_ROOT; };
+		DC4682311D911B910078FDDB /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		DC4682351D9127DB0078FDDB /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
+		DC4682371D9128F70078FDDB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCA6DEAB1D914C45000DCE25 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				23D9B3391D901EE20074B677 /* Assets.xcassets */,
+				DC4682351D9127DB0078FDDB /* Photos.xcassets */,
+				DC4682371D9128F70078FDDB /* Images.xcassets */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -89,6 +101,8 @@
 		23D9B3341D901E7A0074B677 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DCA6DEAA1D914C2C000DCE25 /* Cells */,
+				DCA6DEA91D914C25000DCE25 /* Views */,
 				23D9B3371D901ED50074B677 /* AppDelegate.swift */,
 				23D9B3351D901E7A0074B677 /* Controllers */,
 				23D9B3361D901E7A0074B677 /* Storyboards */,
@@ -103,6 +117,7 @@
 				23D9B33F1D901F350074B677 /* SignupViewController.swift */,
 				23D9B3411D901F450074B677 /* ForgotPasswordViewController.swift */,
 				23D9B3431D90203F0074B677 /* IntroductionPageViewController.swift */,
+				DC4682311D911B910078FDDB /* HomeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,10 +125,26 @@
 		23D9B3361D901E7A0074B677 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				23D9B3211D901E370074B677 /* Main.storyboard */,
-				23D9B3291D901E370074B677 /* LaunchScreen.storyboard */,
+				DC4682281D911A210078FDDB /* LaunchScreen.storyboard */,
+				DC46822A1D911A210078FDDB /* Main.storyboard */,
+				DC46822E1D911A340078FDDB /* Home.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DCA6DEA91D914C25000DCE25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DCA6DEAA1D914C2C000DCE25 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DCA6DEAB1D914C45000DCE25 /* HomeTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +207,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23D9B32B1D901E370074B677 /* LaunchScreen.storyboard in Resources */,
+				DC46822D1D911A210078FDDB /* Main.storyboard in Resources */,
 				23D9B33A1D901EE20074B677 /* Assets.xcassets in Resources */,
-				23D9B3231D901E370074B677 /* Main.storyboard in Resources */,
+				DC46822C1D911A210078FDDB /* LaunchScreen.storyboard in Resources */,
+				DC4682381D9128F70078FDDB /* Images.xcassets in Resources */,
+				DC4682361D9127DB0078FDDB /* Photos.xcassets in Resources */,
+				DC4682301D911A340078FDDB /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +227,9 @@
 				23D9B3441D90203F0074B677 /* IntroductionPageViewController.swift in Sources */,
 				23D9B3381D901ED50074B677 /* AppDelegate.swift in Sources */,
 				23D9B3421D901F450074B677 /* ForgotPasswordViewController.swift in Sources */,
+				DC4682321D911B910078FDDB /* HomeTableViewController.swift in Sources */,
 				23D9B3401D901F350074B677 /* SignupViewController.swift in Sources */,
+				DCA6DEAC1D914C45000DCE25 /* HomeTableViewCell.swift in Sources */,
 				23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,22 +237,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		23D9B3211D901E370074B677 /* Main.storyboard */ = {
+		DC4682281D911A210078FDDB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				23D9B3221D901E370074B677 /* Base */,
-			);
-			name = Main.storyboard;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		23D9B3291D901E370074B677 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				23D9B32A1D901E370074B677 /* Base */,
+				DC4682291D911A210078FDDB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = ../..;
+			sourceTree = "<group>";
+		};
+		DC46822A1D911A210078FDDB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC46822B1D911A210078FDDB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC46822E1D911A340078FDDB /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC46822F1D911A340078FDDB /* Base */,
+			);
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -359,6 +401,7 @@
 				23D9B3311D901E370074B677 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
