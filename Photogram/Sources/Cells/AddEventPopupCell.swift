@@ -29,7 +29,7 @@ class AddEventPopupCell: UICollectionViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Setting"
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightMedium)
         label.textColor = UIColor.white
         return label
     }()
@@ -42,28 +42,15 @@ class AddEventPopupCell: UICollectionViewCell {
         return imageView
     }()
     
-    let containerView: UIView = {
-       let view = UIView()
-        view.backgroundColor = UIColor.white
-        return view
-    }()
-    
     func setupViews() {
-        containerView.addSubview(iconImageView)
         addSubview(nameLabel)
-        addSubview(containerView)
+        addSubview(iconImageView)
         
-        addConstraintsWithFormat("H:[v0]-8-[v1(40)]-16-|", views: nameLabel, containerView)
+        addConstraintsWithFormat("H:[v0]-8-[v1(40)]-16-|", views: nameLabel, iconImageView)
         addConstraintsWithFormat("V:|[v0]|", views: nameLabel)
-        addConstraintsWithFormat("V:[v0(40)]", views: containerView)
+        addConstraintsWithFormat("V:[v0(40)]", views: iconImageView)
         
-        addConstraint(NSLayoutConstraint(item: containerView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
-        
-        containerView.addConstraintsWithFormat("H:|-4-[v0]-4-|", views: iconImageView)
-        containerView.addConstraintsWithFormat("V:|-4-[v0]-4-|", views: iconImageView)
-        
-        containerView.layer.cornerRadius = 20
-        containerView.layer.masksToBounds = true
+        addConstraint(NSLayoutConstraint(item: iconImageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
     }
 }
 

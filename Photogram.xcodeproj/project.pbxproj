@@ -19,6 +19,8 @@
 		5ADBD06D04AACEA615C5E893 /* Pods_Photogram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2150EE75A1E08DAE5B85D81F /* Pods_Photogram.framework */; };
 		BF3BD9D51D9249CE001049BE /* UploadEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD9D41D9249CE001049BE /* UploadEventViewController.swift */; };
 		BF3BD9D71D925108001049BE /* UploadEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD9D61D925108001049BE /* UploadEventCollectionViewCell.swift */; };
+		BF4EF8E21D92CE0800F9F7B5 /* UserHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4EF8E11D92CE0800F9F7B5 /* UserHomeViewController.swift */; };
+		BF4EF8E41D92CFF700F9F7B5 /* UserHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4EF8E31D92CFF700F9F7B5 /* UserHomeTableViewCell.swift */; };
 		BFAE83751D919C9E002358D3 /* TypeDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE83741D919C9E002358D3 /* TypeDefine.swift */; };
 		BFAE837A1D919CD8002358D3 /* AddEventPopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE83791D919CD8002358D3 /* AddEventPopupCell.swift */; };
 		BFAE837D1D919CE1002358D3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE837C1D919CE1002358D3 /* Extensions.swift */; };
@@ -56,6 +58,8 @@
 		8503067DE8633FA6A027C322 /* Pods-Photogram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photogram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photogram/Pods-Photogram.debug.xcconfig"; sourceTree = "<group>"; };
 		BF3BD9D41D9249CE001049BE /* UploadEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadEventViewController.swift; sourceTree = "<group>"; };
 		BF3BD9D61D925108001049BE /* UploadEventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadEventCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF4EF8E11D92CE0800F9F7B5 /* UserHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeViewController.swift; sourceTree = "<group>"; };
+		BF4EF8E31D92CFF700F9F7B5 /* UserHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeTableViewCell.swift; sourceTree = "<group>"; };
 		BFAE83741D919C9E002358D3 /* TypeDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDefine.swift; sourceTree = "<group>"; };
 		BFAE83771D919CCD002358D3 /* AddEventPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventPopup.swift; sourceTree = "<group>"; };
 		BFAE83791D919CD8002358D3 /* AddEventPopupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventPopupCell.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 				DC4682311D911B910078FDDB /* HomeTableViewController.swift */,
 				BF3BD9D41D9249CE001049BE /* UploadEventViewController.swift */,
 				DC9F4A6F1D9278A8003D49C1 /* FollowViewController.swift */,
+				BF4EF8E11D92CE0800F9F7B5 /* UserHomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				DCA6DEAB1D914C45000DCE25 /* HomeTableViewCell.swift */,
 				BF3BD9D61D925108001049BE /* UploadEventCollectionViewCell.swift */,
 				DC9F4A711D927DA4003D49C1 /* FollowTableViewCell.swift */,
+				BF4EF8E31D92CFF700F9F7B5 /* UserHomeTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -412,6 +418,8 @@
 				BF3BD9D51D9249CE001049BE /* UploadEventViewController.swift in Sources */,
 				DCA6DEAC1D914C45000DCE25 /* HomeTableViewCell.swift in Sources */,
 				BFAE837F1D919D91002358D3 /* HomeViewController.swift in Sources */,
+				BF4EF8E21D92CE0800F9F7B5 /* UserHomeViewController.swift in Sources */,
+				BF4EF8E41D92CFF700F9F7B5 /* UserHomeTableViewCell.swift in Sources */,
 				23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

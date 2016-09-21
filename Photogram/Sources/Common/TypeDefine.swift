@@ -13,6 +13,16 @@ enum AddEventType: Int {
     case Photo = 1
 }
 
+enum OptionMenu: Int {
+    case Download = 0
+    case Save = 1
+}
+
+enum AddEventMenu: String {
+    case Home = "home"
+    case UserHome = "userhome"
+}
+
 class StoryBoardId: NSObject {
     static let uploadEventController = "UploadEventController"
     static let followController = "FollowController"

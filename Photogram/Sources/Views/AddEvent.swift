@@ -29,7 +29,16 @@ class AddEvent: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, 
     private let blackView = UIView()
     private let cellId = "eventCell"
     private let cellHeight: CGFloat = 50
-    private let statusBarHeight: CGFloat = 20
+    private var startingFrame: CGRect!
+    
+    var menuType: AddEventMenu! {
+        didSet {
+            let path = Bundle.main.path(forResource: "AddEventMenu", ofType: "plist")
+            let dictionary = NSDictionary(contentsOfFile: path!)
+            settings =  dictionary![menuType.rawValue] as! [AnyObject]
+
+        }
+    }
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -38,10 +47,7 @@ class AddEvent: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, 
         return cv
     }()
     
-    private let settings: [AnyObject] = {
-        let path = Bundle.main.path(forResource: "AddEventMenu", ofType: "plist")
-        return NSArray(contentsOfFile: path!) as! [AnyObject]
-    }()
+    private var settings: [AnyObject] = [AnyObject]()
     
     override init() {
         super.init()
@@ -51,19 +57,19 @@ class AddEvent: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, 
         collectionView.register(AddEventPopupCell.self, forCellWithReuseIdentifier: cellId)
     }
     
-    func showSettings() {
+    func showSettings(_ atFrame: CGRect) {
         //show menu
-        
+        startingFrame = atFrame
         if let window = UIApplication.shared.keyWindow {
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss(_:))))
+            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissView)))
             
             window.addSubview(blackView)
             
             window.addSubview(collectionView)
             
             let height: CGFloat = CGFloat(settings.count) * cellHeight
-            collectionView.frame = CGRect(x: 0, y: statusBarHeight, width: window.frame.width, height: 0)
+            collectionView.frame = CGRect(x: 0, y: self.startingFrame.origin.y + self.startingFrame.height, width: window.frame.width, height: 0)
             
             blackView.frame = window.frame
             blackView.alpha = 0
@@ -72,17 +78,21 @@ class AddEvent: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, 
                 
                 self.blackView.alpha = 1
                 
-                self.collectionView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.collectionView.frame.width, height: height)
+                self.collectionView.frame = CGRect(x: 0, y: self.startingFrame.origin.y + self.startingFrame.height, width: self.collectionView.frame.width, height: height)
                 
                 }, completion: nil)
         }
     }
     
-    func handleDismiss(_ completion: (()->(Void))?) {
+    @objc private func dismissView() {
+        handleDismiss()
+    }
+    
+    func handleDismiss(_ completion: (()->(Void))? = nil) {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             
             self.blackView.alpha = 0
-            self.collectionView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.collectionView.frame.width, height: 0)
+            self.collectionView.frame = CGRect(x: 0, y: self.startingFrame.origin.y + self.startingFrame.height, width: self.collectionView.frame.width, height: 0)
             
         }) { (completed: Bool) in
             if completion != nil {

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ACq-1H-CaG">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ACq-1H-CaG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="807.20000000000005" y="119.1904047976012"/>
         </scene>
-        <!--View Controller-->
+        <!--User Home View Controller-->
         <scene sceneID="tRP-aN-euY">
             <objects>
-                <viewController id="3X2-4m-5A9" sceneMemberID="viewController">
+                <viewController id="3X2-4m-5A9" customClass="UserHomeViewController" customModule="Photogram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="peW-Op-soN"/>
                         <viewControllerLayoutGuide type="bottom" id="LzM-bH-zY8"/>
@@ -96,6 +96,7 @@
                                         <state key="normal" image="icn_back"/>
                                         <connections>
                                             <action selector="didClickBackButton:" destination="flv-Va-PcV" eventType="touchUpInside" id="W6D-EU-LAc"/>
+                                            <action selector="didClickBackButton:" destination="3X2-4m-5A9" eventType="touchUpInside" id="lxH-pS-3b5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -112,14 +113,14 @@
                                     <constraint firstItem="u5h-px-otR" firstAttribute="leading" secondItem="Cbc-uO-6Hx" secondAttribute="leading" id="vAY-dp-goZ"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="541" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X7r-aY-3Yo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="541" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X7r-aY-3Yo">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="516" id="xUc-JC-H4p">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userCell" rowHeight="516" id="xUc-JC-H4p" customClass="UserHomeTableViewCell" customModule="Photogram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="516"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xUc-JC-H4p" id="Cbx-Re-5d8">
-                                            <frame key="frameInset" width="375" height="515"/>
+                                            <frame key="frameInset" width="375" height="516"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sup-M8-AJO" userLabel="infoView">
@@ -173,7 +174,7 @@
                                                                 <constraint firstItem="XEx-vQ-ybF" firstAttribute="centerY" secondItem="jdc-av-GAr" secondAttribute="centerY" id="fUj-pu-W3U"/>
                                                                 <constraint firstItem="XEx-vQ-ybF" firstAttribute="leading" secondItem="6w6-RM-f6I" secondAttribute="trailing" constant="10" id="lpt-Bt-Esz"/>
                                                                 <constraint firstItem="jdc-av-GAr" firstAttribute="top" secondItem="zzX-h9-vPX" secondAttribute="bottom" constant="4" id="p11-6G-PNq"/>
-                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oNn-Kg-nvN" secondAttribute="trailing" id="qJJ-KV-xsC"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oNn-Kg-nvN" secondAttribute="trailing" priority="250" id="qJJ-KV-xsC"/>
                                                                 <constraint firstItem="6w6-RM-f6I" firstAttribute="leading" secondItem="jdc-av-GAr" secondAttribute="trailing" constant="4" id="roW-dJ-dZ4"/>
                                                                 <constraint firstAttribute="bottom" secondItem="jdc-av-GAr" secondAttribute="bottom" id="udN-Fj-TRz"/>
                                                             </constraints>
@@ -185,6 +186,9 @@
                                                             <state key="normal" image="icn_menu_horizontal">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="didClickOptionButton:" destination="xUc-JC-H4p" eventType="touchUpInside" id="gsc-UY-q73"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -292,8 +296,20 @@
                                                 <constraint firstAttribute="trailing" secondItem="sup-M8-AJO" secondAttribute="trailing" id="uL1-i5-tqa"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="hBl-wp-pgo" id="pLM-5H-QFN"/>
+                                            <outlet property="coverImageView" destination="rcO-KW-m0W" id="huq-WM-a90"/>
+                                            <outlet property="eventnameLabel" destination="6w6-RM-f6I" id="Y6l-di-ZIu"/>
+                                            <outlet property="locationLabel" destination="oNn-Kg-nvN" id="1We-8U-U6d"/>
+                                            <outlet property="optionMenuButton" destination="lzN-RZ-fEA" id="EUg-bx-dWS"/>
+                                            <outlet property="usernameLabel" destination="zzX-h9-vPX" id="WZy-FA-F8K"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3X2-4m-5A9" id="Iyz-ok-JVf"/>
+                                    <outlet property="delegate" destination="3X2-4m-5A9" id="cGq-EK-Tgg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -307,10 +323,13 @@
                             <constraint firstAttribute="trailing" secondItem="Cbc-uO-6Hx" secondAttribute="trailing" id="pVh-s1-lic"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileTableView" destination="X7r-aY-3Yo" id="CSl-i2-ykC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cz4-Hh-ENG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805.60000000000002" y="786.65667166416802"/>
+            <point key="canvasLocation" x="807" y="880"/>
         </scene>
         <!--Home Table View Controller-->
         <scene sceneID="ORY-AV-QqU">
@@ -532,6 +551,7 @@
                                     <outlet property="locationLabel" destination="Huu-Dq-TEc" id="o21-NT-DqX"/>
                                     <outlet property="nameLabel" destination="dqW-gH-Wum" id="SJi-Ub-o7i"/>
                                     <outlet property="photoColectionView" destination="vgy-Tz-5Tq" id="TOG-Pq-c4Q"/>
+                                    <segue destination="3X2-4m-5A9" kind="show" id="HKE-R2-mrJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

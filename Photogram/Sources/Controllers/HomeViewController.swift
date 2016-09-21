@@ -35,11 +35,13 @@ class HomeViewController: UIViewController, AddEventDelegate {
     lazy var addEventPopup: AddEvent = {
         let addEvent = AddEvent()
         addEvent.delegate = self
+        addEvent.menuType = .Home
         return addEvent
     }()
     
     @IBAction func didClickAddButton(_ sender: AnyObject) {
-        addEventPopup.showSettings()
+        let startingFrame = (sender as! UIButton).superview?.convert(sender.frame, to: nil)
+        addEventPopup.showSettings(startingFrame!)
     }
     
     func addEvent(_ addEvent: AddEvent, didSelectedItemAt index: Int) {
