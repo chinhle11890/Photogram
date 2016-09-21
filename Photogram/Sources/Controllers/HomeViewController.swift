@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, AddEventPopupDelegate {
+class HomeViewController: UIViewController, AddEventDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +32,9 @@ class HomeViewController: UIViewController, AddEventPopupDelegate {
     }
     */
     
-    lazy var addEventPopup: AddEventPopup = {
-        let addEvent = AddEventPopup()
-        addEvent.delegate = self;
+    lazy var addEventPopup: AddEvent = {
+        let addEvent = AddEvent()
+        addEvent.delegate = self
         return addEvent
     }()
     
@@ -42,9 +42,8 @@ class HomeViewController: UIViewController, AddEventPopupDelegate {
         addEventPopup.showSettings()
     }
     
-    func addEvent(_ addEventPopup: AddEventPopup, didSelectedItemAt index: Int) {
-        print(index)
-        let eventType: AddEvent = AddEvent(rawValue: index) ?? .Event
+    func addEvent(_ addEvent: AddEvent, didSelectedItemAt index: Int) {
+        let eventType = AddEventType(rawValue: index) ?? .Event
         switch eventType {
         case .Event:
             if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.uploadEventController) as? UploadEventViewController {
@@ -52,6 +51,9 @@ class HomeViewController: UIViewController, AddEventPopupDelegate {
             }
             break
         case .Photo:
+            if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.followController) as? FollowViewController {
+                navigationController?.pushViewController(vc, animated: true)
+            }
             break
         }
     }

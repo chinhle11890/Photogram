@@ -1,5 +1,5 @@
 //
-//  AddEventPopup.swift
+//  AddEvent.swift
 //  Photogram
 //
 //  Created by Bao Nguyen on 9/20/16.
@@ -18,13 +18,13 @@ class Setting: NSObject {
     }
 }
 
-protocol AddEventPopupDelegate: AnyObject {
-    func addEvent(_ addEventPopup: AddEventPopup, didSelectedItemAt index: Int);
+protocol AddEventDelegate: AnyObject {
+    func addEvent(_ addEvent: AddEvent, didSelectedItemAt index: Int);
 }
 
-class AddEventPopup: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class AddEvent: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    weak var delegate: AddEventPopupDelegate?
+    weak var delegate: AddEventDelegate?
     
     private let blackView = UIView()
     private let cellId = "eventCell"
@@ -56,7 +56,7 @@ class AddEventPopup: NSObject, UICollectionViewDelegate, UICollectionViewDataSou
         
         if let window = UIApplication.shared.keyWindow {
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
+            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss(_:))))
             
             window.addSubview(blackView)
             
@@ -78,14 +78,16 @@ class AddEventPopup: NSObject, UICollectionViewDelegate, UICollectionViewDataSou
         }
     }
     
-    func handleDismiss() {
+    func handleDismiss(_ completion: (()->(Void))?) {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             
             self.blackView.alpha = 0
             self.collectionView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.collectionView.frame.width, height: 0)
             
         }) { (completed: Bool) in
-            
+            if completion != nil {
+                completion!()
+            }
         }
     }
     
@@ -113,9 +115,10 @@ class AddEventPopup: NSObject, UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let delegate = delegate {
-            delegate.addEvent(self, didSelectedItemAt: indexPath.row)
+        handleDismiss {
+            if let delegate = self.delegate {
+                delegate.addEvent(self, didSelectedItemAt: indexPath.row)
+            }
         }
-        handleDismiss()
     }
 }

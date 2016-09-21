@@ -8,11 +8,12 @@
 
 import UIKit
 
-enum AddEvent: Int {
+enum AddEventType: Int {
     case Event = 0
     case Photo = 1
 }
 
 class StoryBoardId: NSObject {
     static let uploadEventController = "UploadEventController"
+    static let followController = "FollowController"
 }
