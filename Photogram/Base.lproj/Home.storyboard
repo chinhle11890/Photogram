@@ -575,7 +575,7 @@
         <!--Navigation Controller-->
         <scene sceneID="LrE-TG-38k">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ACq-1H-CaG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigation" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ACq-1H-CaG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gga-Kg-GWS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -588,7 +588,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIf-rL-wWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-132" y="119.1904047976012"/>
+            <point key="canvasLocation" x="-129" y="117"/>
         </scene>
     </scenes>
     <resources>
