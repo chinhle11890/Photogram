@@ -142,11 +142,11 @@
 		23D9B3351D901E7A0074B677 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BFAE837E1D919D91002358D3 /* HomeViewController.swift */,
 				23D9B33D1D901F0C0074B677 /* SignInViewController.swift */,
 				23D9B33F1D901F350074B677 /* SignupViewController.swift */,
 				23D9B3411D901F450074B677 /* ForgotPasswordViewController.swift */,
 				23D9B3431D90203F0074B677 /* IntroductionPageViewController.swift */,
+				BFAE837E1D919D91002358D3 /* HomeViewController.swift */,
 				DC4682311D911B910078FDDB /* HomeTableViewController.swift */,
 			);
 			path = Controllers;

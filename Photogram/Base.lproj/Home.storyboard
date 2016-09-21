@@ -82,7 +82,7 @@
                                     <frame key="frameInset" width="375" height="597"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxa-ML-QO2">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxa-ML-QO2" userLabel="infoView">
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="gI6-Qx-CuH">
                                                     <constraints>
@@ -149,13 +149,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="rin-GS-CNu" secondAttribute="trailing" constant="8" id="yc9-UK-qWZ"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQN-nO-udE">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mQN-nO-udE" userLabel="mainView">
+                                            <frame key="frameInset" minY="50" width="375" height="320"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="we2-s9-zRD">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" secondItem="we2-s9-zRD" secondAttribute="width" multiplier="0.7" id="rJh-xw-Bvz"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="we2-s9-zRD"/>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vgy-Tz-5Tq">
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EGG-fd-do2">
@@ -166,10 +163,8 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="VAc-rY-9GS">
-                                                            <rect key="frame" x="0.0" y="24.5" width="150" height="88"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="88"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02" translatesAutoresizingMaskIntoConstraints="NO" id="tyG-E0-69k"/>
@@ -188,7 +183,7 @@
                                             <constraints>
                                                 <constraint firstItem="vgy-Tz-5Tq" firstAttribute="top" secondItem="we2-s9-zRD" secondAttribute="bottom" id="ON2-Re-N6i"/>
                                                 <constraint firstItem="we2-s9-zRD" firstAttribute="leading" secondItem="mQN-nO-udE" secondAttribute="leading" id="S2C-0d-BYh"/>
-                                                <constraint firstAttribute="width" secondItem="mQN-nO-udE" secondAttribute="height" multiplier="1:1" id="aLY-fD-WIT"/>
+                                                <constraint firstAttribute="width" secondItem="mQN-nO-udE" secondAttribute="height" multiplier="1:1" constant="-80" id="aLY-fD-WIT"/>
                                                 <constraint firstAttribute="bottom" secondItem="vgy-Tz-5Tq" secondAttribute="bottom" id="cmk-NJ-jAv"/>
                                                 <constraint firstItem="we2-s9-zRD" firstAttribute="top" secondItem="mQN-nO-udE" secondAttribute="top" id="gKp-du-M9c"/>
                                                 <constraint firstItem="vgy-Tz-5Tq" firstAttribute="leading" secondItem="mQN-nO-udE" secondAttribute="leading" id="oDy-cO-W0h"/>
@@ -196,7 +191,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="we2-s9-zRD" secondAttribute="trailing" id="vwn-RL-PQj"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mde-4s-5l2">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mde-4s-5l2" userLabel="commentView">
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Q5-jh-jUs">
                                                     <attributedString key="attributedText">
@@ -225,7 +220,7 @@
                                                 <constraint firstItem="4Q5-jh-jUs" firstAttribute="top" secondItem="Mde-4s-5l2" secondAttribute="top" id="w17-bC-eQW"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-JP-egM">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-JP-egM" userLabel="likeView">
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRw-T5-ctJ" userLabel="topLineView">
                                                     <color key="backgroundColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>

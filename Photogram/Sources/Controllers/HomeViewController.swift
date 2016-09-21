@@ -44,13 +44,13 @@ class HomeViewController: UIViewController, AddEventPopupDelegate {
     
     func addEvent(_ addEventPopup: AddEventPopup, didSelectedItemAt index: Int) {
         print(index)
-        let eventType = AddEvent(rawValue: index)
-//        switch eventType {
-//        case .Event: break
-//            
-//        case .Photo: break
-//            
-//        }
+        let eventType: AddEvent = AddEvent(rawValue: index) ?? .Event
+        switch eventType {
+        case .Event:
+            break
+        case .Photo:
+            break
+        }
     }
 
 }
