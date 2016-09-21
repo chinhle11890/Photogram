@@ -47,6 +47,9 @@ class HomeViewController: UIViewController, AddEventPopupDelegate {
         let eventType: AddEvent = AddEvent(rawValue: index) ?? .Event
         switch eventType {
         case .Event:
+            if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.uploadEventController) as? UploadEventViewController {
+                navigationController?.pushViewController(vc, animated: true)
+            }
             break
         case .Photo:
             break

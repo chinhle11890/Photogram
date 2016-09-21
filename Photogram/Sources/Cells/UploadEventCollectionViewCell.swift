@@ -16,4 +16,15 @@ class UploadEventCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    var photo: Photo? {
+        didSet {
+            if let choose: Bool = photo?.choose {
+                chooseImageView.image = choose ? UIImage(named: "icn_choose") : nil
+            }
+            if let image = photo?.image {
+                avatarImageView.image = image
+            }
+        }
+    }
 }

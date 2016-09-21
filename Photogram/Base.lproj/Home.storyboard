@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ACq-1H-CaG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ACq-1H-CaG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -285,7 +285,6 @@
                                     <outlet property="locationLabel" destination="Huu-Dq-TEc" id="o21-NT-DqX"/>
                                     <outlet property="nameLabel" destination="dqW-gH-Wum" id="SJi-Ub-o7i"/>
                                     <outlet property="photoColectionView" destination="vgy-Tz-5Tq" id="TOG-Pq-c4Q"/>
-                                    <segue destination="flv-Va-PcV" kind="show" id="vCy-4q-Thm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -305,7 +304,7 @@
         <!--Upload Event View Controller-->
         <scene sceneID="CA5-fg-1FQ">
             <objects>
-                <viewController id="flv-Va-PcV" customClass="UploadEventViewController" customModule="Photogram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UploadEventController" id="flv-Va-PcV" customClass="UploadEventViewController" customModule="Photogram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WjQ-eb-3zk"/>
                         <viewControllerLayoutGuide type="bottom" id="laZ-s9-BMi"/>

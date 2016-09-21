@@ -12,3 +12,7 @@ enum AddEvent: Int {
     case Event = 0
     case Photo = 1
 }
+
+class StoryBoardId: NSObject {
+    static let uploadEventController = "UploadEventController"
+}
