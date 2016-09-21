@@ -17,6 +17,8 @@
 		23D9B3421D901F450074B677 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3411D901F450074B677 /* ForgotPasswordViewController.swift */; };
 		23D9B3441D90203F0074B677 /* IntroductionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3431D90203F0074B677 /* IntroductionPageViewController.swift */; };
 		5ADBD06D04AACEA615C5E893 /* Pods_Photogram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2150EE75A1E08DAE5B85D81F /* Pods_Photogram.framework */; };
+		BF3BD9D51D9249CE001049BE /* UploadEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD9D41D9249CE001049BE /* UploadEventViewController.swift */; };
+		BF3BD9D71D925108001049BE /* UploadEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD9D61D925108001049BE /* UploadEventCollectionViewCell.swift */; };
 		BFAE83751D919C9E002358D3 /* TypeDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE83741D919C9E002358D3 /* TypeDefine.swift */; };
 		BFAE83781D919CCD002358D3 /* AddEventPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE83771D919CCD002358D3 /* AddEventPopup.swift */; };
 		BFAE837A1D919CD8002358D3 /* AddEventPopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE83791D919CD8002358D3 /* AddEventPopupCell.swift */; };
@@ -46,6 +48,8 @@
 		23D9B3411D901F450074B677 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		23D9B3431D90203F0074B677 /* IntroductionPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionPageViewController.swift; sourceTree = "<group>"; };
 		8503067DE8633FA6A027C322 /* Pods-Photogram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photogram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photogram/Pods-Photogram.debug.xcconfig"; sourceTree = "<group>"; };
+		BF3BD9D41D9249CE001049BE /* UploadEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadEventViewController.swift; sourceTree = "<group>"; };
+		BF3BD9D61D925108001049BE /* UploadEventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadEventCollectionViewCell.swift; sourceTree = "<group>"; };
 		BFAE83741D919C9E002358D3 /* TypeDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDefine.swift; sourceTree = "<group>"; };
 		BFAE83771D919CCD002358D3 /* AddEventPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventPopup.swift; sourceTree = "<group>"; };
 		BFAE83791D919CD8002358D3 /* AddEventPopupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventPopupCell.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 				23D9B3431D90203F0074B677 /* IntroductionPageViewController.swift */,
 				BFAE837E1D919D91002358D3 /* HomeViewController.swift */,
 				DC4682311D911B910078FDDB /* HomeTableViewController.swift */,
+				BF3BD9D41D9249CE001049BE /* UploadEventViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			children = (
 				BFAE83791D919CD8002358D3 /* AddEventPopupCell.swift */,
 				DCA6DEAB1D914C45000DCE25 /* HomeTableViewCell.swift */,
+				BF3BD9D61D925108001049BE /* UploadEventCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 			files = (
 				23D9B33E1D901F0C0074B677 /* SignInViewController.swift in Sources */,
 				23D9B3441D90203F0074B677 /* IntroductionPageViewController.swift in Sources */,
+				BF3BD9D71D925108001049BE /* UploadEventCollectionViewCell.swift in Sources */,
 				23D9B3381D901ED50074B677 /* AppDelegate.swift in Sources */,
 				23D9B3421D901F450074B677 /* ForgotPasswordViewController.swift in Sources */,
 				DC4682321D911B910078FDDB /* HomeTableViewController.swift in Sources */,
@@ -368,6 +375,7 @@
 				BFAE837D1D919CE1002358D3 /* Extensions.swift in Sources */,
 				BFAE837A1D919CD8002358D3 /* AddEventPopupCell.swift in Sources */,
 				23D9B3401D901F350074B677 /* SignupViewController.swift in Sources */,
+				BF3BD9D51D9249CE001049BE /* UploadEventViewController.swift in Sources */,
 				DCA6DEAC1D914C45000DCE25 /* HomeTableViewCell.swift in Sources */,
 				BFAE837F1D919D91002358D3 /* HomeViewController.swift in Sources */,
 				23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */,
