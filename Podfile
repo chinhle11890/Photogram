@@ -7,8 +7,8 @@ target 'Photogram' do
 
   # Pods for Photogram
 
-pod "TextFieldEffects"
-pod "SlackTextViewController"
+pod 'TextFieldEffects'
+pod 'JSQMessagesViewController'
 
 end
 

@@ -21,6 +21,7 @@
 		BF3BD9D71D925108001049BE /* UploadEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD9D61D925108001049BE /* UploadEventCollectionViewCell.swift */; };
 		BF4EF8E21D92CE0800F9F7B5 /* UserHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4EF8E11D92CE0800F9F7B5 /* UserHomeViewController.swift */; };
 		BF4EF8E41D92CFF700F9F7B5 /* UserHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4EF8E31D92CFF700F9F7B5 /* UserHomeTableViewCell.swift */; };
+		BF994E2E1D94426E009F378B /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF994E2D1D94426E009F378B /* CommentViewController.swift */; };
 		BFAE83751D919C9E002358D3 /* TypeDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE83741D919C9E002358D3 /* TypeDefine.swift */; };
 		BFAE837A1D919CD8002358D3 /* AddEventPopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE83791D919CD8002358D3 /* AddEventPopupCell.swift */; };
 		BFAE837D1D919CE1002358D3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE837C1D919CE1002358D3 /* Extensions.swift */; };
@@ -61,6 +62,8 @@
 		BF3BD9D61D925108001049BE /* UploadEventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadEventCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF4EF8E11D92CE0800F9F7B5 /* UserHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeViewController.swift; sourceTree = "<group>"; };
 		BF4EF8E31D92CFF700F9F7B5 /* UserHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeTableViewCell.swift; sourceTree = "<group>"; };
+		BF994E2A1D94422E009F378B /* Photogram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photogram-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF994E2D1D94426E009F378B /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		BFAE83741D919C9E002358D3 /* TypeDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDefine.swift; sourceTree = "<group>"; };
 		BFAE83791D919CD8002358D3 /* AddEventPopupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventPopupCell.swift; sourceTree = "<group>"; };
 		BFAE837C1D919CE1002358D3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				DC9F4A6F1D9278A8003D49C1 /* FollowViewController.swift */,
 				BF4EF8E11D92CE0800F9F7B5 /* UserHomeViewController.swift */,
 				BFC9B2DF1D943386005AF14B /* ImageDetailViewController.swift */,
+				BF994E2A1D94422E009F378B /* Photogram-Bridging-Header.h */,
+				BF994E2D1D94426E009F378B /* CommentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 				BF4EF8E21D92CE0800F9F7B5 /* UserHomeViewController.swift in Sources */,
 				BF4EF8E41D92CFF700F9F7B5 /* UserHomeTableViewCell.swift in Sources */,
 				23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */,
+				BF994E2E1D94426E009F378B /* CommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baon.Photogram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Photogram/Sources/Controllers/Photogram-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -614,6 +621,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baon.Photogram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Photogram/Sources/Controllers/Photogram-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
