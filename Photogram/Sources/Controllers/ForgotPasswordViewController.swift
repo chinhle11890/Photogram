@@ -16,6 +16,10 @@ class ForgotPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        sendButton?.backgroundColor = UIColor.white
+        sendButton?.layer.cornerRadius = 15
+        sendButton?.clipsToBounds = true
+        
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ForgotPasswordViewController.handleTap))
         self.view.addGestureRecognizer(tapRecognizer)
     }

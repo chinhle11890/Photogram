@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ATD-Qe-KRK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ATD-Qe-KRK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -309,10 +309,10 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="f4Y-CV-uVK" firstAttribute="top" secondItem="mdA-CI-4CM" secondAttribute="top" constant="40" id="W2Z-86-Hj5"/>
+                                                    <constraint firstItem="f4Y-CV-uVK" firstAttribute="top" secondItem="mdA-CI-4CM" secondAttribute="top" constant="30" id="WfH-9t-jTL"/>
                                                     <constraint firstItem="f2T-Bb-uHi" firstAttribute="centerX" secondItem="mdA-CI-4CM" secondAttribute="centerX" id="gxm-ym-mKi"/>
                                                     <constraint firstItem="f2T-Bb-uHi" firstAttribute="centerY" secondItem="mdA-CI-4CM" secondAttribute="centerY" id="gyf-sa-uRD"/>
-                                                    <constraint firstAttribute="trailing" secondItem="f4Y-CV-uVK" secondAttribute="trailing" constant="20" id="s0S-WE-s9i"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f4Y-CV-uVK" secondAttribute="trailing" constant="10" id="jAe-LA-Pm7"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCY-6e-fQN">
@@ -646,6 +646,9 @@
                             <constraint firstItem="P8Y-s9-lnV" firstAttribute="leading" secondItem="90O-nV-jge" secondAttribute="leading" id="vPd-Gp-Vo3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="signupButton" destination="h6I-Pg-9cL" id="rLW-SD-86O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I85-c6-uRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -696,13 +699,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="qNL-eK-fFJ" firstAttribute="top" secondItem="HKB-N8-qGK" secondAttribute="top" constant="30" id="6U1-VC-Kaf"/>
                                     <constraint firstItem="ZGV-VO-dsS" firstAttribute="centerY" secondItem="HKB-N8-qGK" secondAttribute="centerY" id="6ct-yW-OI1"/>
-                                    <constraint firstAttribute="trailing" secondItem="qNL-eK-fFJ" secondAttribute="trailing" constant="20" id="KAl-eI-wJj"/>
+                                    <constraint firstAttribute="trailing" secondItem="qNL-eK-fFJ" secondAttribute="trailing" constant="10" id="8Qi-hq-sOm"/>
                                     <constraint firstItem="eS8-fR-iZw" firstAttribute="trailing" secondItem="ZGV-VO-dsS" secondAttribute="trailing" id="a4H-Bs-dYy"/>
                                     <constraint firstItem="eS8-fR-iZw" firstAttribute="top" secondItem="ZGV-VO-dsS" secondAttribute="bottom" constant="3" id="cdw-Ap-CCw"/>
                                     <constraint firstItem="eS8-fR-iZw" firstAttribute="leading" secondItem="ZGV-VO-dsS" secondAttribute="leading" id="m2C-ek-XhM"/>
                                     <constraint firstItem="ZGV-VO-dsS" firstAttribute="centerX" secondItem="HKB-N8-qGK" secondAttribute="centerX" id="wfW-Dx-u0D"/>
-                                    <constraint firstItem="qNL-eK-fFJ" firstAttribute="top" secondItem="HKB-N8-qGK" secondAttribute="top" constant="40" id="yC2-0p-SFZ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQG-6b-le2">

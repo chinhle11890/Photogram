@@ -19,7 +19,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         
         signInButton?.backgroundColor = UIColor.white
-        signInButton?.layer.cornerRadius = (signInButton?.frame.width)!
+        signInButton?.layer.cornerRadius = 15
         signInButton?.clipsToBounds = true
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.handleTap))

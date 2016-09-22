@@ -9,9 +9,14 @@
 import UIKit
 
 class SignupViewController: UIViewController {
-
+    @IBOutlet weak var signupButton: UIButton?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        signupButton?.backgroundColor = UIColor.white
+        signupButton?.layer.cornerRadius = 15
+        signupButton?.clipsToBounds = true
 
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignupViewController.handleTap))
         self.view.addGestureRecognizer(tapRecognizer)
