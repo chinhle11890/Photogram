@@ -26,7 +26,6 @@ class AddEvent: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, 
     
     weak var delegate: AddEventDelegate?
     
-    private let blackView = UIView()
     private let cellId = "eventCell"
     private let cellHeight: CGFloat = 50
     private var startingFrame: CGRect!
@@ -39,6 +38,21 @@ class AddEvent: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, 
 
         }
     }
+    
+    private lazy var blackView: UIView = {
+        let blackView = UIView()
+        blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissView)))
+        
+        let button = UIButton()
+        button.setImage(UIImage(named: "icn_back_circle_red"), for: .normal)
+        button.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
+        blackView.addSubview(button)
+        blackView.addConstraintsWithFormat("H:[v0]-20-|", views: button)
+        blackView.addConstraintsWithFormat("V:[v0]-20-|", views: button)
+        
+        return blackView
+    }()
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -61,8 +75,6 @@ class AddEvent: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, 
         //show menu
         startingFrame = atFrame
         if let window = UIApplication.shared.keyWindow {
-            blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissView)))
             
             window.addSubview(blackView)
             

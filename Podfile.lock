@@ -1,12 +1,15 @@
 PODS:
+  - SlackTextViewController (1.9.3)
   - TextFieldEffects (0.4.0)
 
 DEPENDENCIES:
+  - SlackTextViewController
   - TextFieldEffects
 
 SPEC CHECKSUMS:
+  SlackTextViewController: bd2a34c188d4f7dec93cf42388f38551263fac82
   TextFieldEffects: 757bb7871bb742d95e0782e85da923bbaf97660f
 
-PODFILE CHECKSUM: 9c8601f61f31cc5e61200ec960f3a9f8ff5f8169
+PODFILE CHECKSUM: 4a40ded20167fdb9d3b1710d6f8efb7edd91f4a5
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.0.0.beta.6
