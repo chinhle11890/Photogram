@@ -6,23 +6,33 @@
 	<dict>
 		<key>Pods-Photogram.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SlackTextViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>TextFieldEffects.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4502E0B8CB6FD60A0D63D01861D22D3D</key>
+		<key>16DBE258CE8E1CAA8516D7FF58F6B0F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6CF3B343FB04E45D4CE8381D064C5167</key>
+		<key>66DABD055491B6826D02ED488D3DAA6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8CFDA7F154311B3AE74D81E84595EDA8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
