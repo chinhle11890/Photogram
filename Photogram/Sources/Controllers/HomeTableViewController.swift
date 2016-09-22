@@ -8,13 +8,12 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController, UINavigationControllerDelegate {
+class HomeTableViewController: UITableViewController {
     
     private let homeCell = "homeCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.delegate = self
         self.tableView.estimatedRowHeight = 597
         self.tableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -40,15 +39,6 @@ class HomeTableViewController: UITableViewController, UINavigationControllerDele
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return section == 0 ? 0 : 10
-    }
-    
-    // MARK : UINavigationControllerDelegate
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        if viewController is HomeTableViewController {
-            self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        } else {
-            self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        }
     }
 
 }

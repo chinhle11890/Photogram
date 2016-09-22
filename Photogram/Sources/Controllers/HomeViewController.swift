@@ -8,12 +8,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, AddEventDelegate {
+class HomeViewController: UIViewController, AddEventDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationController?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,6 +58,16 @@ class HomeViewController: UIViewController, AddEventDelegate {
             }
             break
         }
+    }
+    
+    // MARK : UINavigationControllerDelegate
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//        if viewController is HomeTableViewController {
+//            self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//        } else {
+//            self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//        }
     }
 
 }
