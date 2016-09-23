@@ -38,8 +38,8 @@ class SignInViewController: UIViewController {
     
     @IBAction func forgotPasswordButtonAction(sender: UIButton) {
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let signupVC : ForgotPasswordViewController = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
-        self.present(signupVC, animated: true, completion: nil)
+        let forgotPasswordVC : ForgotPasswordViewController = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
+        self.present(forgotPasswordVC, animated: true, completion: nil)
     }
     
     @IBAction func signInButtonAction(sender: UIButton) {

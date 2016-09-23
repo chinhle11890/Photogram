@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23964A431D95890B00F14782 /* PageItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23964A411D95890B00F14782 /* PageItemViewController.swift */; };
+		23964A441D95890B00F14782 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23964A421D95890B00F14782 /* TutorialViewController.swift */; };
+		23964A461D95891E00F14782 /* Walkthrough_guideline.png in Resources */ = {isa = PBXBuildFile; fileRef = 23964A451D95891E00F14782 /* Walkthrough_guideline.png */; };
 		23B398D81D9163A7009236C3 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B398D71D9163A7009236C3 /* LaunchImage.png */; };
 		23CD513A1D9172EE0071301F /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 23CD51391D9172EE0071301F /* Background.png */; };
 		23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3241D901E370074B677 /* Photogram.xcdatamodeld */; };
@@ -46,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		2150EE75A1E08DAE5B85D81F /* Pods_Photogram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photogram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23964A411D95890B00F14782 /* PageItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemViewController.swift; sourceTree = "<group>"; };
+		23964A421D95890B00F14782 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		23964A451D95891E00F14782 /* Walkthrough_guideline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Walkthrough_guideline.png; sourceTree = "<group>"; };
 		23B398D71D9163A7009236C3 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		23CD51391D9172EE0071301F /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		23D9B31A1D901E370074B677 /* Photogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +146,7 @@
 		23D9B3331D901E7A0074B677 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				23964A451D95891E00F14782 /* Walkthrough_guideline.png */,
 				23B398D71D9163A7009236C3 /* LaunchImage.png */,
 				23CD51391D9172EE0071301F /* Background.png */,
 				23D9B3391D901EE20074B677 /* Assets.xcassets */,
@@ -167,6 +174,8 @@
 		23D9B3351D901E7A0074B677 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				23964A411D95890B00F14782 /* PageItemViewController.swift */,
+				23964A421D95890B00F14782 /* TutorialViewController.swift */,
 				23D9B33D1D901F0C0074B677 /* SignInViewController.swift */,
 				23D9B33F1D901F350074B677 /* SignupViewController.swift */,
 				23D9B3411D901F450074B677 /* ForgotPasswordViewController.swift */,
@@ -341,6 +350,7 @@
 				DC4682381D9128F70078FDDB /* Images.xcassets in Resources */,
 				DC4682361D9127DB0078FDDB /* Photos.xcassets in Resources */,
 				DC4682301D911A340078FDDB /* Home.storyboard in Resources */,
+				23964A461D95891E00F14782 /* Walkthrough_guideline.png in Resources */,
 				DC9F4A741D928398003D49C1 /* Follows.plist in Resources */,
 				DC9F4A6B1D926E7A003D49C1 /* Photos.plist in Resources */,
 			);
@@ -463,7 +473,9 @@
 				BFAE837A1D919CD8002358D3 /* AddEventPopupCell.swift in Sources */,
 				23D9B3401D901F350074B677 /* SignupViewController.swift in Sources */,
 				BF3BD9D51D9249CE001049BE /* UploadEventViewController.swift in Sources */,
+				23964A441D95890B00F14782 /* TutorialViewController.swift in Sources */,
 				DCA6DEAC1D914C45000DCE25 /* HomeTableViewCell.swift in Sources */,
+				23964A431D95890B00F14782 /* PageItemViewController.swift in Sources */,
 				BFAE837F1D919D91002358D3 /* HomeViewController.swift in Sources */,
 				BF4EF8E21D92CE0800F9F7B5 /* UserHomeViewController.swift in Sources */,
 				BF4EF8E41D92CFF700F9F7B5 /* UserHomeTableViewCell.swift in Sources */,
