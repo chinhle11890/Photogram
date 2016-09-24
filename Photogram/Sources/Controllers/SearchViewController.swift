@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, MenuBarDelegate {
+class SearchViewController: UIViewController, MenuBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var menuBarContainer: UIView!
     @IBOutlet weak var searchTextField: UITextField!
@@ -32,9 +32,9 @@ class SearchViewController: UIViewController, MenuBarDelegate {
         menuBarContainer.addConstraintsWithFormat("V:|[v0]|", views: menuBar)
         searchTextField.becomeFirstResponder()
         
-//        photoCollectionView.contentInset = UIEdgeInsetsMake(8, 8, 8, 8)
-//        photoCollectionView.showsVerticalScrollIndicator = false
-//        photoCollectionView.showsHorizontalScrollIndicator = false
+        photoCollectionView.contentInset = UIEdgeInsetsMake(8, 8, 8, 8)
+        photoCollectionView.showsVerticalScrollIndicator = false
+        photoCollectionView.showsHorizontalScrollIndicator = false
     }
     
     @IBAction func didClickBackButton(_ sender: AnyObject) {
@@ -47,10 +47,9 @@ class SearchViewController: UIViewController, MenuBarDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCell, for: indexPath) as! UploadEventCollectionViewCell
-//        let photo = photos[indexPath.item]
-//        cell.photo = photo
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCell, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCell, for: indexPath) as! UploadEventCollectionViewCell
+        let photo = photos[indexPath.item]
+        cell.photo = photo
         return cell
     }
     
