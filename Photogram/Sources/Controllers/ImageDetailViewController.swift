@@ -40,6 +40,9 @@ class ImageDetailViewController: UIViewController, AddEventDelegate {
         let eventType = OptionMenu(rawValue: index) ?? .Download
         switch eventType {
         case .Download:
+            if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.searchController) as? SearchViewController {
+                navigationController?.pushViewController(vc, animated: true)
+            }
             break
         case .Save:
             break
