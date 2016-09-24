@@ -7,14 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2330AF9F1D96232C00AE4985 /* Addevent_CoverBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 2330AF9E1D96232C00AE4985 /* Addevent_CoverBackground.png */; };
-		2330AFA11D96318100AE4985 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330AFA01D96318000AE4985 /* ProfileViewController.swift */; };
-		2330AFA31D9631C400AE4985 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330AFA21D9631C400AE4985 /* UserProfileViewController.swift */; };
-		2330AFA51D96322F00AE4985 /* EventDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330AFA41D96322F00AE4985 /* EventDisplayViewController.swift */; };
 		23964A431D95890B00F14782 /* PageItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23964A411D95890B00F14782 /* PageItemViewController.swift */; };
 		23964A441D95890B00F14782 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23964A421D95890B00F14782 /* TutorialViewController.swift */; };
 		23964A461D95891E00F14782 /* Walkthrough_guideline.png in Resources */ = {isa = PBXBuildFile; fileRef = 23964A451D95891E00F14782 /* Walkthrough_guideline.png */; };
-		23964A481D9599A000F14782 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23964A471D95999F00F14782 /* AddEventViewController.swift */; };
 		23B398D81D9163A7009236C3 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B398D71D9163A7009236C3 /* LaunchImage.png */; };
 		23CD513A1D9172EE0071301F /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 23CD51391D9172EE0071301F /* Background.png */; };
 		23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3241D901E370074B677 /* Photogram.xcdatamodeld */; };
@@ -57,14 +52,9 @@
 
 /* Begin PBXFileReference section */
 		2150EE75A1E08DAE5B85D81F /* Pods_Photogram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photogram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2330AF9E1D96232C00AE4985 /* Addevent_CoverBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Addevent_CoverBackground.png; sourceTree = "<group>"; };
-		2330AFA01D96318000AE4985 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		2330AFA21D9631C400AE4985 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
-		2330AFA41D96322F00AE4985 /* EventDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDisplayViewController.swift; sourceTree = "<group>"; };
 		23964A411D95890B00F14782 /* PageItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemViewController.swift; sourceTree = "<group>"; };
 		23964A421D95890B00F14782 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		23964A451D95891E00F14782 /* Walkthrough_guideline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Walkthrough_guideline.png; sourceTree = "<group>"; };
-		23964A471D95999F00F14782 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		23B398D71D9163A7009236C3 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		23CD51391D9172EE0071301F /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		23D9B31A1D901E370074B677 /* Photogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +152,6 @@
 		23D9B3331D901E7A0074B677 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				2330AF9E1D96232C00AE4985 /* Addevent_CoverBackground.png */,
 				23964A451D95891E00F14782 /* Walkthrough_guideline.png */,
 				23B398D71D9163A7009236C3 /* LaunchImage.png */,
 				23CD51391D9172EE0071301F /* Background.png */,
@@ -205,14 +194,7 @@
 				BFC9B2DF1D943386005AF14B /* ImageDetailViewController.swift */,
 				BF994E2A1D94422E009F378B /* Photogram-Bridging-Header.h */,
 				BF994E2D1D94426E009F378B /* CommentViewController.swift */,
-<<<<<<< HEAD
-				23964A471D95999F00F14782 /* AddEventViewController.swift */,
-				2330AFA01D96318000AE4985 /* ProfileViewController.swift */,
-				2330AFA21D9631C400AE4985 /* UserProfileViewController.swift */,
-				2330AFA41D96322F00AE4985 /* EventDisplayViewController.swift */,
-=======
 				BF70AC841D963E8B004B01B5 /* SearchViewController.swift */,
->>>>>>> master
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -374,7 +356,6 @@
 				BFAE83821D919E10002358D3 /* AddEventMenu.plist in Resources */,
 				DC46822C1D911A210078FDDB /* LaunchScreen.storyboard in Resources */,
 				23B398D81D9163A7009236C3 /* LaunchImage.png in Resources */,
-				2330AF9F1D96232C00AE4985 /* Addevent_CoverBackground.png in Resources */,
 				DC4682381D9128F70078FDDB /* Images.xcassets in Resources */,
 				DC4682361D9127DB0078FDDB /* Photos.xcassets in Resources */,
 				DC4682301D911A340078FDDB /* Home.storyboard in Resources */,
@@ -486,15 +467,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC9F4A6E1D926F17003D49C1 /* Photo.swift in Sources */,
-				23964A481D9599A000F14782 /* AddEventViewController.swift in Sources */,
 				23D9B33E1D901F0C0074B677 /* SignInViewController.swift in Sources */,
 				DC9F4A761D928579003D49C1 /* Follow.swift in Sources */,
 				23D9B3441D90203F0074B677 /* IntroductionPageViewController.swift in Sources */,
 				BF3BD9D71D925108001049BE /* UploadEventCollectionViewCell.swift in Sources */,
-				2330AFA11D96318100AE4985 /* ProfileViewController.swift in Sources */,
 				DC9F4A721D927DA4003D49C1 /* FollowTableViewCell.swift in Sources */,
 				23D9B3381D901ED50074B677 /* AppDelegate.swift in Sources */,
-				2330AFA31D9631C400AE4985 /* UserProfileViewController.swift in Sources */,
 				DC9F4A701D9278A8003D49C1 /* FollowViewController.swift in Sources */,
 				BF70AC851D963E8B004B01B5 /* SearchViewController.swift in Sources */,
 				23D9B3421D901F450074B677 /* ForgotPasswordViewController.swift in Sources */,
@@ -515,7 +493,6 @@
 				23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */,
 				BF70AC871D963EB5004B01B5 /* MenuBar.swift in Sources */,
 				BF994E2E1D94426E009F378B /* CommentViewController.swift in Sources */,
-				2330AFA51D96322F00AE4985 /* EventDisplayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
