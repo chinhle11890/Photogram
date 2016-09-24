@@ -22,8 +22,11 @@
 		5ADBD06D04AACEA615C5E893 /* Pods_Photogram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2150EE75A1E08DAE5B85D81F /* Pods_Photogram.framework */; };
 		BF3BD9D51D9249CE001049BE /* UploadEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD9D41D9249CE001049BE /* UploadEventViewController.swift */; };
 		BF3BD9D71D925108001049BE /* UploadEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD9D61D925108001049BE /* UploadEventCollectionViewCell.swift */; };
+		BF4985831D964D08004303D0 /* SearchMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF4985821D964D08004303D0 /* SearchMenu.plist */; };
 		BF4EF8E21D92CE0800F9F7B5 /* UserHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4EF8E11D92CE0800F9F7B5 /* UserHomeViewController.swift */; };
 		BF4EF8E41D92CFF700F9F7B5 /* UserHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4EF8E31D92CFF700F9F7B5 /* UserHomeTableViewCell.swift */; };
+		BF70AC851D963E8B004B01B5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70AC841D963E8B004B01B5 /* SearchViewController.swift */; };
+		BF70AC871D963EB5004B01B5 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70AC861D963EB5004B01B5 /* MenuBar.swift */; };
 		BF994E2E1D94426E009F378B /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF994E2D1D94426E009F378B /* CommentViewController.swift */; };
 		BFAE83751D919C9E002358D3 /* TypeDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE83741D919C9E002358D3 /* TypeDefine.swift */; };
 		BFAE837A1D919CD8002358D3 /* AddEventPopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE83791D919CD8002358D3 /* AddEventPopupCell.swift */; };
@@ -66,8 +69,11 @@
 		8503067DE8633FA6A027C322 /* Pods-Photogram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photogram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photogram/Pods-Photogram.debug.xcconfig"; sourceTree = "<group>"; };
 		BF3BD9D41D9249CE001049BE /* UploadEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadEventViewController.swift; sourceTree = "<group>"; };
 		BF3BD9D61D925108001049BE /* UploadEventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadEventCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF4985821D964D08004303D0 /* SearchMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SearchMenu.plist; sourceTree = "<group>"; };
 		BF4EF8E11D92CE0800F9F7B5 /* UserHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeViewController.swift; sourceTree = "<group>"; };
 		BF4EF8E31D92CFF700F9F7B5 /* UserHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeTableViewCell.swift; sourceTree = "<group>"; };
+		BF70AC841D963E8B004B01B5 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BF70AC861D963EB5004B01B5 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		BF994E2A1D94422E009F378B /* Photogram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photogram-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF994E2D1D94426E009F378B /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		BFAE83741D919C9E002358D3 /* TypeDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDefine.swift; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 				BFC9B2DF1D943386005AF14B /* ImageDetailViewController.swift */,
 				BF994E2A1D94422E009F378B /* Photogram-Bridging-Header.h */,
 				BF994E2D1D94426E009F378B /* CommentViewController.swift */,
+				BF70AC841D963E8B004B01B5 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,6 +239,7 @@
 				BFAE83811D919E10002358D3 /* AddEventMenu.plist */,
 				DC9F4A6A1D926E7A003D49C1 /* Photos.plist */,
 				DC9F4A731D928398003D49C1 /* Follows.plist */,
+				BF4985821D964D08004303D0 /* SearchMenu.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -258,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				DC9F4A7D1D928E6F003D49C1 /* AddEvent.swift */,
+				BF70AC861D963EB5004B01B5 /* MenuBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,6 +360,7 @@
 				DC4682361D9127DB0078FDDB /* Photos.xcassets in Resources */,
 				DC4682301D911A340078FDDB /* Home.storyboard in Resources */,
 				23964A461D95891E00F14782 /* Walkthrough_guideline.png in Resources */,
+				BF4985831D964D08004303D0 /* SearchMenu.plist in Resources */,
 				DC9F4A741D928398003D49C1 /* Follows.plist in Resources */,
 				DC9F4A6B1D926E7A003D49C1 /* Photos.plist in Resources */,
 			);
@@ -464,6 +474,7 @@
 				DC9F4A721D927DA4003D49C1 /* FollowTableViewCell.swift in Sources */,
 				23D9B3381D901ED50074B677 /* AppDelegate.swift in Sources */,
 				DC9F4A701D9278A8003D49C1 /* FollowViewController.swift in Sources */,
+				BF70AC851D963E8B004B01B5 /* SearchViewController.swift in Sources */,
 				23D9B3421D901F450074B677 /* ForgotPasswordViewController.swift in Sources */,
 				DC4682321D911B910078FDDB /* HomeTableViewController.swift in Sources */,
 				DC9F4A7E1D928E6F003D49C1 /* AddEvent.swift in Sources */,
@@ -480,6 +491,7 @@
 				BF4EF8E21D92CE0800F9F7B5 /* UserHomeViewController.swift in Sources */,
 				BF4EF8E41D92CFF700F9F7B5 /* UserHomeTableViewCell.swift in Sources */,
 				23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */,
+				BF70AC871D963EB5004B01B5 /* MenuBar.swift in Sources */,
 				BF994E2E1D94426E009F378B /* CommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +625,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4X4ZDEX56P;
 				INFOPLIST_FILE = Photogram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baon.Photogram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -630,6 +643,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4X4ZDEX56P;
 				INFOPLIST_FILE = Photogram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baon.Photogram;
 				PRODUCT_NAME = "$(TARGET_NAME)";

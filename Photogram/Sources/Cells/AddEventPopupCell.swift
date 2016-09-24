@@ -29,7 +29,11 @@ class AddEventPopupCell: UICollectionViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Setting"
-        label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightMedium)
+        if #available(iOS 8.2, *) {
+            label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightMedium)
+        } else {
+            // Fallback on earlier versions
+        }
         label.textColor = UIColor.white
         return label
     }()
