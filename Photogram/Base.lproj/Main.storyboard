@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m6F-Yz-ZhI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JNt-rI-72U">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -1319,17 +1319,20 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBq-Pd-JHo">
+                                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBq-Pd-JHo">
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                <state key="normal" title="Contact">
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="JF2-TP-dRX"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Contact" image="icn_profile_contact">
                                                                     <color key="titleColor" red="0.92941176470588238" green="0.13333333333333333" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlr-E8-0Du">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlr-E8-0Du">
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                <state key="normal" title="Following">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Following" image="icn_profile_following">
                                                                     <color key="titleColor" red="0.92941176469999998" green="0.1333333333" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                             </button>
@@ -1390,7 +1393,7 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dsk-hU-SKT">
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TVl-5s-c5J">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="TVl-5s-c5J">
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="JBt-um-KnJ"/>
                                                             <constraint firstAttribute="width" secondItem="TVl-5s-c5J" secondAttribute="height" multiplier="1:1" id="wEK-rz-eXg"/>
@@ -1415,8 +1418,8 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="2Zx-F9-Lag" firstAttribute="centerY" secondItem="Dsk-hU-SKT" secondAttribute="centerY" id="2gv-ej-e4M"/>
                                                     <constraint firstAttribute="trailing" secondItem="2Zx-F9-Lag" secondAttribute="trailing" id="5m2-Xs-dKF"/>
-                                                    <constraint firstAttribute="bottom" secondItem="2Zx-F9-Lag" secondAttribute="bottom" id="CeN-eE-psj"/>
                                                     <constraint firstItem="2Zx-F9-Lag" firstAttribute="leading" secondItem="vXI-El-Qk4" secondAttribute="trailing" id="Ils-RP-ukf"/>
                                                     <constraint firstItem="vXI-El-Qk4" firstAttribute="leading" secondItem="TVl-5s-c5J" secondAttribute="trailing" constant="5" id="JvW-p4-Pyv"/>
                                                     <constraint firstAttribute="trailing" secondItem="WJV-sJ-KPS" secondAttribute="trailing" id="Rjr-gG-MwX"/>
@@ -1425,8 +1428,8 @@
                                                     <constraint firstItem="TVl-5s-c5J" firstAttribute="leading" secondItem="Dsk-hU-SKT" secondAttribute="leading" constant="20" id="bVj-Lt-hfR"/>
                                                     <constraint firstItem="WJV-sJ-KPS" firstAttribute="top" secondItem="Dsk-hU-SKT" secondAttribute="top" id="cH6-b5-M73"/>
                                                     <constraint firstItem="vXI-El-Qk4" firstAttribute="bottom" secondItem="TVl-5s-c5J" secondAttribute="bottom" id="hhf-EE-eq8"/>
-                                                    <constraint firstItem="2Zx-F9-Lag" firstAttribute="top" secondItem="Dsk-hU-SKT" secondAttribute="top" id="lSO-cc-Mgj"/>
                                                     <constraint firstItem="vXI-El-Qk4" firstAttribute="top" secondItem="TVl-5s-c5J" secondAttribute="top" id="rGJ-Kc-ZQR"/>
+                                                    <constraint firstItem="2Zx-F9-Lag" firstAttribute="height" secondItem="Dsk-hU-SKT" secondAttribute="height" multiplier="2:3" id="xod-8O-Bcr"/>
                                                     <constraint firstAttribute="bottom" secondItem="WJV-sJ-KPS" secondAttribute="bottom" id="ymN-cr-8ab"/>
                                                 </constraints>
                                             </view>
@@ -1438,7 +1441,7 @@
                                                             <constraint firstAttribute="width" secondItem="Yxt-kB-AJg" secondAttribute="height" multiplier="1:1" id="mhe-YP-BdH"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUb-hw-AsP">
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUb-hw-AsP">
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -1449,7 +1452,11 @@
                                                             <constraint firstAttribute="width" constant="1" id="cyo-pK-B6s"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwh-o3-D14">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwh-o3-D14">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="didClickMyPhotosButton:" destination="JNt-rI-72U" eventType="touchUpInside" id="Ocp-kc-nIg"/>
                                                         </connections>
@@ -1457,18 +1464,18 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="BkD-9R-W0i" firstAttribute="centerY" secondItem="efb-Ya-Mzd" secondAttribute="centerY" id="04a-zU-ewh"/>
                                                     <constraint firstItem="HUb-hw-AsP" firstAttribute="bottom" secondItem="Yxt-kB-AJg" secondAttribute="bottom" id="54V-9o-oBz"/>
                                                     <constraint firstItem="HUb-hw-AsP" firstAttribute="top" secondItem="Yxt-kB-AJg" secondAttribute="top" id="7fu-eJ-jU9"/>
+                                                    <constraint firstItem="BkD-9R-W0i" firstAttribute="height" secondItem="efb-Ya-Mzd" secondAttribute="height" multiplier="2:3" id="8Bu-Si-gbn"/>
                                                     <constraint firstItem="Bwh-o3-D14" firstAttribute="leading" secondItem="efb-Ya-Mzd" secondAttribute="leading" id="GOD-oU-DA6"/>
                                                     <constraint firstItem="Bwh-o3-D14" firstAttribute="top" secondItem="efb-Ya-Mzd" secondAttribute="top" id="Rvv-gE-oyb"/>
                                                     <constraint firstAttribute="trailing" secondItem="Bwh-o3-D14" secondAttribute="trailing" id="WLA-cf-djd"/>
                                                     <constraint firstItem="Yxt-kB-AJg" firstAttribute="leading" secondItem="efb-Ya-Mzd" secondAttribute="leading" constant="20" id="bpk-I8-bHV"/>
-                                                    <constraint firstAttribute="bottom" secondItem="BkD-9R-W0i" secondAttribute="bottom" id="f7W-Wp-lxZ"/>
                                                     <constraint firstAttribute="bottom" secondItem="Bwh-o3-D14" secondAttribute="bottom" id="h0l-Fd-VeD"/>
                                                     <constraint firstItem="BkD-9R-W0i" firstAttribute="leading" secondItem="HUb-hw-AsP" secondAttribute="trailing" id="hap-8x-z98"/>
                                                     <constraint firstItem="HUb-hw-AsP" firstAttribute="leading" secondItem="Yxt-kB-AJg" secondAttribute="trailing" constant="5" id="kLS-LP-piX"/>
                                                     <constraint firstAttribute="trailing" secondItem="BkD-9R-W0i" secondAttribute="trailing" id="ugp-R5-x3P"/>
-                                                    <constraint firstItem="BkD-9R-W0i" firstAttribute="top" secondItem="efb-Ya-Mzd" secondAttribute="top" id="wom-fy-md1"/>
                                                     <constraint firstItem="Yxt-kB-AJg" firstAttribute="centerY" secondItem="efb-Ya-Mzd" secondAttribute="centerY" id="yCD-NZ-QtF"/>
                                                 </constraints>
                                             </view>
@@ -2104,7 +2111,9 @@
         <image name="icn_home_top" width="331" height="64"/>
         <image name="icn_key" width="29" height="29"/>
         <image name="icn_location" width="29" height="29"/>
+        <image name="icn_profile_contact" width="15" height="15"/>
         <image name="icn_profile_edit" width="29" height="29"/>
+        <image name="icn_profile_following" width="15" height="15"/>
         <image name="icn_register_checked" width="29" height="29"/>
         <image name="icn_register_logo" width="150" height="150"/>
         <image name="icn_user" width="29" height="29"/>

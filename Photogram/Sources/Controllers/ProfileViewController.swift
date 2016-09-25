@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController, UIPageViewControllerDataSource {
         // Set corner radius
         contactButton?.layer.cornerRadius = 10
         contactButton?.clipsToBounds = true
+        contactButton?.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
         followingButton?.layer.cornerRadius = 10
         followingButton?.clipsToBounds = true
         
