@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ALRadial.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JSQMessagesViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3AE70E108419B4477C65A55161883F7D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>59CDDB315DD2B098E0CD9ED56B026F4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E34D250982E7CB6806D67ABD1C0A237</key>
+		<key>902BDB79317E0C2666E83471898BF7C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B20EB586997CD2FD5B1D95544093904A</key>
+		<key>B475210296BC90CDA4B2EBAFB673ED16</key>
 		<dict>
 			<key>primary</key>
 			<true/>

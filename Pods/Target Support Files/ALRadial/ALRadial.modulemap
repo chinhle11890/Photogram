@@ -1,0 +1,6 @@
+framework module ALRadial {
+  umbrella header "ALRadial-umbrella.h"
+
+  export *
+  module * { export * }
+}

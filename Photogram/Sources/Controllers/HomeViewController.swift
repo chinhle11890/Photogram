@@ -7,8 +7,17 @@
 //
 
 import UIKit
+import ALRadial
 
-class HomeViewController: UIViewController, AddEventDelegate, UINavigationControllerDelegate {
+class HomeViewController: UIViewController, AddEventDelegate, UINavigationControllerDelegate, ALRadialMenuDelegate {
+    
+    @IBOutlet weak var mainMenuButton: UIButton!
+    
+    lazy var menuButton: ALRadialMenu = {
+        let button = ALRadialMenu()
+        button.delegate = self
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,11 +72,44 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
     // MARK : UINavigationControllerDelegate
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
-//        if viewController is HomeTableViewController {
-//            self.navigationController?.setNavigationBarHidden(true, animated: animated)
-//        } else {
-//            self.navigationController?.setNavigationBarHidden(true, animated: animated)
-//        }
+    }
+    
+    
+    @IBAction func didClickMenuButton(_ sender: AnyObject) {
+        let frame = (sender as! UIButton).superview?.convert(sender.frame, to: nil)
+        print(frame)
+        menuButton.buttonsWillAnimateFromButton(sender, withFrame: frame!, in: self.view)
+    }
+    
+    // MARK: ALRadialMenuDelegate
+    
+    func numberOfItems(in radialMenu: ALRadialMenu!) -> Int {
+        return 5
+    }
+    
+    func arcSize(for radialMenu: ALRadialMenu!) -> Int {
+        return 90
+    }
+    
+    func arcRadius(for radialMenu: ALRadialMenu!) -> Int {
+        return 120
+    }
+    
+    func radialMenu(_ radialMenu: ALRadialMenu!, imageFor index: Int) -> UIImage! {
+        return UIImage(named: "icn_menu_user")
+    }
+    
+    func radialMenu(_ radialMenu: ALRadialMenu!, didSelectItemAt index: Int) {
+        print("ahihi ", index)
+        menuButton.itemsWillDisapear(into: mainMenuButton)
+    }
+    
+    public func arcStart(for radialMenu: ALRadialMenu!) -> Int {
+        return 180
+        
+    }
+    public func buttonSize(for radialMenu: ALRadialMenu!) -> Float {
+        return 40.0
     }
 
 }
