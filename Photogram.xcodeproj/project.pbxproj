@@ -11,6 +11,8 @@
 		2330AFA11D96318100AE4985 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330AFA01D96318000AE4985 /* ProfileViewController.swift */; };
 		2330AFA31D9631C400AE4985 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330AFA21D9631C400AE4985 /* UserProfileViewController.swift */; };
 		2330AFA51D96322F00AE4985 /* EventDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330AFA41D96322F00AE4985 /* EventDisplayViewController.swift */; };
+		238618F91D983DAC00E8BC6E /* Walkthrough_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 238618F81D983DAC00E8BC6E /* Walkthrough_background.png */; };
+		238618FB1D983DD600E8BC6E /* Walkthrough_guideline.png in Resources */ = {isa = PBXBuildFile; fileRef = 238618FA1D983DD600E8BC6E /* Walkthrough_guideline.png */; };
 		23964A431D95890B00F14782 /* PageItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23964A411D95890B00F14782 /* PageItemViewController.swift */; };
 		23964A441D95890B00F14782 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23964A421D95890B00F14782 /* TutorialViewController.swift */; };
 		23964A461D95891E00F14782 /* Walkthrough_guideline.png in Resources */ = {isa = PBXBuildFile; fileRef = 23964A451D95891E00F14782 /* Walkthrough_guideline.png */; };
@@ -63,6 +65,8 @@
 		2330AFA01D96318000AE4985 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2330AFA21D9631C400AE4985 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		2330AFA41D96322F00AE4985 /* EventDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDisplayViewController.swift; sourceTree = "<group>"; };
+		238618F81D983DAC00E8BC6E /* Walkthrough_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Walkthrough_background.png; sourceTree = "<group>"; };
+		238618FA1D983DD600E8BC6E /* Walkthrough_guideline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Walkthrough_guideline.png; sourceTree = "<group>"; };
 		23964A411D95890B00F14782 /* PageItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemViewController.swift; sourceTree = "<group>"; };
 		23964A421D95890B00F14782 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		23964A451D95891E00F14782 /* Walkthrough_guideline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Walkthrough_guideline.png; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 		23D9B3331D901E7A0074B677 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				238618FA1D983DD600E8BC6E /* Walkthrough_guideline.png */,
+				238618F81D983DAC00E8BC6E /* Walkthrough_background.png */,
 				2330AF9E1D96232C00AE4985 /* Addevent_CoverBackground.png */,
 				23964A451D95891E00F14782 /* Walkthrough_guideline.png */,
 				23B398D71D9163A7009236C3 /* LaunchImage.png */,
@@ -372,9 +378,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC46822D1D911A210078FDDB /* Main.storyboard in Resources */,
+				238618FB1D983DD600E8BC6E /* Walkthrough_guideline.png in Resources */,
 				23CD513A1D9172EE0071301F /* Background.png in Resources */,
 				23D9B33A1D901EE20074B677 /* Assets.xcassets in Resources */,
 				BFAE83821D919E10002358D3 /* AddEventMenu.plist in Resources */,
+				238618F91D983DAC00E8BC6E /* Walkthrough_background.png in Resources */,
 				DC46822C1D911A210078FDDB /* LaunchScreen.storyboard in Resources */,
 				23B398D81D9163A7009236C3 /* LaunchImage.png in Resources */,
 				2330AF9F1D96232C00AE4985 /* Addevent_CoverBackground.png in Resources */,

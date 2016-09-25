@@ -63,7 +63,7 @@ class AddEventViewController: UIViewController, UINavigationControllerDelegate, 
     @IBAction func didClickCaptureButton(_ sender: AnyObject) {
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+//        imagePicker.sourceType = .camera
         
         present(imagePicker, animated: true, completion: nil)
     }
