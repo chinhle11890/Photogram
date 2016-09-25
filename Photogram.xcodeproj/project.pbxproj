@@ -18,6 +18,7 @@
 		239718DD1D96A122004BC1CB /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239718DC1D96A122004BC1CB /* ProfileCollectionViewCell.swift */; };
 		23B398D81D9163A7009236C3 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B398D71D9163A7009236C3 /* LaunchImage.png */; };
 		23CD513A1D9172EE0071301F /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 23CD51391D9172EE0071301F /* Background.png */; };
+		23D102D11D9774490041048A /* ProfilePageItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D102D01D9774490041048A /* ProfilePageItemViewController.swift */; };
 		23D9B3261D901E370074B677 /* Photogram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3241D901E370074B677 /* Photogram.xcdatamodeld */; };
 		23D9B3381D901ED50074B677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B3371D901ED50074B677 /* AppDelegate.swift */; };
 		23D9B33A1D901EE20074B677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D9B3391D901EE20074B677 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		239718DC1D96A122004BC1CB /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		23B398D71D9163A7009236C3 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		23CD51391D9172EE0071301F /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		23D102D01D9774490041048A /* ProfilePageItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePageItemViewController.swift; sourceTree = "<group>"; };
 		23D9B31A1D901E370074B677 /* Photogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D9B3251D901E370074B677 /* Photogram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photogram.xcdatamodel; sourceTree = "<group>"; };
 		23D9B32C1D901E370074B677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				2330AFA01D96318000AE4985 /* ProfileViewController.swift */,
 				2330AFA21D9631C400AE4985 /* UserProfileViewController.swift */,
 				2330AFA41D96322F00AE4985 /* EventDisplayViewController.swift */,
+				23D102D01D9774490041048A /* ProfilePageItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				2330AFA11D96318100AE4985 /* ProfileViewController.swift in Sources */,
 				DC9F4A721D927DA4003D49C1 /* FollowTableViewCell.swift in Sources */,
 				23D9B3381D901ED50074B677 /* AppDelegate.swift in Sources */,
+				23D102D11D9774490041048A /* ProfilePageItemViewController.swift in Sources */,
 				2330AFA31D9631C400AE4985 /* UserProfileViewController.swift in Sources */,
 				DC9F4A701D9278A8003D49C1 /* FollowViewController.swift in Sources */,
 				BF70AC851D963E8B004B01B5 /* SearchViewController.swift in Sources */,

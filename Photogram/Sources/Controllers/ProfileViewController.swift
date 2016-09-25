@@ -8,69 +8,128 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
-    @IBOutlet weak var photoCollectionView: UICollectionView!
+class ProfileViewController: UIViewController, UIPageViewControllerDataSource {
     @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var followingButton: UIButton!
     
-    private let numberOfColumn: CGFloat = 3
-    private let distanceOfColumns: CGFloat = 8
-    private let photoCell = "ProfileCollectionViewCell"
+    @IBOutlet weak var collectionView: UIView!
     
-    let photos = Photo.allPhotos()
+    // MARK: - Constants
+    let numberOfItem = 3
+    // MARK: - Variables
+    fileprivate var pageViewController: UIPageViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        photoCollectionView.contentInset = UIEdgeInsetsMake(8, 8, 8, 8)
-        photoCollectionView.showsVerticalScrollIndicator = false
-        photoCollectionView.showsHorizontalScrollIndicator = false
         
         // Set corner radius
         contactButton?.layer.cornerRadius = 10
         contactButton?.clipsToBounds = true
         followingButton?.layer.cornerRadius = 10
         followingButton?.clipsToBounds = true
+        
+        createPageViewController()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    fileprivate func createPageViewController() {
+        let pageController = self.storyboard!.instantiateViewController(withIdentifier: "PageViewController") as! UIPageViewController
+        pageController.dataSource = self
+        
+        let firstController = getItemController(0)!
+        let startingViewControllers = [firstController]
+        pageController.setViewControllers(startingViewControllers, direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
+        
+        pageViewController = pageController
+        addChildViewController(pageViewController!)
+        collectionView.addSubview(pageViewController!.view)
+        let rect = CGRect(x: 0, y: 0, width: collectionView.frame.size.width, height: collectionView.frame.size.height)
+        pageViewController!.view.frame = rect
+        pageViewController!.didMove(toParentViewController: self)
+    }
+
+    // MARK: Actions
     @IBAction func didClickBackButton(_ sender: AnyObject) {
         _ = navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func didClickEditProfileBUtton(_ sender: AnyObject) {
+    @IBAction func didClickEditProfileButton(_ sender: AnyObject) {
         _ = navigationController?.popViewController(animated: true)
     }
     
-    // MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCell, for: indexPath) as! ProfileCollectionViewCell
-        let photo = photos[indexPath.item]
-        cell.photo = photo
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (photoCollectionView.frame.width - 16 - distanceOfColumns*(numberOfColumn - 1))/numberOfColumn
-        let photo = photos[indexPath.item] as Photo
-        let image = photo.image
-        let ratio = image.size.height/image.size.width
+    @IBAction func didClickMyEventsButton(_ sender: AnyObject) {
         
-        return CGSize(width: width, height: width*ratio)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return distanceOfColumns
+    @IBAction func didClickMyPhotosButton(_ sender: AnyObject) {
+        
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return distanceOfColumns
+    @IBAction func didClickSavedPhotosButton(_ sender: AnyObject) {
+        
+    }
+    
+    // MARK: - UIPageViewControllerDataSource
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        
+        let itemController = viewController as! ProfilePageItemViewController
+        if itemController.itemIndex > 0 {
+            return getItemController(itemController.itemIndex-1)
+        }
+        
+        return nil
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        
+        let itemController = viewController as! ProfilePageItemViewController
+        if itemController.itemIndex+1 < numberOfItem {
+            return getItemController(itemController.itemIndex+1)
+        }
+        
+        return nil
+    }
+    
+    fileprivate func getItemController(_ itemIndex: Int) -> ProfilePageItemViewController? {
+        
+        if itemIndex < numberOfItem {
+            let pageItemController = self.storyboard!.instantiateViewController(withIdentifier: "ProfilePageItemViewController") as! ProfilePageItemViewController
+            pageItemController.itemIndex = itemIndex
+            return pageItemController
+        }
+        
+        return nil
+    }
+    
+    // MARK: - Page Indicator
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+    
+    // MARK: - Additions
+    func currentControllerIndex() -> Int {
+        let pageItemController = self.currentController()
+        
+        if let controller = pageItemController as? ProfilePageItemViewController {
+            return controller.itemIndex
+        }
+        
+        return -1
+    }
+    
+    func currentController() -> UIViewController? {
+        if (self.pageViewController?.viewControllers?.count)! > 0 {
+            return self.pageViewController?.viewControllers![0]
+        }
+        
+        return nil
     }
 }
