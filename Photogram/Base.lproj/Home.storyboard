@@ -329,41 +329,28 @@
                                     <outlet property="delegate" destination="3X2-4m-5A9" id="cGq-EK-Tgg"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFY-7t-etq">
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_home_menu" translatesAutoresizingMaskIntoConstraints="NO" id="gqm-Sh-wOC"/>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5D-t4-pqK"/>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="I5D-t4-pqK" firstAttribute="top" secondItem="KFY-7t-etq" secondAttribute="top" id="5j5-e1-x9t"/>
-                                    <constraint firstAttribute="width" constant="40" id="8BX-Hu-kvo"/>
-                                    <constraint firstItem="I5D-t4-pqK" firstAttribute="leading" secondItem="KFY-7t-etq" secondAttribute="leading" id="CEu-bx-MTp"/>
-                                    <constraint firstAttribute="width" secondItem="KFY-7t-etq" secondAttribute="height" multiplier="1:1" id="Cwr-vh-sdS"/>
-                                    <constraint firstItem="gqm-Sh-wOC" firstAttribute="top" secondItem="KFY-7t-etq" secondAttribute="top" id="Ekk-kc-AtF"/>
-                                    <constraint firstAttribute="bottom" secondItem="gqm-Sh-wOC" secondAttribute="bottom" id="Noh-Xb-5ZW"/>
-                                    <constraint firstAttribute="trailing" secondItem="I5D-t4-pqK" secondAttribute="trailing" id="V6H-Au-ORR"/>
-                                    <constraint firstItem="gqm-Sh-wOC" firstAttribute="leading" secondItem="KFY-7t-etq" secondAttribute="leading" id="gyB-K7-HWV"/>
-                                    <constraint firstAttribute="bottom" secondItem="I5D-t4-pqK" secondAttribute="bottom" id="ty4-tV-mAP"/>
-                                    <constraint firstAttribute="trailing" secondItem="gqm-Sh-wOC" secondAttribute="trailing" id="xon-DE-Kbj"/>
-                                </constraints>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5D-t4-pqK">
+                                <state key="normal" image="icn_home_menu"/>
+                                <connections>
+                                    <action selector="didClickMenuButton:" destination="3X2-4m-5A9" eventType="touchUpInside" id="RhF-Li-Rpl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KFY-7t-etq" firstAttribute="width" secondItem="KFY-7t-etq" secondAttribute="height" multiplier="1:1" id="9Hb-F8-ZfB"/>
                             <constraint firstItem="LzM-bH-zY8" firstAttribute="top" secondItem="X7r-aY-3Yo" secondAttribute="bottom" id="BxW-YC-lPQ"/>
-                            <constraint firstAttribute="trailing" secondItem="KFY-7t-etq" secondAttribute="trailing" constant="20" id="JQQ-vm-PYj"/>
                             <constraint firstAttribute="trailing" secondItem="X7r-aY-3Yo" secondAttribute="trailing" id="LYS-JP-pBe"/>
                             <constraint firstItem="Cbc-uO-6Hx" firstAttribute="top" secondItem="peW-Op-soN" secondAttribute="bottom" id="Rve-ci-gdj"/>
                             <constraint firstItem="X7r-aY-3Yo" firstAttribute="leading" secondItem="hud-lG-qXw" secondAttribute="leading" id="Wdd-fH-bkS"/>
                             <constraint firstItem="X7r-aY-3Yo" firstAttribute="top" secondItem="Cbc-uO-6Hx" secondAttribute="bottom" id="hvF-Wq-lQt"/>
                             <constraint firstItem="Cbc-uO-6Hx" firstAttribute="leading" secondItem="hud-lG-qXw" secondAttribute="leading" id="n4Z-3T-PB3"/>
                             <constraint firstAttribute="trailing" secondItem="Cbc-uO-6Hx" secondAttribute="trailing" id="pVh-s1-lic"/>
-                            <constraint firstItem="LzM-bH-zY8" firstAttribute="top" secondItem="KFY-7t-etq" secondAttribute="bottom" constant="20" id="vzk-s2-Cww"/>
+                            <constraint firstItem="LzM-bH-zY8" firstAttribute="top" secondItem="I5D-t4-pqK" secondAttribute="bottom" constant="20" id="pYG-ud-ymu"/>
+                            <constraint firstAttribute="trailing" secondItem="I5D-t4-pqK" secondAttribute="trailing" constant="20" id="yMz-mU-pOY"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mainMenuButton" destination="I5D-t4-pqK" id="1ZY-jh-6Qs"/>
                         <outlet property="profileTableView" destination="X7r-aY-3Yo" id="CSl-i2-ykC"/>
                     </connections>
                 </viewController>
