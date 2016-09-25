@@ -24,22 +24,6 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
 
         navigationController?.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     lazy var addEventPopup: AddEvent = {
         let addEvent = AddEvent()
@@ -57,14 +41,15 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
         let eventType = AddEventType(rawValue: index) ?? .Event
         switch eventType {
         case .Event:
-            if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.uploadEventController) as? UploadEventViewController {
+            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.addEventController) as? AddEventViewController {
                 navigationController?.pushViewController(vc, animated: true)
             }
             break
         case .Photo:
-            if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.followController) as? FollowViewController {
+            if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.uploadEventController) as? UploadEventViewController {
                 navigationController?.pushViewController(vc, animated: true)
             }
+            
             break
         }
     }
@@ -77,7 +62,6 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
     
     @IBAction func didClickMenuButton(_ sender: AnyObject) {
         let frame = (sender as! UIButton).superview?.convert(sender.frame, to: nil)
-        print(frame)
         menuButton.buttonsWillAnimateFromButton(sender, withFrame: frame!, in: self.view)
     }
     
@@ -96,12 +80,39 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
     }
     
     func radialMenu(_ radialMenu: ALRadialMenu!, imageFor index: Int) -> UIImage! {
+        if index == 1 {
+            return UIImage(named: "icn_menu_home")
+        } else if index == 2 {
+            return UIImage(named: "icn_menu_search")
+        } else if index == 3 {
+            return UIImage(named: "icn_menu_camera")
+        } else if index == 4 {
+            return UIImage(named: "icn_menu_add_user")
+        } else if index == 5 {
+            return UIImage(named: "icn_menu_user")
+        }
         return UIImage(named: "icn_menu_user")
     }
     
     func radialMenu(_ radialMenu: ALRadialMenu!, didSelectItemAt index: Int) {
-        print("ahihi ", index)
         menuButton.itemsWillDisapear(into: mainMenuButton)
+        if index == 1 { // home
+            
+        } else if index == 2 {  // search
+            if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.searchController) as? SearchViewController {
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        } else if index == 3 {  // camera
+            
+        } else if index == 4 {  // add user
+            if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.followController) as? FollowViewController {
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        } else if index == 5 {  // user
+            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.profileController) as? ProfileViewController {
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
     
     public func arcStart(for radialMenu: ALRadialMenu!) -> Int {

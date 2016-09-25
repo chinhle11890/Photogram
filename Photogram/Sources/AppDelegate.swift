@@ -43,6 +43,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
 //        self.saveContext()
     }
+    
+    func changeRootView(vc: UIViewController) {
+        if let window = self.window {
+            window.rootViewController = vc
+        }
+    }
+    
+    func changeAppView(vc: UIViewController) {
+        if let window = self.window {
+            if let navi = window.rootViewController as? UINavigationController {
+                navi.setViewControllers([vc], animated: false)
+            }
+        }
+    }
 
     // MARK: - Core Data stack
 //    lazy var persistentContainer: NSPersistentContainer = {

@@ -29,11 +29,7 @@ class AddEventPopupCell: UICollectionViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Setting"
-        if #available(iOS 8.2, *) {
-            label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightMedium)
-        } else {
-            // Fallback on earlier versions
-        }
+        label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightMedium)
         label.textColor = UIColor.white
         return label
     }()
@@ -50,9 +46,9 @@ class AddEventPopupCell: UICollectionViewCell {
         addSubview(nameLabel)
         addSubview(iconImageView)
         
-        addConstraintsWithFormat("H:[v0]-8-[v1(40)]-16-|", views: nameLabel, iconImageView)
+        addConstraintsWithFormat("H:[v0]-8-[v1(30)]-16-|", views: nameLabel, iconImageView)
         addConstraintsWithFormat("V:|[v0]|", views: nameLabel)
-        addConstraintsWithFormat("V:[v0(40)]", views: iconImageView)
+        addConstraintsWithFormat("V:[v0(30)]", views: iconImageView)
         
         addConstraint(NSLayoutConstraint(item: iconImageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
     }

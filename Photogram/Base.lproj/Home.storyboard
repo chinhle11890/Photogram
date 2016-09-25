@@ -44,39 +44,22 @@
                                     <segue destination="gXQ-bH-Z1L" kind="embed" id="a55-TV-xDW"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Beo-f4-RE3">
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_home_menu" translatesAutoresizingMaskIntoConstraints="NO" id="2qL-iZ-3EF"/>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vb8-YT-1hT">
-                                        <connections>
-                                            <action selector="didClickMenuButton:" destination="8bQ-fh-6MO" eventType="touchUpInside" id="16W-IH-lr4"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="2qL-iZ-3EF" secondAttribute="trailing" id="606-Fo-wNt"/>
-                                    <constraint firstAttribute="width" constant="40" id="L5k-Xt-3GW"/>
-                                    <constraint firstAttribute="trailing" secondItem="Vb8-YT-1hT" secondAttribute="trailing" id="Lnw-Ib-5og"/>
-                                    <constraint firstAttribute="bottom" secondItem="Vb8-YT-1hT" secondAttribute="bottom" id="Lug-Dc-aTS"/>
-                                    <constraint firstItem="Vb8-YT-1hT" firstAttribute="leading" secondItem="Beo-f4-RE3" secondAttribute="leading" id="ZhH-nW-4Uv"/>
-                                    <constraint firstItem="2qL-iZ-3EF" firstAttribute="top" secondItem="Beo-f4-RE3" secondAttribute="top" id="d3D-kJ-1cO"/>
-                                    <constraint firstItem="2qL-iZ-3EF" firstAttribute="leading" secondItem="Beo-f4-RE3" secondAttribute="leading" id="f2g-9k-NHC"/>
-                                    <constraint firstItem="Vb8-YT-1hT" firstAttribute="top" secondItem="Beo-f4-RE3" secondAttribute="top" id="iaf-ZN-GpB"/>
-                                    <constraint firstAttribute="bottom" secondItem="2qL-iZ-3EF" secondAttribute="bottom" id="oC2-hJ-jxJ"/>
-                                    <constraint firstAttribute="width" secondItem="Beo-f4-RE3" secondAttribute="height" multiplier="1:1" id="s0l-KI-Z8s"/>
-                                </constraints>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vb8-YT-1hT">
+                                <state key="normal" image="icn_home_menu"/>
+                                <connections>
+                                    <action selector="didClickMenuButton:" destination="8bQ-fh-6MO" eventType="touchUpInside" id="16W-IH-lr4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1Dn-hX-Zzh" secondAttribute="trailing" constant="16" id="1Xr-Bc-dR1"/>
-                            <constraint firstItem="q1e-Yf-owu" firstAttribute="top" secondItem="Beo-f4-RE3" secondAttribute="bottom" constant="20" id="36o-5D-aXN"/>
                             <constraint firstAttribute="trailing" secondItem="HbB-Jz-qlH" secondAttribute="trailing" id="8VM-N4-1cu"/>
                             <constraint firstItem="ftU-ZH-OM8" firstAttribute="leading" secondItem="HOq-9T-CHe" secondAttribute="leading" id="CId-sk-GGo"/>
+                            <constraint firstItem="q1e-Yf-owu" firstAttribute="top" secondItem="Vb8-YT-1hT" secondAttribute="bottom" constant="20" id="Ftj-AF-ly3"/>
                             <constraint firstItem="xUP-cU-o4B" firstAttribute="centerX" secondItem="HOq-9T-CHe" secondAttribute="centerX" id="GLx-3T-WKO"/>
+                            <constraint firstAttribute="trailing" secondItem="Vb8-YT-1hT" secondAttribute="trailing" constant="20" id="KVp-CU-597"/>
                             <constraint firstItem="xUP-cU-o4B" firstAttribute="top" secondItem="HOq-9T-CHe" secondAttribute="topMargin" constant="25" id="LgK-51-wWR"/>
-                            <constraint firstAttribute="trailing" secondItem="Beo-f4-RE3" secondAttribute="trailing" constant="20" id="UQW-O9-PHz"/>
                             <constraint firstItem="HbB-Jz-qlH" firstAttribute="leading" secondItem="HOq-9T-CHe" secondAttribute="leading" id="YnZ-mz-FIf"/>
                             <constraint firstAttribute="trailing" secondItem="ftU-ZH-OM8" secondAttribute="trailing" id="grx-PV-bpT"/>
                             <constraint firstItem="ftU-ZH-OM8" firstAttribute="top" secondItem="HbB-Jz-qlH" secondAttribute="bottom" id="jFU-lf-AyW"/>
