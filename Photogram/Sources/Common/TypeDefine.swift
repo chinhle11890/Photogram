@@ -24,6 +24,7 @@ enum AddEventMenu: String {
 }
 
 class StoryBoardId: NSObject {
+    static let homeNavigation = "HomeNavigation"
     static let uploadEventController = "UploadEventController"
     static let followController = "FollowController"
     static let searchController = "SearchController"

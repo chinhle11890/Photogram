@@ -43,7 +43,10 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInButtonAction(sender: UIButton) {
-        
+        if let navi = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.homeNavigation) as? UINavigationController {
+            appDelegate.changeRootView(vc: navi)
+        }
+
     }
     
     @IBAction func signupButtonAction(sender: UIButton) {
