@@ -1512,15 +1512,19 @@
                                                     <constraint firstItem="aBv-AG-cg7" firstAttribute="leading" secondItem="apc-BI-lvB" secondAttribute="leading" constant="20" id="vRK-Yh-C9F"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g62-N3-V2t">
-                                                <frame key="frameInset" minY="59" width="375" height="1"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g62-N3-V2t">
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="z3D-02-5Qz"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="g62-N3-V2t" secondAttribute="trailing" id="6Da-n1-M3c"/>
+                                            <constraint firstAttribute="bottom" secondItem="g62-N3-V2t" secondAttribute="bottom" id="99y-ct-wxu"/>
                                             <constraint firstItem="Dsk-hU-SKT" firstAttribute="leading" secondItem="fnX-8e-lub" secondAttribute="leading" id="AEp-H0-giU"/>
+                                            <constraint firstItem="g62-N3-V2t" firstAttribute="leading" secondItem="fnX-8e-lub" secondAttribute="leading" id="B2S-mP-3lB"/>
                                             <constraint firstItem="apc-BI-lvB" firstAttribute="top" secondItem="fnX-8e-lub" secondAttribute="top" id="E6u-at-QxA"/>
                                             <constraint firstItem="efb-Ya-Mzd" firstAttribute="width" secondItem="Dsk-hU-SKT" secondAttribute="width" id="FgC-kv-Yt3"/>
                                             <constraint firstItem="Dsk-hU-SKT" firstAttribute="width" secondItem="fnX-8e-lub" secondAttribute="width" multiplier="1:3" id="G9C-sR-VUV"/>

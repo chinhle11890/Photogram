@@ -63,15 +63,38 @@ class ProfileViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     @IBAction func didClickMyEventsButton(_ sender: AnyObject) {
-        
+        slideToPage(index: 0, completion: nil)
     }
     
     @IBAction func didClickMyPhotosButton(_ sender: AnyObject) {
-        
+        slideToPage(index: 1, completion: nil)
     }
     
     @IBAction func didClickSavedPhotosButton(_ sender: AnyObject) {
+        slideToPage(index: 2, completion: nil)
+    }
+    
+    func slideToPage(index: Int, completion: (() -> Void)?) {
+        if index >= numberOfItem || index < 0 {
+            return
+        }
         
+        let currentViewController = pageViewController?.viewControllers![0] as! ProfilePageItemViewController
+        let currentPageIndex = currentViewController.itemIndex
+        
+        print("\(index), \(currentPageIndex)")
+        
+        // Moving forward
+        if index > currentPageIndex {
+            if let vc: ProfilePageItemViewController = getItemController(index) {
+                self.pageViewController!.setViewControllers([vc], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
+            }
+        }
+            // Moving backward
+        else if index < currentPageIndex {
+            if let vc: ProfilePageItemViewController = getItemController(index) {
+                self.pageViewController!.setViewControllers([vc], direction: UIPageViewControllerNavigationDirection.reverse, animated: true, completion: nil)
+            }        }
     }
     
     // MARK: - UIPageViewControllerDataSource
