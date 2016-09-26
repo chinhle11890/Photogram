@@ -49,7 +49,7 @@ class ProfilePageItemViewController: UIViewController, UICollectionViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (photoCollectionView.frame.width - 16 - distanceOfColumns*(numberOfColumn - 1))/numberOfColumn
-        print("\(photoCollectionView.frame.width), \(width)")
+//        print("\(photoCollectionView.frame.width), \(width)")
         let photo = photos[indexPath.item] as Photo
         let image = photo.image
         let ratio = image.size.height/image.size.width

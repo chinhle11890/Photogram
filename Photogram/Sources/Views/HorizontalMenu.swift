@@ -92,6 +92,7 @@ class HorizontalMenu: UIView, UICollectionViewDataSource, UICollectionViewDelega
         let dictionary = settings[indexPath.row]
         let setting = Setting(title: dictionary["title"] as! String, imageName: dictionary["image"] as! String)
         cell.setting = setting
+        cell.seperatorView.isHidden = settings.count - 1 == indexPath.item
 
         return cell
     }
@@ -130,6 +131,21 @@ class HorizontalMenu: UIView, UICollectionViewDataSource, UICollectionViewDelega
         fatalError("init(coder:) has not been implemented")
     }
     
+    func updateHorizontalBar(_ index: Int) {
+        selectedIndex = index
+        let x = CGFloat(index) * frame.width / CGFloat(settings.count)
+        leftConstraint.constant = x;
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: 1,
+                       initialSpringVelocity: 1,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.layoutIfNeeded()
+        }) { (success: Bool) in
+        }
+
+    }
 }
 
 class HorizontalCell: UICollectionViewCell {
@@ -160,18 +176,41 @@ class HorizontalCell: UICollectionViewCell {
         return imageView
     }()
     
+    lazy var seperatorView: UIView = {
+       let view = UIView()
+        view.backgroundColor = .lightGray
+        return view
+    }()
+    
     func setupViews() {
         addSubview(iconImageView)
         addSubview(titleLabel)
-        addConstraintsWithFormat("H:|-2-[v0(30)]-2-[v1]-2-|", views: iconImageView , titleLabel)
+        addSubview(seperatorView)
+        addConstraintsWithFormat("H:|-2-[v0(30)]-2-[v1]-2-[v2(1)]|", views: iconImageView , titleLabel, seperatorView)
         addConstraintsWithFormat("V:|[v0]|", views: titleLabel)
         addConstraintsWithFormat("V:[v0(30)]", views: iconImageView)
+        
         addConstraint(NSLayoutConstraint.init(item: iconImageView,
-                                              attribute: .centerX,
+                                              attribute: .centerY,
                                               relatedBy: .equal,
                                               toItem: self,
-                                              attribute: .centerX,
+                                              attribute: .centerY,
                                               multiplier: 1,
+                                              constant: 0))
+        addConstraint(NSLayoutConstraint.init(item: seperatorView,
+                                              attribute: .centerY,
+                                              relatedBy: .equal,
+                                              toItem: self,
+                                              attribute: .centerY,
+                                              multiplier: 1,
+                                              constant: 0))
+        
+        addConstraint(NSLayoutConstraint.init(item: seperatorView,
+                                              attribute: .height,
+                                              relatedBy: .equal,
+                                              toItem: self,
+                                              attribute: .height,
+                                              multiplier: 0.5,
                                               constant: 0))
     }
     
