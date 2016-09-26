@@ -1296,10 +1296,10 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OE3-1U-z6F">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fft-hR-mgX"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Addevent_CoverBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="fft-hR-mgX"/>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMx-i7-QjC">
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w8F-bH-21J">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="w8F-bH-21J">
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="w8F-bH-21J" secondAttribute="height" multiplier="1:1" id="KJ0-F7-zmt"/>
                                                         </constraints>
@@ -1310,7 +1310,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="f4A-tm-d4r"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1338,16 +1338,16 @@
                                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBq-Pd-JHo">
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="JF2-TP-dRX"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="JF2-TP-dRX"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                 <state key="normal" title="Contact" image="icn_profile_contact">
                                                                     <color key="titleColor" red="0.92941176470588238" green="0.13333333333333333" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlr-E8-0Du">
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                 <state key="normal" title="Following" image="icn_profile_following">
                                                                     <color key="titleColor" red="0.92941176469999998" green="0.1333333333" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
@@ -1385,15 +1385,15 @@
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="ufX-nU-IS5" secondAttribute="trailing" id="9vZ-ks-YZn"/>
                                                     <constraint firstItem="ufX-nU-IS5" firstAttribute="leading" secondItem="w8F-bH-21J" secondAttribute="trailing" constant="20" id="KWh-Rx-5Yn"/>
-                                                    <constraint firstAttribute="bottom" secondItem="w8F-bH-21J" secondAttribute="bottom" id="Rk0-1w-uhS"/>
+                                                    <constraint firstAttribute="bottom" secondItem="w8F-bH-21J" secondAttribute="bottom" constant="10" id="Rk0-1w-uhS"/>
                                                     <constraint firstAttribute="bottom" secondItem="ufX-nU-IS5" secondAttribute="bottom" id="ShQ-YR-lLK"/>
-                                                    <constraint firstItem="w8F-bH-21J" firstAttribute="top" secondItem="OMx-i7-QjC" secondAttribute="top" id="nBp-eN-qiY"/>
+                                                    <constraint firstItem="w8F-bH-21J" firstAttribute="top" secondItem="OMx-i7-QjC" secondAttribute="top" constant="10" id="nBp-eN-qiY"/>
                                                     <constraint firstItem="w8F-bH-21J" firstAttribute="leading" secondItem="OMx-i7-QjC" secondAttribute="leading" constant="40" id="vCA-0C-wot"/>
                                                     <constraint firstItem="ufX-nU-IS5" firstAttribute="top" secondItem="OMx-i7-QjC" secondAttribute="top" id="wFr-X7-8yl"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.144059354" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="OMx-i7-QjC" firstAttribute="leading" secondItem="OE3-1U-z6F" secondAttribute="leading" id="1I9-Oe-u3h"/>
                                             <constraint firstItem="fft-hR-mgX" firstAttribute="top" secondItem="OE3-1U-z6F" secondAttribute="top" id="4YU-ra-Mxl"/>
@@ -1656,10 +1656,10 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IG-O6-Kh9">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dk4-6C-QeI"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Addevent_CoverBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dk4-6C-QeI"/>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUm-D6-yhM">
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SXE-o3-EQN">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="SXE-o3-EQN">
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="SXE-o3-EQN" secondAttribute="height" multiplier="1:1" id="eZg-CZ-eJ7"/>
                                                         </constraints>
@@ -1670,7 +1670,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="IO2-B2-hr8"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1687,14 +1687,17 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXq-Tc-uIa">
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="PYl-kA-lrk"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                 <state key="normal" title="Contact">
                                                                     <color key="titleColor" red="0.92941176469999998" green="0.1333333333" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGp-jq-Lu2">
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                 <state key="normal" title="Following">
                                                                     <color key="titleColor" red="0.92941176469999998" green="0.1333333333" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
@@ -1726,14 +1729,13 @@
                                                     <constraint firstAttribute="bottom" secondItem="e0J-o7-MP0" secondAttribute="bottom" id="LTI-pa-Vin"/>
                                                     <constraint firstItem="SXE-o3-EQN" firstAttribute="leading" secondItem="jUm-D6-yhM" secondAttribute="leading" constant="40" id="UYi-rr-RlD"/>
                                                     <constraint firstItem="e0J-o7-MP0" firstAttribute="leading" secondItem="SXE-o3-EQN" secondAttribute="trailing" constant="20" id="WBr-nF-d40"/>
-                                                    <constraint firstAttribute="bottom" secondItem="SXE-o3-EQN" secondAttribute="bottom" id="eao-Ho-EQc"/>
+                                                    <constraint firstAttribute="bottom" secondItem="SXE-o3-EQN" secondAttribute="bottom" constant="10" id="eao-Ho-EQc"/>
                                                     <constraint firstItem="e0J-o7-MP0" firstAttribute="top" secondItem="jUm-D6-yhM" secondAttribute="top" id="g6L-6m-xjE"/>
                                                     <constraint firstAttribute="trailing" secondItem="e0J-o7-MP0" secondAttribute="trailing" id="kHk-y9-eTD"/>
-                                                    <constraint firstItem="SXE-o3-EQN" firstAttribute="top" secondItem="jUm-D6-yhM" secondAttribute="top" id="lxh-aB-FzP"/>
+                                                    <constraint firstItem="SXE-o3-EQN" firstAttribute="top" secondItem="jUm-D6-yhM" secondAttribute="top" constant="10" id="lxh-aB-FzP"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.144059354" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="jUm-D6-yhM" secondAttribute="trailing" id="24j-j5-QuC"/>
                                             <constraint firstItem="jUm-D6-yhM" firstAttribute="centerY" secondItem="9IG-O6-Kh9" secondAttribute="centerY" id="8EZ-Rx-R0Q"/>
@@ -1938,7 +1940,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfS-uJ-QVz">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R6W-ul-rPa"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Addevent_CoverBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="R6W-ul-rPa"/>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="XCW-wR-sgK">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="0na-2Q-3Ej"/>
@@ -2115,6 +2117,7 @@
     </scenes>
     <resources>
         <image name="01" width="213" height="320"/>
+        <image name="10" width="213" height="320"/>
         <image name="Addevent_CoverBackground.png" width="1396" height="915"/>
         <image name="Background.png" width="1242" height="2208"/>
         <image name="Walkthrough_background.png" width="1242" height="2208"/>

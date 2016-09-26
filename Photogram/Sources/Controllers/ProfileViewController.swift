@@ -38,10 +38,10 @@ class ProfileViewController: UIViewController, UIPageViewControllerDataSource, H
         containerMenuView.addConstraintsWithFormat("V:|[v0]|", views: horizontalMenu)
         
         // Set corner radius
-        contactButton?.layer.cornerRadius = 10
+        contactButton?.layer.cornerRadius = 5
         contactButton?.clipsToBounds = true
         contactButton?.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
-        followingButton?.layer.cornerRadius = 10
+        followingButton?.layer.cornerRadius = 5
         followingButton?.clipsToBounds = true
         
         createPageViewController()
