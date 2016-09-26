@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m6F-Yz-ZhI">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m6F-Yz-ZhI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -55,8 +55,8 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="PIj-Dr-ldw" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,7 +92,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A5O-uX-cRy" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -425,8 +425,8 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w4w-GF-Ds5" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -462,8 +462,8 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WfL-Is-pXb" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -499,8 +499,8 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fkv-Nm-C3r" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -536,7 +536,7 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9h-Va-aJQ" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -573,7 +573,7 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Re-type Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3OW-vJ-tLi" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -651,10 +651,14 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQw-J9-Y1u">
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="30" id="6hW-r9-QJ1"/>
+                                                                            <constraint firstAttribute="height" constant="20" id="6hW-r9-QJ1"/>
                                                                             <constraint firstAttribute="width" secondItem="ZQw-J9-Y1u" secondAttribute="height" multiplier="1:1" id="Ik1-4W-qls"/>
                                                                         </constraints>
-                                                                        <state key="normal" image="icn_register_checked"/>
+                                                                        <state key="normal" image="icn_register_unchecked"/>
+                                                                        <state key="selected" image="icn_register_checked"/>
+                                                                        <connections>
+                                                                            <action selector="photographerButtonActionWithSender:" destination="lx0-2u-huw" eventType="touchUpInside" id="Azi-FX-15J"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photographer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tN-a6-HNJ">
                                                                         <constraints>
@@ -773,10 +777,10 @@
                             <constraint firstItem="uef-WF-ZD4" firstAttribute="width" secondItem="90O-nV-jge" secondAttribute="width" id="2xW-xl-kI8"/>
                             <constraint firstItem="soM-Hw-pMx" firstAttribute="top" secondItem="P8Y-s9-lnV" secondAttribute="bottom" id="DL4-dN-qOQ"/>
                             <constraint firstItem="mdA-CI-4CM" firstAttribute="height" secondItem="90O-nV-jge" secondAttribute="height" multiplier="3:10" id="Kvu-Mh-biZ"/>
-                            <constraint firstItem="uCY-6e-fQN" firstAttribute="height" secondItem="90O-nV-jge" secondAttribute="height" multiplier="3:5" id="SkU-b1-ZMo"/>
                             <constraint firstItem="P8Y-s9-lnV" firstAttribute="top" secondItem="90O-nV-jge" secondAttribute="top" id="T3p-EP-0ac"/>
                             <constraint firstItem="NJz-dF-L0G" firstAttribute="top" secondItem="90O-nV-jge" secondAttribute="top" id="dj0-Lw-LyH"/>
                             <constraint firstAttribute="trailing" secondItem="P8Y-s9-lnV" secondAttribute="trailing" id="mFT-Qg-rlf"/>
+                            <constraint firstItem="uCY-6e-fQN" firstAttribute="height" secondItem="90O-nV-jge" secondAttribute="height" multiplier="3:5" id="o8x-y8-SUo"/>
                             <constraint firstItem="NJz-dF-L0G" firstAttribute="leading" secondItem="90O-nV-jge" secondAttribute="leading" id="rWu-f7-HY3"/>
                             <constraint firstItem="soM-Hw-pMx" firstAttribute="top" secondItem="NJz-dF-L0G" secondAttribute="bottom" id="t2P-2G-aeD"/>
                             <constraint firstItem="uef-WF-ZD4" firstAttribute="height" relation="greaterThanOrEqual" secondItem="90O-nV-jge" secondAttribute="height" priority="250" id="uQx-qH-oGi"/>
@@ -857,8 +861,8 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDe-tF-jaN" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -875,7 +879,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="BsV-Vj-ce4" secondAttribute="height" multiplier="1:1" id="cvM-0y-cTV"/>
-                                            <constraint firstAttribute="height" constant="30" id="e2z-Va-Uh8"/>
+                                            <constraint firstAttribute="height" constant="20" id="e2z-Va-Uh8"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -1033,7 +1037,7 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Event Name" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="24Z-8R-EqU" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -1062,7 +1066,7 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="San Francisco, CA Canada" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y02-DC-Jde" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -1097,21 +1101,28 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBi-1N-d79">
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bc-92-T9m">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <state key="normal" title="Private" image="icn_addevent_uncheck">
                                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <state key="selected" image="icn_addevent_check">
                                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="privatePublicButtonActionWithSender:" destination="dKG-aH-F3f" eventType="touchUpInside" id="aFe-xB-XCf"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-Fs-Swe">
-                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <state key="normal" title="Public" image="icn_addevent_uncheck">
                                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <state key="selected" image="icn_addevent_check">
                                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="privatePublicButtonActionWithSender:" destination="dKG-aH-F3f" eventType="touchUpInside" id="Mma-I9-Hqw"/>
+                                                                </connections>
                                                             </button>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lez-3h-0Xf">
                                                                 <subviews>
@@ -1208,6 +1219,8 @@
                     <connections>
                         <outlet property="cameraImageView" destination="qTX-4b-nuB" id="dC8-Qc-9Hl"/>
                         <outlet property="locationImageView" destination="aNW-fg-dkk" id="rCW-ot-1Iu"/>
+                        <outlet property="privateButton" destination="2Bc-92-T9m" id="WeT-2K-bDk"/>
+                        <outlet property="publicButton" destination="n9D-Fs-Swe" id="ggl-dX-Ijh"/>
                         <outlet property="uploadLabel" destination="puD-gW-r3m" id="O41-3g-xL1"/>
                     </connections>
                 </viewController>
@@ -2124,6 +2137,7 @@
         <image name="icn_profile_following" width="15" height="15"/>
         <image name="icn_register_checked" width="29" height="29"/>
         <image name="icn_register_logo" width="150" height="150"/>
+        <image name="icn_register_unchecked" width="30" height="30"/>
         <image name="icn_user" width="29" height="29"/>
     </resources>
 </document>

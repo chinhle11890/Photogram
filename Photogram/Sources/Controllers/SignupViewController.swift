@@ -35,4 +35,8 @@ class SignupViewController: UIViewController {
     @IBAction func dismissButtonAction(sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func photographerButtonAction(sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
 }

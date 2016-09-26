@@ -8,10 +8,11 @@
 
 import UIKit
 
-class AddEventViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class AddEventViewController: UIViewController {
     @IBOutlet weak var locationImageView: UIImageView!
     @IBOutlet weak var cameraImageView: UIImageView!
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var privateButton: UIButton!
+    @IBOutlet weak var publicButton: UIButton!
     @IBOutlet weak var uploadLabel: UILabel!
     
     var imagePicker: UIImagePickerController!
@@ -20,8 +21,8 @@ class AddEventViewController: UIViewController, UINavigationControllerDelegate, 
         super.viewDidLoad()
 
         // Set border and rounded
-        signInButton?.layer.cornerRadius = 15
-        signInButton?.clipsToBounds = true
+        privateButton.isSelected = true
+        publicButton.isSelected = false
         
         uploadLabel?.layer.cornerRadius = 5
         uploadLabel?.clipsToBounds = true
@@ -62,15 +63,12 @@ class AddEventViewController: UIViewController, UINavigationControllerDelegate, 
 
     @IBAction func didClickCaptureButton(_ sender: AnyObject) {
         imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self
-//        imagePicker.sourceType = .camera
         
         present(imagePicker, animated: true, completion: nil)
     }
     
-    // MARK - UIImagePickerControllerDelegate
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-//        imagePicker.dismissViewControllerAnimated(true, completion: nil)
-//        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    @IBAction func privatePublicButtonAction(sender: UIButton) {
+        privateButton.isSelected = !privateButton.isSelected
+        publicButton.isSelected = !publicButton.isSelected
     }
 }
