@@ -58,6 +58,7 @@
 		DC9F4A761D928579003D49C1 /* Follow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F4A751D928579003D49C1 /* Follow.swift */; };
 		DC9F4A7E1D928E6F003D49C1 /* AddEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F4A7D1D928E6F003D49C1 /* AddEvent.swift */; };
 		DCA6DEAC1D914C45000DCE25 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6DEAB1D914C45000DCE25 /* HomeTableViewCell.swift */; };
+		DCCE9FF31D993D0D00550259 /* HorizontalMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE9FF21D993D0D00550259 /* HorizontalMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		DC9F4A751D928579003D49C1 /* Follow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Follow.swift; sourceTree = "<group>"; };
 		DC9F4A7D1D928E6F003D49C1 /* AddEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEvent.swift; sourceTree = "<group>"; };
 		DCA6DEAB1D914C45000DCE25 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DCCE9FF21D993D0D00550259 /* HorizontalMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +298,7 @@
 			children = (
 				DC9F4A7D1D928E6F003D49C1 /* AddEvent.swift */,
 				BF70AC861D963EB5004B01B5 /* MenuBar.swift */,
+				DCCE9FF21D993D0D00550259 /* HorizontalMenu.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				2330AFA31D9631C400AE4985 /* UserProfileViewController.swift in Sources */,
 				DC9F4A701D9278A8003D49C1 /* FollowViewController.swift in Sources */,
 				BF70AC851D963E8B004B01B5 /* SearchViewController.swift in Sources */,
+				DCCE9FF31D993D0D00550259 /* HorizontalMenu.swift in Sources */,
 				23D9B3421D901F450074B677 /* ForgotPasswordViewController.swift in Sources */,
 				DC4682321D911B910078FDDB /* HomeTableViewController.swift in Sources */,
 				DC9F4A7E1D928E6F003D49C1 /* AddEvent.swift in Sources */,
