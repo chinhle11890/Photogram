@@ -115,7 +115,8 @@ class UserHomeViewController: UIViewController, UITableViewDelegate, UITableView
     func radialMenu(_ radialMenu: ALRadialMenu!, didSelectItemAt index: Int) {
         menuButton.itemsWillDisapear(into: mainMenuButton)
         if index == 1 { // home
-            _ = navigationController?.popViewController(animated: true  )
+//            _ = navigationController?.popViewController(animated: true)
+            _ = navigationController?.popToRootViewController(animated: true)
         } else if index == 2 {  // search
             if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.searchController) as? SearchViewController {
                 navigationController?.pushViewController(vc, animated: true)

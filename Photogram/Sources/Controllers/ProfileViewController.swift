@@ -59,7 +59,7 @@ class ProfileViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     @IBAction func didClickEditProfileButton(_ sender: AnyObject) {
-        _ = navigationController?.popViewController(animated: true)
+
     }
     
     @IBAction func didClickMyEventsButton(_ sender: AnyObject) {
