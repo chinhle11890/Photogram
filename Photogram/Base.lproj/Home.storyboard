@@ -669,9 +669,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Cbc-uO-6Hx" firstAttribute="top" secondItem="hud-lG-qXw" secondAttribute="top" id="Ade-77-p2B"/>
                             <constraint firstItem="LzM-bH-zY8" firstAttribute="top" secondItem="X7r-aY-3Yo" secondAttribute="bottom" id="BxW-YC-lPQ"/>
                             <constraint firstAttribute="trailing" secondItem="X7r-aY-3Yo" secondAttribute="trailing" id="LYS-JP-pBe"/>
-                            <constraint firstItem="Cbc-uO-6Hx" firstAttribute="top" secondItem="peW-Op-soN" secondAttribute="bottom" id="Rve-ci-gdj"/>
                             <constraint firstItem="X7r-aY-3Yo" firstAttribute="leading" secondItem="hud-lG-qXw" secondAttribute="leading" id="Wdd-fH-bkS"/>
                             <constraint firstItem="X7r-aY-3Yo" firstAttribute="top" secondItem="Cbc-uO-6Hx" secondAttribute="bottom" id="hvF-Wq-lQt"/>
                             <constraint firstItem="Cbc-uO-6Hx" firstAttribute="leading" secondItem="hud-lG-qXw" secondAttribute="leading" id="n4Z-3T-PB3"/>
@@ -897,8 +897,8 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="RFz-4u-MqP" secondAttribute="trailing" id="2hq-Cd-0lg"/>
                             <constraint firstItem="XA4-Rq-u2u" firstAttribute="leading" secondItem="Vcj-D1-flX" secondAttribute="leading" id="Btc-fR-yeF"/>
+                            <constraint firstItem="stw-MS-e4S" firstAttribute="top" secondItem="Vcj-D1-flX" secondAttribute="top" id="GyY-4R-Si5"/>
                             <constraint firstItem="nUS-ai-QVP" firstAttribute="top" secondItem="XA4-Rq-u2u" secondAttribute="bottom" id="QaB-UR-6T8"/>
-                            <constraint firstItem="stw-MS-e4S" firstAttribute="top" secondItem="up1-E7-SWS" secondAttribute="bottom" id="S6c-qb-iBi"/>
                             <constraint firstItem="XA4-Rq-u2u" firstAttribute="height" secondItem="Vcj-D1-flX" secondAttribute="height" multiplier="1:2" id="TEg-P2-uIv"/>
                             <constraint firstItem="stw-MS-e4S" firstAttribute="leading" secondItem="Vcj-D1-flX" secondAttribute="leading" id="Tot-yP-sHD"/>
                             <constraint firstItem="RFz-4u-MqP" firstAttribute="leading" secondItem="Vcj-D1-flX" secondAttribute="leading" id="g3W-aj-kXw"/>
@@ -1327,10 +1327,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="followCell" rowHeight="100" id="d6Q-xZ-PiU" customClass="FollowTableViewCell" customModule="Photogram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d6Q-xZ-PiU" id="yy5-Vp-t4k">
-                                            <frame key="frameInset" width="1000" height="100"/>
+                                            <frame key="frameInset" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03" translatesAutoresizingMaskIntoConstraints="NO" id="Hm1-I3-zRa">

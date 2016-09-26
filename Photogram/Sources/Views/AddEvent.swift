@@ -44,13 +44,6 @@ class AddEvent: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, 
         blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
         blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissView)))
         
-//        let image = UIImageView()
-//        image.image = UIImage(named: "icn_back_circle_red")
-//        image.contentMode = .scaleToFill
-//        blackView.addSubview(image)
-//        blackView.addConstraintsWithFormat("H:[v0(30)]-20-|", views: image)
-//        blackView.addConstraintsWithFormat("V:[v0(30)]-20-|", views: image)
-        
         let button = UIButton()
         button.setImage(UIImage(named: "icn_back_circle_red"), for: .normal)
         button.addTarget(self, action: #selector(dismissView), for: .touchUpInside)

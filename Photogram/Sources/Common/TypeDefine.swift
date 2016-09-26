@@ -23,6 +23,11 @@ enum AddEventMenu: String {
     case UserHome = "userhome"
 }
 
+enum HorizontalMenuType: String {
+    case PROFILE = "profile"
+    case UserProfile = "userprofile"
+}
+
 class StoryBoardId: NSObject {
     static let homeNavigation = "HomeNavigation"
     static let uploadEventController = "UploadEventController"

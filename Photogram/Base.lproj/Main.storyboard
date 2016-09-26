@@ -1589,6 +1589,7 @@
                     <connections>
                         <outlet property="collectionView" destination="Dun-bE-dZZ" id="N3t-Vz-dxO"/>
                         <outlet property="contactButton" destination="wBq-Pd-JHo" id="tH0-rL-k7a"/>
+                        <outlet property="containerMenuView" destination="fnX-8e-lub" id="NyG-vc-wVA"/>
                         <outlet property="followingButton" destination="qlr-E8-0Du" id="WO0-x3-qsg"/>
                     </connections>
                 </viewController>

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HorizontalMenuDelegate: AnyObject {
-    func HorizontalMenu(_ horizontalMenu: HorizontalMenu, didClickItemAt index: Int)
+    func horizontalMenu(_ horizontalMenu: HorizontalMenu, didClickItemAt index: Int)
 }
 
 class HorizontalMenu: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -29,10 +29,17 @@ class HorizontalMenu: UIView, UICollectionViewDataSource, UICollectionViewDelega
         return view
     }()
     
-    lazy var dataSource: [String] = {
-        let path = Bundle.main.path(forResource: "SearchMenu", ofType: "plist")
-        return NSArray(contentsOfFile: path!) as! [String]
-    }()
+    var menuType: HorizontalMenuType! {
+        didSet {
+            let path = Bundle.main.path(forResource: "HorizontalMenu", ofType: "plist")
+            let dictionary = NSDictionary(contentsOfFile: path!)
+            settings =  dictionary![menuType.rawValue] as! [AnyObject]
+            setupView()
+            collectionView.reloadData()
+        }
+    }
+
+    private var settings: [AnyObject] = [AnyObject]()
     
     private var leftConstraint: NSLayoutConstraint!
     
@@ -42,8 +49,10 @@ class HorizontalMenu: UIView, UICollectionViewDataSource, UICollectionViewDelega
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        collectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
+    }
+    
+    func setupView() {
+        collectionView.register(HorizontalCell.self, forCellWithReuseIdentifier: cellId)
         
         addSubview(collectionView)
         addConstraintsWithFormat("H:|[v0]|", views: collectionView)
@@ -60,7 +69,7 @@ class HorizontalMenu: UIView, UICollectionViewDataSource, UICollectionViewDelega
                                               relatedBy: .equal,
                                               toItem: self,
                                               attribute: .width,
-                                              multiplier: 1/CGFloat(dataSource.count),
+                                              multiplier: 1/CGFloat(settings.count),
                                               constant: 0))
         leftConstraint = NSLayoutConstraint.init(item: horizontalBar,
                                                  attribute: .leading,
@@ -70,17 +79,20 @@ class HorizontalMenu: UIView, UICollectionViewDataSource, UICollectionViewDelega
                                                  multiplier: 1,
                                                  constant: 0)
         addConstraint(leftConstraint)
+
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.count
+        return settings.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HorizontalCell
         
-        cell.titleLabel.text = dataSource[indexPath.item]
-        
+        let dictionary = settings[indexPath.row]
+        let setting = Setting(title: dictionary["title"] as! String, imageName: dictionary["image"] as! String)
+        cell.setting = setting
+
         return cell
     }
     
@@ -89,7 +101,7 @@ class HorizontalMenu: UIView, UICollectionViewDataSource, UICollectionViewDelega
             return
         }
         selectedIndex = indexPath.item
-        let x = CGFloat(indexPath.item) * frame.width / CGFloat(dataSource.count)
+        let x = CGFloat(indexPath.item) * frame.width / CGFloat(settings.count)
         leftConstraint.constant = x;
         UIView.animate(withDuration: 0.5,
                        delay: 0,
@@ -100,13 +112,13 @@ class HorizontalMenu: UIView, UICollectionViewDataSource, UICollectionViewDelega
                         self.layoutIfNeeded()
         }) { (success: Bool) in
             if let delegate = self.delegate {
-                delegate.HorizontalMenu(self, didClickItemAt: indexPath.item)
+                delegate.horizontalMenu(self, didClickItemAt: indexPath.item)
             }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let item: CGFloat = CGFloat(dataSource.count)
+        let item: CGFloat = CGFloat(settings.count)
         return CGSize(width: frame.width/item, height: frame.height)
     }
     
@@ -143,15 +155,31 @@ class HorizontalCell: UICollectionViewCell {
     lazy var iconImageView: UIImageView = {
         let image = UIImage(named: "icn_user")
         let imageView = UIImageView()
-        imageView.image = image!
+        imageView.image = image?.withRenderingMode(.alwaysTemplate)
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
     func setupViews() {
+        addSubview(iconImageView)
         addSubview(titleLabel)
-        addConstraintsWithFormat("H:|-2-[v0]-2-|", views: titleLabel)
+        addConstraintsWithFormat("H:|-2-[v0(30)]-2-[v1]-2-|", views: iconImageView , titleLabel)
         addConstraintsWithFormat("V:|[v0]|", views: titleLabel)
+        addConstraintsWithFormat("V:[v0(30)]", views: iconImageView)
+        addConstraint(NSLayoutConstraint.init(item: iconImageView,
+                                              attribute: .centerX,
+                                              relatedBy: .equal,
+                                              toItem: self,
+                                              attribute: .centerX,
+                                              multiplier: 1,
+                                              constant: 0))
+    }
+    
+    var setting: Setting? {
+        didSet {
+            titleLabel.text = setting?.title
+            iconImageView.image = UIImage(named:setting!.imageName)
+        }
     }
     
 }

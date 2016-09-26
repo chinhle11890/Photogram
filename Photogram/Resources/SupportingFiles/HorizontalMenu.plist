@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>profile</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>My Events</string>
+			<key>image</key>
+			<string>icn_event</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>My Photos</string>
+			<key>image</key>
+			<string>icn_photo</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Save Photos</string>
+			<key>image</key>
+			<string>icn_photo</string>
+		</dict>
+	</array>
+	<key>userprofile</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>My Photos</string>
+			<key>image</key>
+			<string>icn_download</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Save Events</string>
+			<key>image</key>
+			<string>icn_save</string>
+		</dict>
+	</array>
+</dict>
+</plist>

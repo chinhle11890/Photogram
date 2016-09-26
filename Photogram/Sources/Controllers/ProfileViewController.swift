@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UIPageViewControllerDataSource {
+class ProfileViewController: UIViewController, UIPageViewControllerDataSource, HorizontalMenuDelegate {
     @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var followingButton: UIButton!
     
@@ -19,8 +19,23 @@ class ProfileViewController: UIViewController, UIPageViewControllerDataSource {
     // MARK: - Variables
     fileprivate var pageViewController: UIPageViewController?
     
+    @IBOutlet weak var containerMenuView: UIView!
+    
+    lazy var horizontalMenu: HorizontalMenu = {
+        let menu = HorizontalMenu()
+        menu.menuType = .PROFILE
+        menu.delegate = self
+        return menu
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Add horizontal menu
+        containerMenuView.addSubview(horizontalMenu)
+        containerMenuView.addConstraintsWithFormat("H:|[v0]|", views: horizontalMenu)
+        containerMenuView.addConstraintsWithFormat("V:|[v0]|", views: horizontalMenu)
         
         // Set corner radius
         contactButton?.layer.cornerRadius = 10
@@ -155,5 +170,10 @@ class ProfileViewController: UIViewController, UIPageViewControllerDataSource {
         }
         
         return nil
+    }
+    
+    // MARK: - HorizontalMenuDelegate
+    func horizontalMenu(_ horizontalMenu: HorizontalMenu, didClickItemAt index: Int) {
+        print("--->", index)
     }
 }
