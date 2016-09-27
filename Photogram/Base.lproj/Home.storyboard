@@ -91,11 +91,16 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_polygon" translatesAutoresizingMaskIntoConstraints="NO" id="ld0-t9-wYl"/>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ld0-t9-wYl" firstAttribute="bottom" secondItem="bYZ-p1-DIw" secondAttribute="bottom" id="7eQ-e8-C7Z"/>
+                                                <constraint firstItem="ld0-t9-wYl" firstAttribute="leading" secondItem="bYZ-p1-DIw" secondAttribute="leading" id="G2W-Od-rCJ"/>
                                                 <constraint firstItem="bYZ-p1-DIw" firstAttribute="centerX" secondItem="Yc8-tO-KJm" secondAttribute="centerX" id="Hzv-DJ-bEP"/>
+                                                <constraint firstItem="ld0-t9-wYl" firstAttribute="top" secondItem="bYZ-p1-DIw" secondAttribute="top" id="JNe-vH-f1z"/>
                                                 <constraint firstItem="bYZ-p1-DIw" firstAttribute="centerY" secondItem="Yc8-tO-KJm" secondAttribute="centerY" id="Thn-4m-Nhe"/>
                                                 <constraint firstAttribute="bottom" secondItem="ehK-9X-qb1" secondAttribute="bottom" constant="20" id="UzS-gM-XBI"/>
+                                                <constraint firstItem="ld0-t9-wYl" firstAttribute="trailing" secondItem="bYZ-p1-DIw" secondAttribute="trailing" id="XOQ-Pl-zJR"/>
                                                 <constraint firstItem="bYZ-p1-DIw" firstAttribute="height" secondItem="Yc8-tO-KJm" secondAttribute="height" multiplier="0.65" id="ldt-VS-N7e"/>
                                                 <constraint firstAttribute="trailing" secondItem="ehK-9X-qb1" secondAttribute="trailing" constant="20" id="rFA-gA-10B"/>
                                             </constraints>
@@ -478,6 +483,7 @@
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_polygon" translatesAutoresizingMaskIntoConstraints="NO" id="2Vg-C2-gqe"/>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84A-oT-cgG">
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="leonardo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzX-h9-vPX">
@@ -540,10 +546,14 @@
                                                         </button>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="2Vg-C2-gqe" firstAttribute="trailing" secondItem="hBl-wp-pgo" secondAttribute="trailing" id="7AY-g0-gyY"/>
+                                                        <constraint firstItem="2Vg-C2-gqe" firstAttribute="bottom" secondItem="hBl-wp-pgo" secondAttribute="bottom" id="7Q5-Y3-JPi"/>
                                                         <constraint firstItem="84A-oT-cgG" firstAttribute="centerY" secondItem="sup-M8-AJO" secondAttribute="centerY" id="Cmk-RY-XZt"/>
+                                                        <constraint firstItem="2Vg-C2-gqe" firstAttribute="leading" secondItem="hBl-wp-pgo" secondAttribute="leading" id="HgF-jh-IUK"/>
                                                         <constraint firstItem="lzN-RZ-fEA" firstAttribute="leading" secondItem="84A-oT-cgG" secondAttribute="trailing" id="KpC-ct-VGF"/>
                                                         <constraint firstItem="hBl-wp-pgo" firstAttribute="leading" secondItem="sup-M8-AJO" secondAttribute="leading" constant="8" id="MRD-8b-2TG"/>
                                                         <constraint firstItem="lzN-RZ-fEA" firstAttribute="centerY" secondItem="sup-M8-AJO" secondAttribute="centerY" id="Vc0-Ix-cOI"/>
+                                                        <constraint firstItem="2Vg-C2-gqe" firstAttribute="top" secondItem="hBl-wp-pgo" secondAttribute="top" id="dSF-aa-1Tm"/>
                                                         <constraint firstItem="84A-oT-cgG" firstAttribute="leading" secondItem="hBl-wp-pgo" secondAttribute="trailing" constant="8" id="hg1-4T-aPv"/>
                                                         <constraint firstItem="hBl-wp-pgo" firstAttribute="height" secondItem="sup-M8-AJO" secondAttribute="height" multiplier="0.75" id="j46-jd-MW6"/>
                                                         <constraint firstAttribute="height" constant="50" id="lwz-po-HWx"/>
@@ -942,6 +952,9 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_polygon" translatesAutoresizingMaskIntoConstraints="NO" id="Dab-w6-jRT" userLabel="polygon">
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rin-GS-CNu">
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="leonardo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqW-gH-Wum">
@@ -994,10 +1007,14 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gI6-Qx-CuH" firstAttribute="height" secondItem="gxa-ML-QO2" secondAttribute="height" multiplier="0.75" id="4g6-31-Iyf"/>
+                                                <constraint firstItem="Dab-w6-jRT" firstAttribute="leading" secondItem="gI6-Qx-CuH" secondAttribute="leading" id="T8Q-Io-dW0"/>
                                                 <constraint firstItem="rin-GS-CNu" firstAttribute="centerY" secondItem="gxa-ML-QO2" secondAttribute="centerY" id="bmS-md-Jw6"/>
                                                 <constraint firstItem="gI6-Qx-CuH" firstAttribute="leading" secondItem="gxa-ML-QO2" secondAttribute="leading" constant="8" id="ckd-Kk-Ich"/>
                                                 <constraint firstAttribute="height" constant="50" id="iSU-bc-vI2"/>
                                                 <constraint firstItem="rin-GS-CNu" firstAttribute="leading" secondItem="gI6-Qx-CuH" secondAttribute="trailing" constant="8" id="lbh-Kd-wtI"/>
+                                                <constraint firstItem="Dab-w6-jRT" firstAttribute="trailing" secondItem="gI6-Qx-CuH" secondAttribute="trailing" id="m3X-0q-MZK"/>
+                                                <constraint firstItem="Dab-w6-jRT" firstAttribute="bottom" secondItem="gI6-Qx-CuH" secondAttribute="bottom" id="nHf-nE-utJ"/>
+                                                <constraint firstItem="Dab-w6-jRT" firstAttribute="top" secondItem="gI6-Qx-CuH" secondAttribute="top" id="vEK-G6-rYf"/>
                                                 <constraint firstItem="gI6-Qx-CuH" firstAttribute="centerY" secondItem="gxa-ML-QO2" secondAttribute="centerY" id="w8L-ul-0HL"/>
                                                 <constraint firstAttribute="trailing" secondItem="rin-GS-CNu" secondAttribute="trailing" constant="8" id="yc9-UK-qWZ"/>
                                             </constraints>
@@ -1328,7 +1345,7 @@
                                         <rect key="frame" x="0.0" y="28" width="1000" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d6Q-xZ-PiU" id="yy5-Vp-t4k">
-                                            <frame key="frameInset" width="1000" height="100"/>
+                                            <frame key="frameInset" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03" translatesAutoresizingMaskIntoConstraints="NO" id="Hm1-I3-zRa">
@@ -1341,6 +1358,9 @@
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_polygon" translatesAutoresizingMaskIntoConstraints="NO" id="jv4-FN-7Tc">
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuw-Jw-uQ5">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
@@ -1390,12 +1410,16 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="utg-XT-oFV" firstAttribute="leading" secondItem="Hm1-I3-zRa" secondAttribute="trailing" constant="8" id="Cs6-WH-2w9"/>
+                                                <constraint firstItem="jv4-FN-7Tc" firstAttribute="top" secondItem="Hm1-I3-zRa" secondAttribute="top" id="IIe-sq-acW"/>
+                                                <constraint firstItem="jv4-FN-7Tc" firstAttribute="bottom" secondItem="Hm1-I3-zRa" secondAttribute="bottom" id="NUi-VS-rs7"/>
                                                 <constraint firstItem="Hm1-I3-zRa" firstAttribute="centerY" secondItem="yy5-Vp-t4k" secondAttribute="centerY" id="OG1-fk-MsI"/>
                                                 <constraint firstItem="Hm1-I3-zRa" firstAttribute="height" secondItem="yy5-Vp-t4k" secondAttribute="height" multiplier="0.75" id="PVn-bH-2Mh"/>
                                                 <constraint firstItem="Hm1-I3-zRa" firstAttribute="leading" secondItem="yy5-Vp-t4k" secondAttribute="leading" constant="20" id="QHI-9G-atg"/>
                                                 <constraint firstItem="utg-XT-oFV" firstAttribute="centerY" secondItem="yy5-Vp-t4k" secondAttribute="centerY" id="dcD-3x-F23"/>
                                                 <constraint firstItem="Cuw-Jw-uQ5" firstAttribute="width" secondItem="yy5-Vp-t4k" secondAttribute="width" multiplier="0.25" id="eHF-i1-G1I"/>
                                                 <constraint firstAttribute="trailing" secondItem="Cuw-Jw-uQ5" secondAttribute="trailing" constant="20" id="gEV-Zp-wjg"/>
+                                                <constraint firstItem="jv4-FN-7Tc" firstAttribute="trailing" secondItem="Hm1-I3-zRa" secondAttribute="trailing" id="gma-GS-wEq"/>
+                                                <constraint firstItem="jv4-FN-7Tc" firstAttribute="leading" secondItem="Hm1-I3-zRa" secondAttribute="leading" id="sfx-X2-65g"/>
                                                 <constraint firstItem="Cuw-Jw-uQ5" firstAttribute="centerY" secondItem="yy5-Vp-t4k" secondAttribute="centerY" id="tfH-vR-O04"/>
                                                 <constraint firstItem="Cuw-Jw-uQ5" firstAttribute="leading" secondItem="utg-XT-oFV" secondAttribute="trailing" constant="8" id="wgt-6w-QdE"/>
                                             </constraints>
@@ -1633,6 +1657,7 @@
         <image name="icn_location" width="29" height="29"/>
         <image name="icn_menu_horizontal" width="29" height="29"/>
         <image name="icn_menu_vertical" width="29" height="29"/>
+        <image name="icn_polygon" width="200" height="200"/>
         <image name="icn_user" width="29" height="29"/>
     </resources>
 </document>
