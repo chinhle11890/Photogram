@@ -21,7 +21,6 @@ class ProfilePageItemViewController: UIViewController, UICollectionViewDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         photoCollectionView.contentInset = UIEdgeInsetsMake(8, 8, 8, 8)
         photoCollectionView.showsVerticalScrollIndicator = false
         photoCollectionView.showsHorizontalScrollIndicator = false

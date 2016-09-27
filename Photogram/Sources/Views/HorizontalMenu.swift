@@ -133,7 +133,7 @@ class HorizontalMenu: UIView, UICollectionViewDataSource, UICollectionViewDelega
     
     func updateHorizontalBar(_ index: Int) {
         selectedIndex = index
-        let x = CGFloat(index) * frame.width / CGFloat(settings.count)
+        let x = CGFloat(selectedIndex) * frame.width / CGFloat(settings.count)
         leftConstraint.constant = x;
         UIView.animate(withDuration: 0.5,
                        delay: 0,
