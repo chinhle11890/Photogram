@@ -63,8 +63,9 @@ class ProfileViewController: UIViewController, UIPageViewControllerDataSource, U
         createPageViewController()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
         userAvatarImageView.polygon()
     }
     
