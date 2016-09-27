@@ -11,6 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, HorizontalMenuDelegate {
     @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var followingButton: UIButton!
+    @IBOutlet weak var userAvatarImageView: UIImageView!
     
     @IBOutlet weak var collectionView: UIView!
     var pageIndex: Int = 0 {
@@ -60,6 +61,11 @@ class ProfileViewController: UIViewController, UIPageViewControllerDataSource, U
         followingButton?.clipsToBounds = true
         
         createPageViewController()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        userAvatarImageView.polygon()
     }
     
     fileprivate func createPageViewController() {

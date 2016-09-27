@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ACq-1H-CaG">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ACq-1H-CaG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -91,19 +91,11 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_polygon" translatesAutoresizingMaskIntoConstraints="NO" id="ld0-t9-wYl">
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ld0-t9-wYl" firstAttribute="bottom" secondItem="bYZ-p1-DIw" secondAttribute="bottom" id="7eQ-e8-C7Z"/>
-                                                <constraint firstItem="ld0-t9-wYl" firstAttribute="leading" secondItem="bYZ-p1-DIw" secondAttribute="leading" id="G2W-Od-rCJ"/>
                                                 <constraint firstItem="bYZ-p1-DIw" firstAttribute="centerX" secondItem="Yc8-tO-KJm" secondAttribute="centerX" id="Hzv-DJ-bEP"/>
-                                                <constraint firstItem="ld0-t9-wYl" firstAttribute="top" secondItem="bYZ-p1-DIw" secondAttribute="top" id="JNe-vH-f1z"/>
                                                 <constraint firstItem="bYZ-p1-DIw" firstAttribute="centerY" secondItem="Yc8-tO-KJm" secondAttribute="centerY" id="Thn-4m-Nhe"/>
                                                 <constraint firstAttribute="bottom" secondItem="ehK-9X-qb1" secondAttribute="bottom" constant="20" id="UzS-gM-XBI"/>
-                                                <constraint firstItem="ld0-t9-wYl" firstAttribute="trailing" secondItem="bYZ-p1-DIw" secondAttribute="trailing" id="XOQ-Pl-zJR"/>
                                                 <constraint firstItem="bYZ-p1-DIw" firstAttribute="height" secondItem="Yc8-tO-KJm" secondAttribute="height" multiplier="0.65" id="ldt-VS-N7e"/>
                                                 <constraint firstAttribute="trailing" secondItem="ehK-9X-qb1" secondAttribute="trailing" constant="20" id="rFA-gA-10B"/>
                                             </constraints>
@@ -343,6 +335,9 @@
                             <constraint firstItem="jlX-6L-hxM" firstAttribute="top" secondItem="NpK-ql-nIw" secondAttribute="bottom" id="wmx-7l-bOz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userAvatarImageView" destination="bYZ-p1-DIw" id="Fer-tK-Otf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYK-c7-EL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -467,10 +462,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userCell" rowHeight="516" id="xUc-JC-H4p" customClass="UserHomeTableViewCell" customModule="Photogram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="516"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="516"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xUc-JC-H4p" id="Cbx-Re-5d8">
-                                            <frame key="frameInset" width="1000" height="516"/>
+                                            <frame key="frameInset" width="375" height="516"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sup-M8-AJO" userLabel="infoView">
@@ -1045,8 +1040,10 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="VAc-rY-9GS">
+                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="88"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="88"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02" translatesAutoresizingMaskIntoConstraints="NO" id="tyG-E0-69k"/>
@@ -1358,7 +1355,7 @@
                                         <rect key="frame" x="0.0" y="28" width="1000" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d6Q-xZ-PiU" id="yy5-Vp-t4k">
-                                            <frame key="frameInset" width="375" height="100"/>
+                                            <frame key="frameInset" width="1000" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03" translatesAutoresizingMaskIntoConstraints="NO" id="Hm1-I3-zRa">

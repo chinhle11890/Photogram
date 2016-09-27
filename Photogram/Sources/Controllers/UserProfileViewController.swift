@@ -12,6 +12,7 @@ class UserProfileViewController: UIViewController, UIPageViewControllerDataSourc
 
     @IBOutlet weak var collectionView: UIView!
     @IBOutlet weak var containerMenuView: UIView!
+    @IBOutlet weak var userAvatarImageView: UIImageView!
     
     // MARK: - Constants
     let numberOfItem = 2
@@ -52,6 +53,11 @@ class UserProfileViewController: UIViewController, UIPageViewControllerDataSourc
         containerMenuView.addConstraintsWithFormat("V:|[v0]|", views: horizontalMenu)
         
         createPageViewController()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        userAvatarImageView.polygon()
     }
     
     fileprivate func createPageViewController() {

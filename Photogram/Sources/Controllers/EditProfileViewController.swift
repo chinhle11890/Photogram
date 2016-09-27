@@ -10,12 +10,18 @@ import UIKit
 
 class EditProfileViewController: UIViewController {
     
+    @IBOutlet weak var userAvatarImageView: UIImageView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        userAvatarImageView.polygon()
     }
     
     @IBAction func didClickBackButton(_ sender: AnyObject) {

@@ -1482,6 +1482,7 @@
                         <outlet property="contactButton" destination="wBq-Pd-JHo" id="tH0-rL-k7a"/>
                         <outlet property="containerMenuView" destination="fnX-8e-lub" id="NyG-vc-wVA"/>
                         <outlet property="followingButton" destination="qlr-E8-0Du" id="WO0-x3-qsg"/>
+                        <outlet property="userAvatarImageView" destination="w8F-bH-21J" id="iLP-1Z-NC3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxe-HK-qqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1685,6 +1686,7 @@
                     <connections>
                         <outlet property="collectionView" destination="M11-xq-9oz" id="t7k-K6-NBt"/>
                         <outlet property="containerMenuView" destination="9zZ-yg-nDn" id="c9S-ah-1l5"/>
+                        <outlet property="userAvatarImageView" destination="SXE-o3-EQN" id="e3i-Tf-hWi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yuq-MU-Tp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
