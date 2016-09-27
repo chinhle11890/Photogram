@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JNt-rI-72U">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m6F-Yz-ZhI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -1234,7 +1234,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="Home" referencedIdentifier="EditProfileViewController" id="AJs-DZ-rIN" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9t-vu-bCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5647" y="832"/>
+            <point key="canvasLocation" x="5482" y="719"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="ld7-Xr-V3O">
@@ -1501,6 +1501,7 @@
                                         <state key="normal" image="icn_profile_edit"/>
                                         <connections>
                                             <action selector="didClickEditProfileButton:" destination="vUY-y6-G7u" eventType="touchUpInside" id="4VF-6s-pkz"/>
+                                            <segue destination="AJs-DZ-rIN" kind="show" id="vrS-Ja-wn6"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1616,80 +1617,6 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zZ-yg-nDn">
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJ5-Zs-VAR">
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bCF-gi-ycW">
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="bCF-gi-ycW" secondAttribute="height" multiplier="1:1" id="ZqN-1p-djj"/>
-                                                            <constraint firstAttribute="height" constant="20" id="zbc-je-iK6"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9r-cy-jyE">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjP-h7-8b2">
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="1" id="5yF-qt-dMV"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRS-60-5d0">
-                                                        <connections>
-                                                            <action selector="didClickMyPhotosButton:" destination="vUY-y6-G7u" eventType="touchUpInside" id="9ev-xv-dLX"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstItem="mjP-h7-8b2" firstAttribute="top" secondItem="cJ5-Zs-VAR" secondAttribute="top" id="3xb-Dh-AFi"/>
-                                                    <constraint firstAttribute="bottom" secondItem="mjP-h7-8b2" secondAttribute="bottom" id="O1w-ht-wm3"/>
-                                                    <constraint firstItem="W9r-cy-jyE" firstAttribute="top" secondItem="bCF-gi-ycW" secondAttribute="top" id="OYS-se-xed"/>
-                                                    <constraint firstItem="W9r-cy-jyE" firstAttribute="leading" secondItem="bCF-gi-ycW" secondAttribute="trailing" constant="5" id="R2W-Ag-c0m"/>
-                                                    <constraint firstAttribute="trailing" secondItem="mjP-h7-8b2" secondAttribute="trailing" id="WFH-SY-eaI"/>
-                                                    <constraint firstItem="wRS-60-5d0" firstAttribute="leading" secondItem="cJ5-Zs-VAR" secondAttribute="leading" id="e8B-4j-yr7"/>
-                                                    <constraint firstItem="bCF-gi-ycW" firstAttribute="centerY" secondItem="cJ5-Zs-VAR" secondAttribute="centerY" id="hq8-pJ-nLz"/>
-                                                    <constraint firstAttribute="bottom" secondItem="wRS-60-5d0" secondAttribute="bottom" id="m3A-M1-g2C"/>
-                                                    <constraint firstItem="bCF-gi-ycW" firstAttribute="leading" secondItem="cJ5-Zs-VAR" secondAttribute="leading" constant="20" id="qqH-e5-rOA"/>
-                                                    <constraint firstItem="W9r-cy-jyE" firstAttribute="bottom" secondItem="bCF-gi-ycW" secondAttribute="bottom" id="rmu-i1-AeL"/>
-                                                    <constraint firstItem="mjP-h7-8b2" firstAttribute="leading" secondItem="W9r-cy-jyE" secondAttribute="trailing" id="xmI-7K-Not"/>
-                                                    <constraint firstItem="wRS-60-5d0" firstAttribute="top" secondItem="cJ5-Zs-VAR" secondAttribute="top" id="xyt-3U-Zgi"/>
-                                                    <constraint firstItem="mjP-h7-8b2" firstAttribute="leading" secondItem="wRS-60-5d0" secondAttribute="trailing" id="zrE-Jd-vMU"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pP2-30-apu">
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0aK-dJ-5pE">
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="0aK-dJ-5pE" secondAttribute="height" multiplier="1:1" id="fan-PE-veY"/>
-                                                            <constraint firstAttribute="height" constant="20" id="woo-Jq-yAZ"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUP-k2-iI9">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5d-y7-nhz">
-                                                        <connections>
-                                                            <action selector="didClickSavedPhotosButton:" destination="vUY-y6-G7u" eventType="touchUpInside" id="hSs-7m-ImY"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstItem="qUP-k2-iI9" firstAttribute="top" secondItem="0aK-dJ-5pE" secondAttribute="top" id="8wN-iT-htZ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="o5d-y7-nhz" secondAttribute="bottom" id="BFc-UO-dup"/>
-                                                    <constraint firstAttribute="trailing" secondItem="o5d-y7-nhz" secondAttribute="trailing" id="FzG-mt-cTr"/>
-                                                    <constraint firstItem="o5d-y7-nhz" firstAttribute="leading" secondItem="pP2-30-apu" secondAttribute="leading" id="Yq9-B1-p95"/>
-                                                    <constraint firstItem="o5d-y7-nhz" firstAttribute="top" secondItem="pP2-30-apu" secondAttribute="top" id="dok-ZP-rvs"/>
-                                                    <constraint firstItem="0aK-dJ-5pE" firstAttribute="centerY" secondItem="pP2-30-apu" secondAttribute="centerY" id="fBp-hi-gbi"/>
-                                                    <constraint firstItem="0aK-dJ-5pE" firstAttribute="leading" secondItem="pP2-30-apu" secondAttribute="leading" constant="20" id="ma8-3J-13o"/>
-                                                    <constraint firstItem="qUP-k2-iI9" firstAttribute="leading" secondItem="0aK-dJ-5pE" secondAttribute="trailing" constant="5" id="q1M-9y-kHJ"/>
-                                                    <constraint firstItem="qUP-k2-iI9" firstAttribute="bottom" secondItem="0aK-dJ-5pE" secondAttribute="bottom" id="xZd-0A-Xcz"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E2I-94-S0g">
                                                 <frame key="frameInset" minY="59" width="375" height="1"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1698,14 +1625,7 @@
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="cJ5-Zs-VAR" firstAttribute="width" secondItem="9zZ-yg-nDn" secondAttribute="width" multiplier="1:2" id="3BN-S8-wNC"/>
-                                            <constraint firstItem="pP2-30-apu" firstAttribute="leading" secondItem="cJ5-Zs-VAR" secondAttribute="trailing" id="CgT-qn-ngl"/>
-                                            <constraint firstItem="pP2-30-apu" firstAttribute="top" secondItem="9zZ-yg-nDn" secondAttribute="top" id="Md4-Df-0lJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="cJ5-Zs-VAR" secondAttribute="bottom" id="NKp-fE-SHq"/>
-                                            <constraint firstItem="cJ5-Zs-VAR" firstAttribute="leading" secondItem="9zZ-yg-nDn" secondAttribute="leading" id="WW2-WT-hhN"/>
-                                            <constraint firstItem="cJ5-Zs-VAR" firstAttribute="top" secondItem="9zZ-yg-nDn" secondAttribute="top" id="YDv-Vk-jPZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="pP2-30-apu" secondAttribute="trailing" id="ahE-bR-Aaf"/>
-                                            <constraint firstAttribute="bottom" secondItem="pP2-30-apu" secondAttribute="bottom" id="tcw-sy-zhl"/>
+                                            <constraint firstAttribute="height" constant="40" id="6rm-xV-prz"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M11-xq-9oz">
@@ -1715,7 +1635,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="M11-xq-9oz" firstAttribute="top" secondItem="9zZ-yg-nDn" secondAttribute="bottom" id="0Q9-Cp-Q96"/>
-                                    <constraint firstItem="M11-xq-9oz" firstAttribute="height" secondItem="cTi-2f-WeF" secondAttribute="height" multiplier="3:5" id="2FR-BI-npy"/>
                                     <constraint firstItem="9IG-O6-Kh9" firstAttribute="height" secondItem="cTi-2f-WeF" secondAttribute="height" multiplier="3:10" id="4rm-3G-MfK"/>
                                     <constraint firstItem="9IG-O6-Kh9" firstAttribute="leading" secondItem="cTi-2f-WeF" secondAttribute="leading" id="5zN-aU-rqQ"/>
                                     <constraint firstAttribute="trailing" secondItem="9IG-O6-Kh9" secondAttribute="trailing" id="7mb-hb-Xh2"/>
@@ -1742,6 +1661,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="M11-xq-9oz" id="t7k-K6-NBt"/>
+                        <outlet property="containerMenuView" destination="9zZ-yg-nDn" id="c9S-ah-1l5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yuq-MU-Tp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2011,4 +1931,7 @@
         <image name="icn_register_unchecked" width="30" height="30"/>
         <image name="icn_user" width="29" height="29"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="5ds-Mq-sag"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -115,7 +115,6 @@ class ProfileViewController: UIViewController, UIPageViewControllerDataSource, U
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        
         let currentIndex = viewControllers.index(of: viewController)
         if currentIndex! < viewControllers.count - 1 {
             return viewControllers[currentIndex! + 1]

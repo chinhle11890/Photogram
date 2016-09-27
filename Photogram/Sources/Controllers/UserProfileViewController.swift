@@ -8,17 +8,48 @@
 
 import UIKit
 
-class UserProfileViewController: UIViewController, UIPageViewControllerDataSource {
+class UserProfileViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, HorizontalMenuDelegate {
 
     @IBOutlet weak var collectionView: UIView!
+    @IBOutlet weak var containerMenuView: UIView!
     
     // MARK: - Constants
     let numberOfItem = 2
     // MARK: - Variables
     fileprivate var pageViewController: UIPageViewController?
+    
+    var pageIndex: Int = 0 {
+        didSet {
+            let selectedIndexPath = IndexPath(item: pageIndex, section: 0)
+            horizontalMenu.collectionView.selectItem(at: selectedIndexPath, animated: true, scrollPosition: UICollectionViewScrollPosition())
+            horizontalMenu.updateHorizontalBar(pageIndex)
+        }
+    }
+
+    lazy var horizontalMenu: HorizontalMenu = {
+        let menu = HorizontalMenu()
+        menu.menuType = .UserProfile
+        menu.delegate = self
+        return menu
+    }()
+    
+    lazy var viewControllers: [UIViewController] = {
+        var views = [UIViewController]()
+        for i in 0..<2 {
+            let pageItemController = self.storyboard!.instantiateViewController(withIdentifier: "ProfilePageItemViewController") as! ProfilePageItemViewController
+            views.append(pageItemController)
+        }
+        return views
+    }()
+
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Add horizontal menu
+        containerMenuView.addSubview(horizontalMenu)
+        containerMenuView.addConstraintsWithFormat("H:|[v0]|", views: horizontalMenu)
+        containerMenuView.addConstraintsWithFormat("V:|[v0]|", views: horizontalMenu)
         
         createPageViewController()
     }
@@ -27,8 +58,8 @@ class UserProfileViewController: UIViewController, UIPageViewControllerDataSourc
         let pageController = self.storyboard!.instantiateViewController(withIdentifier: "PageViewController") as! UIPageViewController
         pageController.dataSource = self
         
-        let firstController = getItemController(0)!
-        let startingViewControllers = [firstController]
+        let firstController = viewControllers.first
+        let startingViewControllers = [firstController!]
         pageController.setViewControllers(startingViewControllers, direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
         
         pageViewController = pageController
@@ -44,74 +75,54 @@ class UserProfileViewController: UIViewController, UIPageViewControllerDataSourc
     }
     
     @IBAction func didClickEditProfileButton(_ sender: AnyObject) {
-        _ = navigationController?.popViewController(animated: true)
+//        _ = navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func didClickMyPhotosButton(_ sender: AnyObject) {
+    fileprivate func slideToPage(index: Int, completion: (() -> Void)?) {
+        if index >= numberOfItem || index < 0 {
+            return
+        }
         
-    }
-    
-    @IBAction func didClickSavedPhotosButton(_ sender: AnyObject) {
+        let currentViewController = pageViewController?.viewControllers?.first
+        let currentPageIndex = viewControllers.index(of: currentViewController!)
         
+        // Moving forward
+        if index > currentPageIndex! {
+            self.pageViewController!.setViewControllers([viewControllers[index]], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
+        } else if index < currentPageIndex! {
+            self.pageViewController!.setViewControllers([viewControllers[index]], direction: UIPageViewControllerNavigationDirection.reverse, animated: true, completion: nil)
+        }
     }
+
     
     // MARK: - UIPageViewControllerDataSource
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-        let itemController = viewController as! ProfilePageItemViewController
-        if itemController.itemIndex > 0 {
-            return getItemController(itemController.itemIndex-1)
+        let currentIndex = viewControllers.index(of: viewController)
+        if currentIndex! > 0 {
+            return viewControllers[currentIndex! - 1]
         }
         
         return nil
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        
-        let itemController = viewController as! ProfilePageItemViewController
-        if itemController.itemIndex+1 < numberOfItem {
-            return getItemController(itemController.itemIndex+1)
+        let currentIndex = viewControllers.index(of: viewController)
+        if currentIndex! < viewControllers.count - 1 {
+            return viewControllers[currentIndex! + 1]
         }
         
         return nil
     }
     
-    fileprivate func getItemController(_ itemIndex: Int) -> ProfilePageItemViewController? {
-        
-        if itemIndex < numberOfItem {
-            let pageItemController = self.storyboard!.instantiateViewController(withIdentifier: "ProfilePageItemViewController") as! ProfilePageItemViewController
-            pageItemController.itemIndex = itemIndex
-            return pageItemController
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if let firstViewController = self.pageViewController?.viewControllers?.first, let index = viewControllers.index(of: firstViewController) {
+            pageIndex = index
         }
-        
-        return nil
     }
     
-    // MARK: - Page Indicator
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return 0
-    }
-    
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 0
-    }
-    
-    // MARK: - Additions
-    func currentControllerIndex() -> Int {
-        let pageItemController = self.currentController()
-        
-        if let controller = pageItemController as? ProfilePageItemViewController {
-            return controller.itemIndex
-        }
-        
-        return -1
-    }
-    
-    func currentController() -> UIViewController? {
-        if (self.pageViewController?.viewControllers?.count)! > 0 {
-            return self.pageViewController?.viewControllers![0]
-        }
-        
-        return nil
+    // MARK: - HorizontalMenuDelegate
+    func horizontalMenu(_ horizontalMenu: HorizontalMenu, didClickItemAt index: Int) {
+        slideToPage(index: index, completion: nil)
     }
 }
