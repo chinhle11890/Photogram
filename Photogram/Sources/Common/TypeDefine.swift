@@ -35,4 +35,5 @@ class StoryBoardId: NSObject {
     static let searchController = "SearchController"
     static let addEventController = "AddEventViewController"
     static let profileController = "ProfileViewController"
+    static let eventDisplayViewController = "EventDisplayViewController"
 }

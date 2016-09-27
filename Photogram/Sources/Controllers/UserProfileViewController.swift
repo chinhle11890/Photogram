@@ -57,6 +57,7 @@ class UserProfileViewController: UIViewController, UIPageViewControllerDataSourc
     fileprivate func createPageViewController() {
         let pageController = self.storyboard!.instantiateViewController(withIdentifier: "PageViewController") as! UIPageViewController
         pageController.dataSource = self
+        pageController.delegate = self
         
         let firstController = viewControllers.first
         let startingViewControllers = [firstController!]

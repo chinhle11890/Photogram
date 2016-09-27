@@ -419,7 +419,7 @@
         <!--User Home View Controller-->
         <scene sceneID="tRP-aN-euY">
             <objects>
-                <viewController id="3X2-4m-5A9" customClass="UserHomeViewController" customModule="Photogram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserHomeViewController" id="3X2-4m-5A9" customClass="UserHomeViewController" customModule="Photogram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="peW-Op-soN"/>
                         <viewControllerLayoutGuide type="bottom" id="LzM-bH-zY8"/>
@@ -928,6 +928,14 @@
             </objects>
             <point key="canvasLocation" x="1543" y="883"/>
         </scene>
+        <!--EventDisplayViewController-->
+        <scene sceneID="oqO-Md-FZq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="EventDisplayViewController" id="V0b-s9-RX7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTx-4w-SH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794" y="-282"/>
+        </scene>
         <!--Home Table View Controller-->
         <scene sceneID="ORY-AV-QqU">
             <objects>
@@ -1161,7 +1169,7 @@
                                     <outlet property="locationLabel" destination="Huu-Dq-TEc" id="o21-NT-DqX"/>
                                     <outlet property="nameLabel" destination="dqW-gH-Wum" id="SJi-Ub-o7i"/>
                                     <outlet property="photoColectionView" destination="vgy-Tz-5Tq" id="TOG-Pq-c4Q"/>
-                                    <segue destination="3X2-4m-5A9" kind="show" id="HKE-R2-mrJ"/>
+                                    <segue destination="V0b-s9-RX7" kind="show" id="iTy-PA-f4A"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

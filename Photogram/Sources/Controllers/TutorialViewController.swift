@@ -47,6 +47,7 @@ class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
         pageViewController = pageController
         addChildViewController(pageViewController!)
         self.view.addSubview(pageViewController!.view)
+        pageViewController?.view.backgroundColor = UIColor.clear
         pageViewController!.didMove(toParentViewController: self)
         
         // Bring pageControl and skip button to front

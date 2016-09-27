@@ -344,15 +344,15 @@
                             <constraint firstItem="VpR-ao-uf3" firstAttribute="top" secondItem="PCa-77-DYj" secondAttribute="bottom" id="2p4-Rj-Moa"/>
                             <constraint firstItem="PCa-77-DYj" firstAttribute="leading" secondItem="DVq-ee-yk9" secondAttribute="leading" id="5iy-jq-UgG"/>
                             <constraint firstAttribute="trailing" secondItem="PCa-77-DYj" secondAttribute="trailing" id="8H2-uZ-5WJ"/>
-                            <constraint firstItem="KBV-ii-tpf" firstAttribute="leading" secondItem="DVq-ee-yk9" secondAttribute="leading" id="Eni-Qa-lGB"/>
-                            <constraint firstItem="VpR-ao-uf3" firstAttribute="top" secondItem="KBV-ii-tpf" secondAttribute="bottom" id="G7E-cA-2Z4"/>
-                            <constraint firstItem="KBV-ii-tpf" firstAttribute="top" secondItem="DVq-ee-yk9" secondAttribute="top" id="Hn3-mD-Czk"/>
+                            <constraint firstItem="KBV-ii-tpf" firstAttribute="leading" secondItem="DVq-ee-yk9" secondAttribute="leading" id="BfK-ze-Kf7"/>
+                            <constraint firstAttribute="trailing" secondItem="KBV-ii-tpf" secondAttribute="trailing" id="aRH-2p-ma2"/>
+                            <constraint firstItem="KBV-ii-tpf" firstAttribute="top" secondItem="DVq-ee-yk9" secondAttribute="top" id="cWd-jy-0Tl"/>
                             <constraint firstAttribute="trailing" secondItem="mkh-kv-loA" secondAttribute="trailing" constant="40" id="cfq-7Q-QQb"/>
                             <constraint firstItem="mkh-kv-loA" firstAttribute="top" secondItem="DVq-ee-yk9" secondAttribute="top" constant="40" id="dLZ-FU-z82"/>
                             <constraint firstItem="mkh-kv-loA" firstAttribute="height" secondItem="DVq-ee-yk9" secondAttribute="height" multiplier="4:5" id="gkJ-7J-k1P"/>
                             <constraint firstItem="mkh-kv-loA" firstAttribute="leading" secondItem="DVq-ee-yk9" secondAttribute="leading" constant="40" id="mrs-Uf-bn8"/>
                             <constraint firstItem="PCa-77-DYj" firstAttribute="top" secondItem="mkh-kv-loA" secondAttribute="bottom" id="oyh-UX-FfM"/>
-                            <constraint firstAttribute="trailing" secondItem="KBV-ii-tpf" secondAttribute="trailing" id="yuj-W5-2lD"/>
+                            <constraint firstItem="VpR-ao-uf3" firstAttribute="top" secondItem="KBV-ii-tpf" secondAttribute="bottom" id="tGz-5N-c8T"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1234,7 +1234,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="Home" referencedIdentifier="EditProfileViewController" id="AJs-DZ-rIN" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9t-vu-bCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5482" y="719"/>
+            <point key="canvasLocation" x="7090" y="1276"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="ld7-Xr-V3O">
@@ -1272,7 +1272,6 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="icn_profile_edit"/>
                                         <connections>
-                                            <action selector="didClickEditProfileButton:" destination="JNt-rI-72U" eventType="touchUpInside" id="zch-Vu-l0Q"/>
                                             <segue destination="AJs-DZ-rIN" kind="show" id="5ds-Mq-sag"/>
                                         </connections>
                                     </button>
@@ -1501,7 +1500,6 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="icn_profile_edit"/>
                                         <connections>
-                                            <action selector="didClickEditProfileButton:" destination="vUY-y6-G7u" eventType="touchUpInside" id="4VF-6s-pkz"/>
                                             <segue destination="AJs-DZ-rIN" kind="show" id="vrS-Ja-wn6"/>
                                         </connections>
                                     </button>
@@ -1705,7 +1703,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="icn_profile_edit"/>
                                         <connections>
-                                            <action selector="didClickEditProfileBUtton:" destination="lAM-Cn-gbq" eventType="touchUpInside" id="AmC-nh-yof"/>
+                                            <segue destination="AJs-DZ-rIN" kind="show" id="ilh-fS-ZNV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1730,6 +1728,7 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Addevent_CoverBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="R6W-ul-rPa"/>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="XCW-wR-sgK">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="0na-2Q-3Ej"/>
                                                     <constraint firstAttribute="width" secondItem="XCW-wR-sgK" secondAttribute="height" multiplier="1:1" id="pNC-ko-tQT"/>
@@ -1741,6 +1740,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_location" translatesAutoresizingMaskIntoConstraints="NO" id="bVe-wv-rNY">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="7GI-wD-0YN"/>
                                                     <constraint firstAttribute="width" secondItem="bVe-wv-rNY" secondAttribute="height" multiplier="1:1" id="wgs-mT-sR4"/>
@@ -1836,7 +1836,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygf-2l-YsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6102" y="1299"/>
+            <point key="canvasLocation" x="6172" y="1299"/>
         </scene>
         <!--Profile Page Item View Controller-->
         <scene sceneID="0GX-Ix-WoT">
@@ -1878,6 +1878,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="avatarImageView" destination="Cri-K4-kHJ" id="ts6-J9-DMt"/>
+                                            <segue destination="n5r-JT-PEJ" kind="show" id="ve9-NT-1SJ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1901,6 +1902,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZR-Ba-moY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--UserHomeViewController-->
+        <scene sceneID="WlV-SY-F0h">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="UserHomeViewController" id="n5r-JT-PEJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epc-Jm-wZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="646" y="-145"/>
         </scene>
     </scenes>
     <resources>
@@ -1933,6 +1942,6 @@
         <image name="icn_user" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5ds-Mq-sag"/>
+        <segue reference="vrS-Ja-wn6"/>
     </inferredMetricsTieBreakers>
 </document>
