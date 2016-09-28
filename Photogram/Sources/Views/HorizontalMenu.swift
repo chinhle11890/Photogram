@@ -183,12 +183,35 @@ class HorizontalCell: UICollectionViewCell {
     }()
     
     func setupViews() {
-        addSubview(iconImageView)
-        addSubview(titleLabel)
+        let containerView = UIView()
+        containerView.backgroundColor = .clear
+        containerView.addSubview(iconImageView)
+        containerView.addSubview(titleLabel)
+        
+        containerView.addConstraintsWithFormat("H:|[v0(20)]-2-[v1]|", views: iconImageView, titleLabel)
+        containerView.addConstraintsWithFormat("V:|[v0]|", views: titleLabel)
+        containerView.addConstraintsWithFormat("V:[v0(20)]", views: iconImageView)
+        containerView.addConstraint(NSLayoutConstraint.init(item: iconImageView,
+                                              attribute: .centerY,
+                                              relatedBy: .equal,
+                                              toItem: containerView,
+                                              attribute: .centerY,
+                                              multiplier: 1,
+                                              constant: 0))
+        containerView.addConstraint(NSLayoutConstraint.init(item: iconImageView,
+                                              attribute: .centerX,
+                                              relatedBy: .equal,
+                                              toItem: containerView,
+                                              attribute: .centerX,
+                                              multiplier: 1,
+                                              constant: 0))
+        
+        addSubview(containerView)
         addSubview(seperatorView)
-        addConstraintsWithFormat("H:|-2-[v0(30)]-2-[v1]-2-[v2(1)]|", views: iconImageView , titleLabel, seperatorView)
-        addConstraintsWithFormat("V:|[v0]|", views: titleLabel)
-        addConstraintsWithFormat("V:[v0(30)]", views: iconImageView)
+        addConstraintsWithFormat("H:|-[v0]-|", views: containerView)
+        addConstraintsWithFormat("V:|[v0]|", views: containerView)
+        
+        addConstraintsWithFormat("H:[v0(1)]|", views: seperatorView)
         
         addConstraint(NSLayoutConstraint.init(item: iconImageView,
                                               attribute: .centerY,
@@ -217,7 +240,8 @@ class HorizontalCell: UICollectionViewCell {
     var setting: Setting? {
         didSet {
             titleLabel.text = setting?.title
-            iconImageView.image = UIImage(named:setting!.imageName)
+            iconImageView.image = UIImage(named:setting!.imageName)?.withRenderingMode(.alwaysTemplate)
+            iconImageView.tintColor = .lightGray
         }
     }
     

@@ -8,13 +8,13 @@
 			<key>title</key>
 			<string>My Events</string>
 			<key>image</key>
-			<string>icn_event_display_calendar</string>
+			<string>icn_calendar</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>My Photos</string>
 			<key>image</key>
-			<string>icn_home_addevent</string>
+			<string>icn_menu_photo</string>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -29,7 +29,7 @@
 			<key>title</key>
 			<string>My Photos</string>
 			<key>image</key>
-			<string>icn_home_addevent</string>
+			<string>icn_menu_photo</string>
 		</dict>
 		<dict>
 			<key>title</key>
