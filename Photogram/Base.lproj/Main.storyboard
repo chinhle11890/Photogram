@@ -1046,11 +1046,6 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <blurEffect style="dark"/>
                                             </visualEffectView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r48-nL-acO">
-                                                <connections>
-                                                    <action selector="didClickCaptureButton:" destination="dKG-aH-F3f" eventType="touchUpInside" id="7x4-Tj-SzT"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2T-Jk-RMg">
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_addevent_cover" translatesAutoresizingMaskIntoConstraints="NO" id="RH2-9d-zw5">
@@ -1075,6 +1070,11 @@
                                                     <constraint firstItem="WUF-rV-gkr" firstAttribute="leading" secondItem="c2T-Jk-RMg" secondAttribute="leading" id="zsc-Wr-7pn"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r48-nL-acO">
+                                                <connections>
+                                                    <action selector="didClickCaptureButton:" destination="dKG-aH-F3f" eventType="touchUpInside" id="7x4-Tj-SzT"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
