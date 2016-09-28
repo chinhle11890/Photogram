@@ -59,9 +59,16 @@ class UserHomeViewController: UIViewController, UITableViewDelegate, UITableView
         return section == 0 ? 0 : 10
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
+    }
+    
     // MARK: - UserHomeCellDelegate
     func userHome(_ userHomeCell: UserHomeTableViewCell, didClickButtonAt index: NSIndexPath, button: UIButton) {
         let startingFrame = button.superview?.convert(button.frame, to: nil)
+        mainMenuButton.setImage(UIImage(named: "icn_back"), for: .normal)
         addEventPopup.showSettings(startingFrame!)
     }
     
@@ -114,6 +121,7 @@ class UserHomeViewController: UIViewController, UITableViewDelegate, UITableView
     
     func radialMenu(_ radialMenu: ALRadialMenu!, didSelectItemAt index: Int) {
         menuButton.itemsWillDisapear(into: mainMenuButton)
+        mainMenuButton.setImage(UIImage(named: "icn_home_menu"), for: .normal)
         if index == 1 { // home
 //            _ = navigationController?.popViewController(animated: true)
             _ = navigationController?.popToRootViewController(animated: true)

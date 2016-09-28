@@ -167,7 +167,7 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHu-oG-Jkg">
                                                         <subviews>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5c-uR-wM4" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5c-uR-wM4" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="Qqw-jq-LP0"/>
@@ -925,6 +925,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="RFz-4u-MqP" secondAttribute="trailing" id="2hq-Cd-0lg"/>
                             <constraint firstItem="XA4-Rq-u2u" firstAttribute="leading" secondItem="Vcj-D1-flX" secondAttribute="leading" id="Btc-fR-yeF"/>
@@ -938,9 +939,17 @@
                             <constraint firstItem="XA4-Rq-u2u" firstAttribute="top" secondItem="RFz-4u-MqP" secondAttribute="bottom" id="xvb-XA-daD"/>
                             <constraint firstAttribute="trailing" secondItem="XA4-Rq-u2u" secondAttribute="trailing" id="zM7-GG-7kP"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vBZ-e7-gJl" appends="YES" id="XxJ-Rc-q0w"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4W-la-q6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vBZ-e7-gJl">
+                    <connections>
+                        <action selector="didClickView:" destination="gEV-HL-bDI" id="Vbh-1x-vw9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1543" y="883"/>
         </scene>
@@ -1523,9 +1532,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="303.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jaB-JL-7GL" appends="YES" id="VCZ-Ou-4Qa"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5d-8b-heB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jaB-JL-7GL">
+                    <connections>
+                        <action selector="didClickView:" destination="UUU-aI-WG2" id="7ZS-Sh-5QA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2358" y="883"/>
         </scene>

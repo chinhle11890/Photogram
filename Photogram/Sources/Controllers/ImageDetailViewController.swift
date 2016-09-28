@@ -17,10 +17,16 @@ class ImageDetailViewController: UIViewController, AddEventDelegate {
         return addEvent
     }()
     
+    var commentController: CommentViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let comment = segue.destination as? CommentViewController {
+            commentController = comment;
+        }
     }
     
     @IBAction func didClickBackButton(_ sender: AnyObject) {
@@ -48,4 +54,7 @@ class ImageDetailViewController: UIViewController, AddEventDelegate {
         
     }
 
+    @IBAction func didClickView(_ sender: AnyObject) {
+        commentController.view.endEditing(true)
+    }
 }

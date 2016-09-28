@@ -32,7 +32,11 @@ class CommentViewController: JSQMessagesViewController {
         self.setup()
         self.addDemoMessages()
     }
-  
+    
+    @IBAction func didClickView(_ sender: AnyObject) {
+        self.view.endEditing(true)
+    }
+
     func reloadMessagesView() {
         self.collectionView?.reloadData()
     }
@@ -87,12 +91,12 @@ class CommentViewController: JSQMessagesViewController {
 //MARK - Setup
 extension CommentViewController {
     func addDemoMessages() {
-        let senderName = ["username1", "username2", "username3"]
+        let senderName = ["username1", "username2", "username3", "username4"]
         for i in 1...10 {
-            let sender = senderName[Int(arc4random()) % senderName.count]
+            let index: Int = Int(arc4random_uniform(UInt32(senderName.count)))
+            print("--> ", index)
+            let sender = senderName[index]
             let messageContent = "Message form user nr. \(i). this is a new message get from local server"
-            
-            
             let message = JSQMessage(senderId: sender, displayName: sender, text: messageContent)
             self.messages.append(message!)
         }
