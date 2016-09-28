@@ -59,7 +59,6 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    
     @IBAction func didClickMenuButton(_ sender: AnyObject) {
         let frame = (sender as! UIButton).superview?.convert(sender.frame, to: nil)
         menuButton.buttonsWillAnimateFromButton(sender, withFrame: frame!, in: self.view)

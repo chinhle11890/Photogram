@@ -8,13 +8,13 @@
 			<key>title</key>
 			<string>Add Event</string>
 			<key>image</key>
-			<string>icn_event</string>
+			<string>icn_photo</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>Add Photo</string>
 			<key>image</key>
-			<string>icn_photo</string>
+			<string>icn_event</string>
 		</dict>
 	</array>
 	<key>userhome</key>
