@@ -94,7 +94,6 @@ extension CommentViewController {
         let senderName = ["username1", "username2", "username3", "username4"]
         for i in 1...10 {
             let index: Int = Int(arc4random_uniform(UInt32(senderName.count)))
-            print("--> ", index)
             let sender = senderName[index]
             let messageContent = "Message form user nr. \(i). this is a new message get from local server"
             let message = JSQMessage(senderId: sender, displayName: sender, text: messageContent)

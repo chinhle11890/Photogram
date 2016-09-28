@@ -18,11 +18,28 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
         button.delegate = self
         return button
     }()
+    
+    lazy var blackView: UIView = {
+       let view = UIView()
+        view.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        view.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(dismissView)))
+        return view
+    }()
+    
+    func dismissView() {
+        blackView.isHidden = true
+        menuButton.itemsWillDisapear(into: mainMenuButton)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationController?.delegate = self
+        
+        blackView.frame = view.frame
+        view.addSubview(blackView)
+        blackView.isHidden = true
+        view.bringSubview(toFront: mainMenuButton)
     }
     
     lazy var addEventPopup: AddEvent = {
@@ -62,6 +79,7 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
     @IBAction func didClickMenuButton(_ sender: AnyObject) {
         let frame = (sender as! UIButton).superview?.convert(sender.frame, to: nil)
         menuButton.buttonsWillAnimateFromButton(sender, withFrame: frame!, in: self.view)
+        blackView.isHidden = false
     }
     
     // MARK: ALRadialMenuDelegate
@@ -75,7 +93,7 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
     }
     
     func arcRadius(for radialMenu: ALRadialMenu!) -> Int {
-        return 120
+        return 100
     }
     
     func radialMenu(_ radialMenu: ALRadialMenu!, imageFor index: Int) -> UIImage! {
@@ -95,6 +113,7 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
     
     func radialMenu(_ radialMenu: ALRadialMenu!, didSelectItemAt index: Int) {
         menuButton.itemsWillDisapear(into: mainMenuButton)
+        blackView.isHidden = true
         if index == 1 { // home
             
         } else if index == 2 {  // search

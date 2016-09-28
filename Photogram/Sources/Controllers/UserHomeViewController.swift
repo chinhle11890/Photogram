@@ -29,12 +29,29 @@ class UserHomeViewController: UIViewController, UITableViewDelegate, UITableView
         return addEvent
     }()
     
+    lazy var blackView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        view.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(dismissView)))
+        return view
+    }()
+    
+    func dismissView() {
+        blackView.isHidden = true
+        menuButton.itemsWillDisapear(into: mainMenuButton)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.profileTableView.estimatedRowHeight = 400
         self.profileTableView.rowHeight = UITableViewAutomaticDimension
+        
+        blackView.frame = view.frame
+        view.addSubview(blackView)
+        blackView.isHidden = true
+        view.bringSubview(toFront: mainMenuButton)
     }
-
+    
     @IBAction func didClickBackButton(_ sender: AnyObject) {
         _ = navigationController?.popViewController(animated: true)
     }
@@ -68,8 +85,8 @@ class UserHomeViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: - UserHomeCellDelegate
     func userHome(_ userHomeCell: UserHomeTableViewCell, didClickButtonAt index: NSIndexPath, button: UIButton) {
         let startingFrame = button.superview?.convert(button.frame, to: nil)
-        mainMenuButton.setImage(UIImage(named: "icn_back"), for: .normal)
         addEventPopup.showSettings(startingFrame!)
+        blackView.isHidden = false
     }
     
     // MARK: - AddEventDelegate
@@ -101,10 +118,11 @@ class UserHomeViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func arcRadius(for radialMenu: ALRadialMenu!) -> Int {
-        return 120
+        return 100
     }
     
     func radialMenu(_ radialMenu: ALRadialMenu!, imageFor index: Int) -> UIImage! {
+        blackView.isHidden = true
         if index == 1 {
             return UIImage(named: "icn_menu_home")
         } else if index == 2 {
@@ -121,9 +139,7 @@ class UserHomeViewController: UIViewController, UITableViewDelegate, UITableView
     
     func radialMenu(_ radialMenu: ALRadialMenu!, didSelectItemAt index: Int) {
         menuButton.itemsWillDisapear(into: mainMenuButton)
-        mainMenuButton.setImage(UIImage(named: "icn_home_menu"), for: .normal)
         if index == 1 { // home
-//            _ = navigationController?.popViewController(animated: true)
             _ = navigationController?.popToRootViewController(animated: true)
         } else if index == 2 {  // search
             if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: StoryBoardId.searchController) as? SearchViewController {
