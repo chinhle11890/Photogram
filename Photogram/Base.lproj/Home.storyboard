@@ -1396,6 +1396,9 @@
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuw-Jw-uQ5">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="gxZ-H4-kib"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                                     <state key="normal" title="+   Follow">
                                                         <color key="titleColor" red="0.95294117647058818" green="0.20000000000000001" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>

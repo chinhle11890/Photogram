@@ -1791,27 +1791,18 @@
                                             <action selector="didClickBackButton:" destination="lAM-Cn-gbq" eventType="touchUpInside" id="HKe-Hu-o7S"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnc-j5-5PQ">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="icn_profile_edit"/>
-                                        <connections>
-                                            <segue destination="AJs-DZ-rIN" kind="show" id="ilh-fS-ZNV"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="bz1-Oa-p85" firstAttribute="width" secondItem="bz1-Oa-p85" secondAttribute="height" multiplier="3:2" id="9Bc-pI-Wnn"/>
                                     <constraint firstItem="ydQ-Rx-hcc" firstAttribute="leading" secondItem="ePl-vi-esa" secondAttribute="leading" id="GZQ-rR-TOa"/>
                                     <constraint firstAttribute="bottom" secondItem="ydQ-Rx-hcc" secondAttribute="bottom" id="H39-Ub-u3q"/>
-                                    <constraint firstAttribute="trailing" secondItem="Fnc-j5-5PQ" secondAttribute="trailing" constant="16" id="QyL-rU-rk9"/>
                                     <constraint firstItem="17Q-3b-crz" firstAttribute="leading" secondItem="ePl-vi-esa" secondAttribute="leading" constant="16" id="cke-bX-wlw"/>
                                     <constraint firstItem="bz1-Oa-p85" firstAttribute="centerX" secondItem="ePl-vi-esa" secondAttribute="centerX" id="gsl-Qe-StZ"/>
                                     <constraint firstAttribute="trailing" secondItem="ydQ-Rx-hcc" secondAttribute="trailing" id="kPR-Oe-5eN"/>
                                     <constraint firstItem="ydQ-Rx-hcc" firstAttribute="top" secondItem="ePl-vi-esa" secondAttribute="top" id="scj-6y-ehd"/>
                                     <constraint firstItem="bz1-Oa-p85" firstAttribute="top" secondItem="ePl-vi-esa" secondAttribute="top" constant="25" id="ufp-fc-bZz"/>
                                     <constraint firstItem="17Q-3b-crz" firstAttribute="centerY" secondItem="bz1-Oa-p85" secondAttribute="centerY" id="xQe-Nu-bqU"/>
-                                    <constraint firstItem="Fnc-j5-5PQ" firstAttribute="baseline" secondItem="bz1-Oa-p85" secondAttribute="baseline" id="zuk-xz-Q4J"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxA-7H-VGz">
@@ -2036,6 +2027,6 @@
         <image name="icn_user" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ilh-fS-ZNV"/>
+        <segue reference="vrS-Ja-wn6"/>
     </inferredMetricsTieBreakers>
 </document>
