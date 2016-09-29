@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ACq-1H-CaG">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ACq-1H-CaG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -50,12 +50,23 @@
                                             <action selector="didClickDoneButton:" destination="k82-Tc-IlN" eventType="touchUpInside" id="JHF-CV-V4G"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUb-IJ-L2S">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="VsM-ue-JBX"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="didClickBackButton:" destination="k82-Tc-IlN" eventType="touchUpInside" id="ymZ-H8-OPY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="EUb-IJ-L2S" firstAttribute="leading" secondItem="HS1-lq-8Ch" secondAttribute="leading" id="1bB-dd-1zL"/>
                                     <constraint firstItem="jdg-EX-9al" firstAttribute="top" secondItem="HS1-lq-8Ch" secondAttribute="top" constant="25" id="7lz-km-Oee"/>
-                                    <constraint firstItem="5Az-Mm-RoS" firstAttribute="leading" secondItem="HS1-lq-8Ch" secondAttribute="leading" constant="16" id="NaV-Xr-hwB"/>
+                                    <constraint firstAttribute="bottom" secondItem="EUb-IJ-L2S" secondAttribute="bottom" id="DzL-GJ-xIe"/>
+                                    <constraint firstItem="5Az-Mm-RoS" firstAttribute="leading" secondItem="HS1-lq-8Ch" secondAttribute="leading" constant="10" id="NaV-Xr-hwB"/>
                                     <constraint firstItem="9r5-my-RfE" firstAttribute="baseline" secondItem="jdg-EX-9al" secondAttribute="baseline" id="Sig-ee-a0p"/>
+                                    <constraint firstItem="EUb-IJ-L2S" firstAttribute="top" secondItem="HS1-lq-8Ch" secondAttribute="top" id="X4M-ca-4iO"/>
                                     <constraint firstAttribute="trailing" secondItem="zew-2H-F21" secondAttribute="trailing" id="XdZ-dX-5jt"/>
                                     <constraint firstAttribute="bottom" secondItem="zew-2H-F21" secondAttribute="bottom" id="eje-R8-AgH"/>
                                     <constraint firstItem="5Az-Mm-RoS" firstAttribute="centerY" secondItem="jdg-EX-9al" secondAttribute="centerY" id="fjH-wQ-6Ra"/>
@@ -465,17 +476,28 @@
                                             <action selector="didClickBackButton:" destination="3X2-4m-5A9" eventType="touchUpInside" id="lxH-pS-3b5"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysQ-I0-s1I">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Ngl-RV-oZ9"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="didClickBackButton:" destination="3X2-4m-5A9" eventType="touchUpInside" id="Scx-HH-7H9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="7iw-BQ-vTt" firstAttribute="top" secondItem="Cbc-uO-6Hx" secondAttribute="top" constant="25" id="1Fy-C3-6Ea"/>
+                                    <constraint firstAttribute="bottom" secondItem="ysQ-I0-s1I" secondAttribute="bottom" id="5Iu-PT-cg6"/>
                                     <constraint firstItem="u5h-px-otR" firstAttribute="top" secondItem="Cbc-uO-6Hx" secondAttribute="top" id="5dU-es-BPg"/>
                                     <constraint firstItem="7iw-BQ-vTt" firstAttribute="centerX" secondItem="Cbc-uO-6Hx" secondAttribute="centerX" id="8O1-LZ-PUc"/>
                                     <constraint firstAttribute="bottom" secondItem="u5h-px-otR" secondAttribute="bottom" id="KGp-u2-sS1"/>
+                                    <constraint firstItem="ysQ-I0-s1I" firstAttribute="top" secondItem="Cbc-uO-6Hx" secondAttribute="top" id="Te8-Kt-KJt"/>
                                     <constraint firstItem="7iw-BQ-vTt" firstAttribute="width" secondItem="7iw-BQ-vTt" secondAttribute="height" multiplier="3:2" id="X38-Cc-KGP"/>
+                                    <constraint firstItem="ysQ-I0-s1I" firstAttribute="leading" secondItem="Cbc-uO-6Hx" secondAttribute="leading" id="YHz-hx-WHi"/>
                                     <constraint firstAttribute="trailing" secondItem="u5h-px-otR" secondAttribute="trailing" id="eJB-Ik-6en"/>
                                     <constraint firstItem="nEH-dC-Fvo" firstAttribute="centerY" secondItem="7iw-BQ-vTt" secondAttribute="centerY" id="ed0-z5-h5d"/>
-                                    <constraint firstItem="nEH-dC-Fvo" firstAttribute="leading" secondItem="Cbc-uO-6Hx" secondAttribute="leading" constant="16" id="jRM-RD-JNB"/>
+                                    <constraint firstItem="nEH-dC-Fvo" firstAttribute="leading" secondItem="Cbc-uO-6Hx" secondAttribute="leading" constant="10" id="jRM-RD-JNB"/>
                                     <constraint firstItem="u5h-px-otR" firstAttribute="leading" secondItem="Cbc-uO-6Hx" secondAttribute="leading" id="vAY-dp-goZ"/>
                                 </constraints>
                             </view>
@@ -483,10 +505,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userCell" rowHeight="516" id="xUc-JC-H4p" customClass="UserHomeTableViewCell" customModule="Photogram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="516"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="516"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xUc-JC-H4p" id="Cbx-Re-5d8">
-                                            <frame key="frameInset" width="1000" height="516"/>
+                                            <frame key="frameInset" width="375" height="516"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sup-M8-AJO" userLabel="infoView">
@@ -761,6 +783,14 @@
                                             <action selector="didClickOptionMenu:" destination="gEV-HL-bDI" eventType="touchUpInside" id="fgu-MD-cyN"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOK-Q8-TcF">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Jzf-Rt-6UB"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="didClickBackButton:" destination="gEV-HL-bDI" eventType="touchUpInside" id="yAw-zD-euX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -770,11 +800,14 @@
                                     <constraint firstAttribute="bottom" secondItem="jjC-ii-5nD" secondAttribute="bottom" id="Czw-QN-xUM"/>
                                     <constraint firstItem="jwM-jb-OJl" firstAttribute="centerX" secondItem="stw-MS-e4S" secondAttribute="centerX" id="KY6-Vf-Enw"/>
                                     <constraint firstAttribute="trailing" secondItem="5HQ-mn-BDY" secondAttribute="trailing" constant="16" id="Mut-ow-Drw"/>
+                                    <constraint firstAttribute="bottom" secondItem="fOK-Q8-TcF" secondAttribute="bottom" id="TW8-cI-Stk"/>
                                     <constraint firstItem="jwM-jb-OJl" firstAttribute="width" secondItem="jwM-jb-OJl" secondAttribute="height" multiplier="3:2" id="TuY-7H-BVd"/>
                                     <constraint firstItem="5HQ-mn-BDY" firstAttribute="baseline" secondItem="jwM-jb-OJl" secondAttribute="baseline" id="ZZ6-94-8vn"/>
                                     <constraint firstItem="scM-nE-Ihr" firstAttribute="centerY" secondItem="jwM-jb-OJl" secondAttribute="centerY" id="kPZ-SO-n6B"/>
                                     <constraint firstAttribute="trailing" secondItem="jjC-ii-5nD" secondAttribute="trailing" id="l76-v1-fWU"/>
-                                    <constraint firstItem="scM-nE-Ihr" firstAttribute="leading" secondItem="stw-MS-e4S" secondAttribute="leading" constant="16" id="rYN-Ou-5EY"/>
+                                    <constraint firstItem="fOK-Q8-TcF" firstAttribute="top" secondItem="stw-MS-e4S" secondAttribute="top" id="pQo-jE-mxG"/>
+                                    <constraint firstItem="scM-nE-Ihr" firstAttribute="leading" secondItem="stw-MS-e4S" secondAttribute="leading" constant="10" id="rYN-Ou-5EY"/>
+                                    <constraint firstItem="fOK-Q8-TcF" firstAttribute="leading" secondItem="stw-MS-e4S" secondAttribute="leading" id="wF2-cv-l23"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XA4-Rq-u2u">
@@ -1070,7 +1103,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="VAc-rY-9GS">
-                                                            <rect key="frame" x="0.0" y="-8" width="150" height="88"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="88"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="88"/>
@@ -1253,6 +1286,14 @@
                                             <action selector="didClickDoneBUtton:" destination="flv-Va-PcV" eventType="touchUpInside" id="XVt-SV-XTE"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cun-Pz-M8u">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Gk5-0A-FR1"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="didClickBackButton:" destination="flv-Va-PcV" eventType="touchUpInside" id="cEH-Pc-nnP"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1264,7 +1305,10 @@
                                     <constraint firstItem="z6m-0O-ZPD" firstAttribute="top" secondItem="hOX-53-JRP" secondAttribute="top" id="Ofr-D4-S4r"/>
                                     <constraint firstAttribute="trailing" secondItem="XS0-yt-VYI" secondAttribute="trailing" constant="16" id="dSG-uc-PdL"/>
                                     <constraint firstItem="z6m-0O-ZPD" firstAttribute="leading" secondItem="hOX-53-JRP" secondAttribute="leading" id="iUG-g6-gP5"/>
-                                    <constraint firstItem="Lzh-Ek-gm9" firstAttribute="leading" secondItem="hOX-53-JRP" secondAttribute="leading" constant="16" id="vUM-k1-NxH"/>
+                                    <constraint firstAttribute="bottom" secondItem="cun-Pz-M8u" secondAttribute="bottom" id="ixu-Qs-kV3"/>
+                                    <constraint firstItem="cun-Pz-M8u" firstAttribute="top" secondItem="hOX-53-JRP" secondAttribute="top" id="j7y-PV-rIS"/>
+                                    <constraint firstItem="cun-Pz-M8u" firstAttribute="leading" secondItem="hOX-53-JRP" secondAttribute="leading" id="jtz-Y1-gIP"/>
+                                    <constraint firstItem="Lzh-Ek-gm9" firstAttribute="leading" secondItem="hOX-53-JRP" secondAttribute="leading" constant="10" id="vUM-k1-NxH"/>
                                     <constraint firstItem="ZUp-Z9-Fyu" firstAttribute="top" secondItem="hOX-53-JRP" secondAttribute="top" constant="25" id="xpt-Si-1C0"/>
                                     <constraint firstItem="Lzh-Ek-gm9" firstAttribute="centerY" secondItem="ZUp-Z9-Fyu" secondAttribute="centerY" id="zXT-0R-tWT"/>
                                 </constraints>
@@ -1365,6 +1409,14 @@
                                             <action selector="didClickBackButton:" destination="9pF-SW-3E3" eventType="touchUpInside" id="VRg-yp-gfg"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCR-ua-Vnr">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Gdm-ey-H5e"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="didClickBackButton:" destination="9pF-SW-3E3" eventType="touchUpInside" id="2AL-xC-HIn"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1374,9 +1426,12 @@
                                     <constraint firstItem="ptk-B8-VuS" firstAttribute="top" secondItem="wce-Ip-iSd" secondAttribute="top" constant="25" id="LOO-7O-KfH"/>
                                     <constraint firstAttribute="bottom" secondItem="1ai-W5-bBR" secondAttribute="bottom" id="PEQ-MZ-Bqp"/>
                                     <constraint firstItem="1ai-W5-bBR" firstAttribute="leading" secondItem="wce-Ip-iSd" secondAttribute="leading" id="R30-jq-Mxi"/>
+                                    <constraint firstItem="mCR-ua-Vnr" firstAttribute="top" secondItem="wce-Ip-iSd" secondAttribute="top" id="fTt-Xu-4ww"/>
+                                    <constraint firstItem="mCR-ua-Vnr" firstAttribute="leading" secondItem="wce-Ip-iSd" secondAttribute="leading" id="fwV-9Q-hgh"/>
                                     <constraint firstItem="ptk-B8-VuS" firstAttribute="width" secondItem="ptk-B8-VuS" secondAttribute="height" multiplier="3:2" id="lqt-pk-ys6"/>
                                     <constraint firstAttribute="trailing" secondItem="1ai-W5-bBR" secondAttribute="trailing" id="pdv-73-GdC"/>
-                                    <constraint firstItem="iPB-9d-DY8" firstAttribute="leading" secondItem="wce-Ip-iSd" secondAttribute="leading" constant="16" id="yi5-wC-dnK"/>
+                                    <constraint firstItem="iPB-9d-DY8" firstAttribute="leading" secondItem="wce-Ip-iSd" secondAttribute="leading" constant="10" id="yi5-wC-dnK"/>
+                                    <constraint firstAttribute="bottom" secondItem="mCR-ua-Vnr" secondAttribute="bottom" id="zO7-PO-keV"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zFT-Rz-hR6">
@@ -1529,7 +1584,7 @@
                         <viewControllerLayoutGuide type="bottom" id="48H-2J-ILp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OqW-aB-N4e">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="303.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="303"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1581,18 +1636,29 @@
                                             <action selector="didClickBackButton:" destination="6xK-W1-bQM" eventType="touchUpInside" id="iIc-Hw-nZo"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJe-Dr-cKI">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="sw6-LZ-Q02"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="didClickBackButton:" destination="6xK-W1-bQM" eventType="touchUpInside" id="crx-A0-mSr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="gez-BJ-Nas" firstAttribute="leading" secondItem="nXH-lj-1MM" secondAttribute="leading" id="2da-sg-O61"/>
                                     <constraint firstItem="bAK-kL-a3E" firstAttribute="width" secondItem="bAK-kL-a3E" secondAttribute="height" multiplier="3:2" id="2n1-U5-wG0"/>
                                     <constraint firstAttribute="bottom" secondItem="gez-BJ-Nas" secondAttribute="bottom" id="3Ml-Y3-c1p"/>
-                                    <constraint firstItem="LeI-lK-GwQ" firstAttribute="leading" secondItem="nXH-lj-1MM" secondAttribute="leading" constant="16" id="BWt-El-Y8R"/>
+                                    <constraint firstItem="LeI-lK-GwQ" firstAttribute="leading" secondItem="nXH-lj-1MM" secondAttribute="leading" constant="10" id="BWt-El-Y8R"/>
                                     <constraint firstItem="bAK-kL-a3E" firstAttribute="centerX" secondItem="nXH-lj-1MM" secondAttribute="centerX" id="BZS-I8-LaK"/>
                                     <constraint firstAttribute="trailing" secondItem="gez-BJ-Nas" secondAttribute="trailing" id="Bg1-7J-2Op"/>
+                                    <constraint firstItem="SJe-Dr-cKI" firstAttribute="leading" secondItem="nXH-lj-1MM" secondAttribute="leading" id="CvT-Bd-Sp0"/>
+                                    <constraint firstItem="SJe-Dr-cKI" firstAttribute="top" secondItem="nXH-lj-1MM" secondAttribute="top" id="DFr-1T-vNL"/>
                                     <constraint firstItem="LeI-lK-GwQ" firstAttribute="centerY" secondItem="bAK-kL-a3E" secondAttribute="centerY" id="UMB-fB-J9c"/>
                                     <constraint firstItem="bAK-kL-a3E" firstAttribute="top" secondItem="nXH-lj-1MM" secondAttribute="top" constant="25" id="XeF-1M-Skr"/>
                                     <constraint firstItem="gez-BJ-Nas" firstAttribute="top" secondItem="nXH-lj-1MM" secondAttribute="top" id="aOo-DD-92n"/>
+                                    <constraint firstAttribute="bottom" secondItem="SJe-Dr-cKI" secondAttribute="bottom" id="jb1-Np-hMS"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIQ-ga-5wt">
