@@ -23,13 +23,13 @@
 			<key>title</key>
 			<string>Download</string>
 			<key>image</key>
-			<string>icn_download</string>
+			<string>icn_download_blue</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>Save To My Timeline</string>
 			<key>image</key>
-			<string>icn_save</string>
+			<string>icn_save_blue</string>
 		</dict>
 	</array>
 </dict>

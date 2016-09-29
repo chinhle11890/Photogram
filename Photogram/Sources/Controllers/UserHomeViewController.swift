@@ -86,7 +86,6 @@ class UserHomeViewController: UIViewController, UITableViewDelegate, UITableView
     func userHome(_ userHomeCell: UserHomeTableViewCell, didClickButtonAt index: NSIndexPath, button: UIButton) {
         let startingFrame = button.superview?.convert(button.frame, to: nil)
         addEventPopup.showSettings(startingFrame!)
-        blackView.isHidden = false
     }
     
     // MARK: - AddEventDelegate
@@ -105,6 +104,7 @@ class UserHomeViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func didClickMenuButton(_ sender: AnyObject) {
         let frame = (sender as! UIButton).superview?.convert(sender.frame, to: nil)
         menuButton.buttonsWillAnimateFromButton(sender, withFrame: frame!, in: self.view)
+        blackView.isHidden = !blackView.isHidden
     }
     
     // MARK: ALRadialMenuDelegate
@@ -122,7 +122,6 @@ class UserHomeViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func radialMenu(_ radialMenu: ALRadialMenu!, imageFor index: Int) -> UIImage! {
-        blackView.isHidden = true
         if index == 1 {
             return UIImage(named: "icn_menu_home")
         } else if index == 2 {
@@ -139,6 +138,7 @@ class UserHomeViewController: UIViewController, UITableViewDelegate, UITableView
     
     func radialMenu(_ radialMenu: ALRadialMenu!, didSelectItemAt index: Int) {
         menuButton.itemsWillDisapear(into: mainMenuButton)
+        blackView.isHidden = true
         if index == 1 { // home
             _ = navigationController?.popToRootViewController(animated: true)
         } else if index == 2 {  // search

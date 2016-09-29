@@ -79,7 +79,7 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
     @IBAction func didClickMenuButton(_ sender: AnyObject) {
         let frame = (sender as! UIButton).superview?.convert(sender.frame, to: nil)
         menuButton.buttonsWillAnimateFromButton(sender, withFrame: frame!, in: self.view)
-        blackView.isHidden = false
+        blackView.isHidden = !blackView.isHidden
     }
     
     // MARK: ALRadialMenuDelegate
@@ -112,6 +112,7 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
     }
     
     func radialMenu(_ radialMenu: ALRadialMenu!, didSelectItemAt index: Int) {
+        print("--> ", index)
         menuButton.itemsWillDisapear(into: mainMenuButton)
         blackView.isHidden = true
         if index == 1 { // home
