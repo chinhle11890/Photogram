@@ -745,7 +745,7 @@
         <!--Image Detail View Controller-->
         <scene sceneID="KoO-fv-Zt5">
             <objects>
-                <viewController id="gEV-HL-bDI" customClass="ImageDetailViewController" customModule="Photogram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageDetailViewController" id="gEV-HL-bDI" customClass="ImageDetailViewController" customModule="Photogram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="up1-E7-SWS"/>
                         <viewControllerLayoutGuide type="bottom" id="nUS-ai-QVP"/>

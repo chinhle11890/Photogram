@@ -22,6 +22,8 @@ class CommentViewController: JSQMessagesViewController {
         inputToolbar.contentView.rightBarButtonItem.setTitle("", for: .normal)
         
         inputToolbar.contentView.leftBarButtonItem.setImage(UIImage(named: "icn_add"), for: .normal)
+        inputToolbar.contentView.leftBarButtonItem.setImage(UIImage(named: "icn_add"), for: .selected)
+        inputToolbar.contentView.leftBarButtonItem.contentMode = .scaleAspectFit
         
         collectionView.collectionViewLayout.incomingAvatarViewSize = .zero
         collectionView.collectionViewLayout.outgoingAvatarViewSize = .zero
@@ -112,9 +114,10 @@ extension CommentViewController {
 extension CommentViewController {
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
-        let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
+        let message = JSQMessage(senderId: "username01", senderDisplayName: senderDisplayName, date: date, text: text)
         self.messages.append(message!)
         self.finishSendingMessage()
+//        collectionView.reloadData()
 
     }
     

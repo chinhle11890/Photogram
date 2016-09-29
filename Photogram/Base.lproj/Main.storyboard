@@ -1313,6 +1313,14 @@
             </objects>
             <point key="canvasLocation" x="7090" y="1276"/>
         </scene>
+        <!--ImageDetailViewController-->
+        <scene sceneID="TlN-FH-ago">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="ImageDetailViewController" id="PrS-6W-VQi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jkO-2M-wSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7001" y="1396"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="ld7-Xr-V3O">
             <objects>
@@ -1924,6 +1932,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="avatarImageView" destination="4NN-9n-L5V" id="f5t-aJ-ePr"/>
+                                                    <segue destination="PrS-6W-VQi" kind="show" id="hsc-zm-bny"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
