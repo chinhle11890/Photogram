@@ -23,10 +23,18 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         return cv
     }()
     
+    lazy var horizontalBar: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.rgb(red: 243, green: 51, blue: 100)
+        return view
+    }()
+    
     lazy var dataSource: [String] = {
         let path = Bundle.main.path(forResource: "SearchMenu", ofType: "plist")
         return NSArray(contentsOfFile: path!) as! [String]
     }()
+    
+    private var leftConstraint: NSLayoutConstraint!
     
     let cellId = "cellId"
     private var selectedIndex = 0
@@ -44,6 +52,24 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         let selectedIndexPath = IndexPath(item: 0, section: 0)
         selectedIndex = 0
         collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: UICollectionViewScrollPosition())
+        
+        addSubview(horizontalBar)
+        addConstraintsWithFormat("V:[v0(2)]|", views: horizontalBar)
+        addConstraint(NSLayoutConstraint.init(item: horizontalBar,
+                                              attribute: .width,
+                                              relatedBy: .equal,
+                                              toItem: self,
+                                              attribute: .width,
+                                              multiplier: 1/CGFloat(dataSource.count),
+                                              constant: 0))
+        leftConstraint = NSLayoutConstraint.init(item: horizontalBar,
+                                                 attribute: .leading,
+                                                 relatedBy: .equal,
+                                                 toItem: self,
+                                                 attribute: .leading,
+                                                 multiplier: 1,
+                                                 constant: 0)
+        addConstraint(leftConstraint)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -63,8 +89,19 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
             return
         }
         selectedIndex = indexPath.item
-        if let delegate = self.delegate {
-            delegate.menuBar(self, didClickItemAt: indexPath.item)
+        let x = CGFloat(indexPath.item) * frame.width / CGFloat(dataSource.count)
+        leftConstraint.constant = x;
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: 1,
+                       initialSpringVelocity: 1,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.layoutIfNeeded()
+        }) { (success: Bool) in
+            if let delegate = self.delegate {
+                delegate.menuBar(self, didClickItemAt: indexPath.item)
+            }
         }
     }
     
