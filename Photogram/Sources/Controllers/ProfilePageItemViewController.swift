@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfilePageItemViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ProfilePageItemViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout {
     var itemIndex: Int = 0
     
     @IBOutlet weak var photoCollectionView: UICollectionView!
@@ -24,11 +24,32 @@ class ProfilePageItemViewController: UIViewController, UICollectionViewDelegate,
         photoCollectionView.contentInset = UIEdgeInsetsMake(8, 8, 8, 8)
         photoCollectionView.showsVerticalScrollIndicator = false
         photoCollectionView.showsHorizontalScrollIndicator = false
+        
+        self.setupCollectionView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setupCollectionView(){
+        
+        // Create a waterfall layout
+        let layout = CHTCollectionViewWaterfallLayout()
+        
+        // Change individual layout attributes for the spacing between cells
+        layout.minimumColumnSpacing = 8.0
+        layout.minimumInteritemSpacing = 8.0
+        layout.columnCount = 3
+//        layout.itemRenderDirection = CHTCollectionViewWaterfallLayoutItemRenderDirection.CHTCollectionViewWaterfallLayoutItemRenderDirectionShortestFirst
+        
+        // Collection view attributes
+        photoCollectionView.autoresizingMask = [UIViewAutoresizing.flexibleHeight, UIViewAutoresizing.flexibleWidth]
+        photoCollectionView.alwaysBounceVertical = true
+        
+        // Add the waterfall layout to your collection view
+        photoCollectionView.collectionViewLayout = layout
     }
     
     // MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
@@ -46,21 +67,33 @@ class ProfilePageItemViewController: UIViewController, UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let width = (photoCollectionView.frame.width - 16 - distanceOfColumns*(numberOfColumn - 1))/numberOfColumn
+////        print("\(photoCollectionView.frame.width), \(width)")
+//        let photo = photos[indexPath.item] as Photo
+//        let image = photo.image
+//        let ratio = image.size.height/image.size.width
+//        
+//        return CGSize(width: width, height: width*ratio)
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return distanceOfColumns
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return distanceOfColumns
+//    }
+    
+    // MARK: CHTCollectionViewDelegateWaterfallLayout
+    func collectionView (_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,
+                         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
         let width = (photoCollectionView.frame.width - 16 - distanceOfColumns*(numberOfColumn - 1))/numberOfColumn
-//        print("\(photoCollectionView.frame.width), \(width)")
+//        let width = 80.5 as CGFloat
+        //        print("\(photoCollectionView.frame.width), \(width)")
         let photo = photos[indexPath.item] as Photo
         let image = photo.image
         let ratio = image.size.height/image.size.width
-        
         return CGSize(width: width, height: width*ratio)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return distanceOfColumns
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return distanceOfColumns
     }
 }

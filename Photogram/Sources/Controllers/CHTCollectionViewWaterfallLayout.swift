@@ -367,11 +367,11 @@ public class CHTCollectionViewWaterfallLayout : UICollectionViewLayout{
         var shorestHeight = MAXFLOAT
 
         (self.columnHeights[section] as! NSMutableArray).enumerateObjects({(object : AnyObject!, idx : NSInteger,pointer :UnsafeMutablePointer<ObjCBool>) in
-            let height = object.floatValue
-            if (height!<shorestHeight){
-                shorestHeight = height!
-                index = idx
-            }
+                let height = object.floatValue
+                if (height!<shorestHeight){
+                    shorestHeight = height!
+                    index = idx
+                }
             } as! (Any, Int, UnsafeMutablePointer<ObjCBool>) -> Void)
         return index
     }
