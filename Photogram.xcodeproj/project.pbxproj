@@ -45,6 +45,7 @@
 		BFAE837F1D919D91002358D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE837E1D919D91002358D3 /* HomeViewController.swift */; };
 		BFAE83821D919E10002358D3 /* AddEventMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFAE83811D919E10002358D3 /* AddEventMenu.plist */; };
 		BFC9B2E01D943386005AF14B /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9B2DF1D943386005AF14B /* ImageDetailViewController.swift */; };
+		DC073E211D9E3F03003CB116 /* CHTCollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC073E201D9E3F03003CB116 /* CHTCollectionViewWaterfallLayout.swift */; };
 		DC46822C1D911A210078FDDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4682281D911A210078FDDB /* LaunchScreen.storyboard */; };
 		DC46822D1D911A210078FDDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC46822A1D911A210078FDDB /* Main.storyboard */; };
 		DC4682301D911A340078FDDB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC46822E1D911A340078FDDB /* Home.storyboard */; };
@@ -106,6 +107,7 @@
 		BFAE83811D919E10002358D3 /* AddEventMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AddEventMenu.plist; sourceTree = "<group>"; };
 		BFC9B2DF1D943386005AF14B /* ImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		C0D18B87750718C4E052B3D7 /* Pods-Photogram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photogram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Photogram/Pods-Photogram.release.xcconfig"; sourceTree = "<group>"; };
+		DC073E201D9E3F03003CB116 /* CHTCollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHTCollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
 		DC4682291D911A210078FDDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Photogram/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		DC46822B1D911A210078FDDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Photogram/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		DC46822F1D911A340078FDDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Photogram/Base.lproj/Home.storyboard; sourceTree = SOURCE_ROOT; };
@@ -207,6 +209,7 @@
 		23D9B3351D901E7A0074B677 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC073E201D9E3F03003CB116 /* CHTCollectionViewWaterfallLayout.swift */,
 				23964A411D95890B00F14782 /* PageItemViewController.swift */,
 				23964A421D95890B00F14782 /* TutorialViewController.swift */,
 				23D9B33D1D901F0C0074B677 /* SignInViewController.swift */,
@@ -517,6 +520,7 @@
 				23D9B3381D901ED50074B677 /* AppDelegate.swift in Sources */,
 				23D102D11D9774490041048A /* ProfilePageItemViewController.swift in Sources */,
 				BF44D7131D98D6FE00256AD1 /* EditProfileViewController.swift in Sources */,
+				DC073E211D9E3F03003CB116 /* CHTCollectionViewWaterfallLayout.swift in Sources */,
 				2330AFA31D9631C400AE4985 /* UserProfileViewController.swift in Sources */,
 				DC9F4A701D9278A8003D49C1 /* FollowViewController.swift in Sources */,
 				BF70AC851D963E8B004B01B5 /* SearchViewController.swift in Sources */,
