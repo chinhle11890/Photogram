@@ -358,44 +358,43 @@ public class CHTCollectionViewWaterfallLayout : UICollectionViewLayout{
     }
     
     /**
-    *  Find the shortest column.
-    *
-    *  @return index for the shortest column
-    */
-    func shortestColumnIndexInSection (_ section: NSInteger) -> NSInteger {
+     *  Find the shortest column.
+     *
+     *  @return index for the shortest column
+     */
+    func shortestColumnIndexInSection(_ section: NSInteger) -> NSInteger {
         var index = 0
-        var shorestHeight = MAXFLOAT
-
-        (self.columnHeights[section] as! NSMutableArray).enumerateObjects({(object : AnyObject!, idx : NSInteger,pointer :UnsafeMutablePointer<ObjCBool>) in
-                let height = object.floatValue
-                if (height!<shorestHeight){
-                    shorestHeight = height!
-                    index = idx
-                }
-            } as! (Any, Int, UnsafeMutablePointer<ObjCBool>) -> Void)
+        var shorestHeight: Float = MAXFLOAT
+        
+        for (idx, value) in (self.columnHeights[section] as! NSMutableArray).enumerated() {
+            let height = (value as AnyObject) as! Float
+            if (height < shorestHeight) {
+                shorestHeight = height
+                index = idx
+            }
+        }
         return index
     }
     
     /**
-    *  Find the longest column.
-    *
-    *  @return index for the longest column
-    */
-
-    func longestColumnIndexInSection (_ section: NSInteger) -> NSInteger {
+     *  Find the longest column.
+     *
+     *  @return index for the longest column
+     */
+    
+    func longestColumnIndexInSection(_ section: NSInteger) -> NSInteger {
         var index = 0
-        var longestHeight:CGFloat = 0.0
-        
-        (self.columnHeights[section] as! NSMutableArray).enumerateObjects({(object : AnyObject!, idx : NSInteger,pointer :UnsafeMutablePointer<ObjCBool>) in
-            let height = CGFloat(object.floatValue)
-            if (height > longestHeight){
+        var longestHeight: CGFloat = 0.0
+        for (idx, value) in (self.columnHeights[section] as! NSMutableArray).enumerated() {
+            let height = (value as AnyObject) as! CGFloat
+            if (height > longestHeight) {
                 longestHeight = height
                 index = idx
             }
-            } as! (Any, Int, UnsafeMutablePointer<ObjCBool>) -> Void)
+        }
         return index
     }
-
+    
     /**
     *  Find the index for the next column.
     *
