@@ -113,8 +113,15 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
     
     func radialMenu(_ radialMenu: ALRadialMenu!, didSelectItemAt index: Int) {
         print("--> ", index)
-        menuButton.itemsWillDisapear(into: mainMenuButton)
-        blackView.isHidden = true
+                menuButton.itemsWillDisapear(into: mainMenuButton)
+        UIView.animate(withDuration: 0.25, animations: { 
+            self.blackView.isHidden = true
+            }) { (success) in
+                self.gotoScreen(index)
+        }
+    }
+    
+    func gotoScreen(_ index: Int) {
         if index == 1 { // home
             
         } else if index == 2 {  // search
@@ -132,6 +139,7 @@ class HomeViewController: UIViewController, AddEventDelegate, UINavigationContro
                 navigationController?.pushViewController(vc, animated: true)
             }
         }
+
     }
     
     public func arcStart(for radialMenu: ALRadialMenu!) -> Int {

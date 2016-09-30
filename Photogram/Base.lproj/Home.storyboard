@@ -505,10 +505,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userCell" rowHeight="516" id="xUc-JC-H4p" customClass="UserHomeTableViewCell" customModule="Photogram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="516"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="516"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xUc-JC-H4p" id="Cbx-Re-5d8">
-                                            <frame key="frameInset" width="1000" height="516"/>
+                                            <frame key="frameInset" width="375" height="516"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sup-M8-AJO" userLabel="infoView">
@@ -1103,7 +1103,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="VAc-rY-9GS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="88"/>
+                                                            <rect key="frame" x="0.0" y="-8" width="150" height="88"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="88"/>
@@ -1438,10 +1438,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="followCell" rowHeight="100" id="d6Q-xZ-PiU" customClass="FollowTableViewCell" customModule="Photogram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d6Q-xZ-PiU" id="yy5-Vp-t4k">
-                                            <frame key="frameInset" width="1000" height="100"/>
+                                            <frame key="frameInset" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03" translatesAutoresizingMaskIntoConstraints="NO" id="Hm1-I3-zRa">
@@ -1665,17 +1665,25 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DhQ-Hh-Ffy">
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
                                     </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_search" translatesAutoresizingMaskIntoConstraints="NO" id="Upi-Uo-vG9">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Upi-Uo-vG9" secondAttribute="height" multiplier="1:1" id="Km5-Z8-V4W"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="DhQ-Hh-Ffy" secondAttribute="trailing" constant="16" id="C7O-Xi-YFe"/>
+                                    <constraint firstItem="Upi-Uo-vG9" firstAttribute="height" secondItem="DhQ-Hh-Ffy" secondAttribute="height" multiplier="0.65" id="6qy-pn-xgW"/>
                                     <constraint firstItem="DhQ-Hh-Ffy" firstAttribute="top" secondItem="SIQ-ga-5wt" secondAttribute="top" id="NOq-14-Iow"/>
                                     <constraint firstItem="DhQ-Hh-Ffy" firstAttribute="leading" secondItem="SIQ-ga-5wt" secondAttribute="leading" constant="16" id="OCu-tG-76r"/>
+                                    <constraint firstItem="Upi-Uo-vG9" firstAttribute="centerY" secondItem="SIQ-ga-5wt" secondAttribute="centerY" id="bXE-Af-HLf"/>
                                     <constraint firstAttribute="bottom" secondItem="DhQ-Hh-Ffy" secondAttribute="bottom" id="fxP-Pf-kkZ"/>
                                     <constraint firstAttribute="height" constant="40" id="ttw-DS-rEI"/>
+                                    <constraint firstItem="Upi-Uo-vG9" firstAttribute="leading" secondItem="DhQ-Hh-Ffy" secondAttribute="trailing" id="uNZ-56-e3S"/>
+                                    <constraint firstAttribute="trailing" secondItem="Upi-Uo-vG9" secondAttribute="trailing" constant="16" id="usQ-AA-XEG"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbx-ZL-CoN">
@@ -1778,6 +1786,7 @@
         <image name="icn_menu_horizontal" width="29" height="29"/>
         <image name="icn_menu_vertical" width="29" height="29"/>
         <image name="icn_polygon" width="200" height="200"/>
+        <image name="icn_search" width="29" height="29"/>
         <image name="icn_user" width="29" height="29"/>
     </resources>
 </document>
