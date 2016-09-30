@@ -29,11 +29,11 @@
 			<key>title</key>
 			<string>My Photos</string>
 			<key>image</key>
-			<string>icn_menu_photo</string>
+			<string>icn_calendar</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Save Events</string>
+			<string>Saved Photos</string>
 			<key>image</key>
 			<string>icn_profile_like_gray</string>
 		</dict>

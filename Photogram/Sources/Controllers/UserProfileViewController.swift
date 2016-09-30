@@ -9,7 +9,8 @@
 import UIKit
 
 class UserProfileViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, HorizontalMenuDelegate {
-
+    @IBOutlet weak var followersButton: UIButton!
+    @IBOutlet weak var followingButton: UIButton!
     @IBOutlet weak var collectionView: UIView!
     @IBOutlet weak var containerMenuView: UIView!
     @IBOutlet weak var userAvatarImageView: UIImageView!
@@ -51,6 +52,12 @@ class UserProfileViewController: UIViewController, UIPageViewControllerDataSourc
         containerMenuView.addSubview(horizontalMenu)
         containerMenuView.addConstraintsWithFormat("H:|[v0]|", views: horizontalMenu)
         containerMenuView.addConstraintsWithFormat("V:|[v0]|", views: horizontalMenu)
+        
+        // Set corner radius
+        followersButton?.layer.cornerRadius = 5
+        followersButton?.clipsToBounds = true
+        followingButton?.layer.cornerRadius = 5
+        followingButton?.clipsToBounds = true
         
         createPageViewController()
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, MenuBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class SearchViewController: UIViewController, MenuBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout {
     
     @IBOutlet weak var menuBarContainer: UIView!
     @IBOutlet weak var searchTextField: UITextField!
@@ -32,9 +32,27 @@ class SearchViewController: UIViewController, MenuBarDelegate, UICollectionViewD
         menuBarContainer.addConstraintsWithFormat("V:|[v0]|", views: menuBar)
         searchTextField.becomeFirstResponder()
         
-        photoCollectionView.contentInset = UIEdgeInsetsMake(8, 8, 8, 8)
+        self.setupCollectionView()
+    }
+    
+    func setupCollectionView(){
         photoCollectionView.showsVerticalScrollIndicator = false
         photoCollectionView.showsHorizontalScrollIndicator = false
+        
+        // Create a waterfall layout
+        let layout = CHTCollectionViewWaterfallLayout()
+        
+        // Change individual layout attributes for the spacing between cells
+        layout.minimumColumnSpacing = 8.0
+        layout.minimumInteritemSpacing = 8.0
+        layout.columnCount = 3
+        
+        // Collection view attributes
+        photoCollectionView.autoresizingMask = [UIViewAutoresizing.flexibleHeight, UIViewAutoresizing.flexibleWidth]
+        photoCollectionView.alwaysBounceVertical = true
+        
+        // Add the waterfall layout to your collection view
+        photoCollectionView.collectionViewLayout = layout
     }
     
     @IBAction func didClickBackButton(_ sender: AnyObject) {
@@ -53,17 +71,19 @@ class SearchViewController: UIViewController, MenuBarDelegate, UICollectionViewD
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    // MARK: CHTCollectionViewDelegateWaterfallLayout
+    func collectionView (_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,
+                         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
         let width = (photoCollectionView.frame.width - 16 - 8*(numberOfColumn - 1))/numberOfColumn
-        return CGSize(width: width, height: width)
+        let photo = photos[indexPath.item] as Photo
+        let image = photo.image
+        let ratio = image.size.height/image.size.width
+        return CGSize(width: width, height: width*ratio)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
+    func collectionView (_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                         insetForSectionAtIndex section: NSInteger) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(8, 8, 8, 8)
     }
     
     //MARK: - MenuBarDelegate
