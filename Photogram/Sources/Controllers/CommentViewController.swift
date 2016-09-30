@@ -21,9 +21,14 @@ class CommentViewController: JSQMessagesViewController {
         inputToolbar.contentView.rightBarButtonItem.setImage(UIImage(named: "icn_send"), for: .normal)
         inputToolbar.contentView.rightBarButtonItem.setTitle("", for: .normal)
         
-        inputToolbar.contentView.leftBarButtonItem.setImage(UIImage(named: "icn_add"), for: .normal)
-        inputToolbar.contentView.leftBarButtonItem.setImage(UIImage(named: "icn_add"), for: .selected)
-        inputToolbar.contentView.leftBarButtonItem.contentMode = .scaleAspectFit
+        let image = UIImage(named: "icn_add")
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: image!.size.width, height: image!.size.height))
+        button.setImage(image, for: .normal)
+        button.setImage(image, for: .highlighted)
+        inputToolbar.contentView.leftBarButtonItem = button
+//        inputToolbar.contentView.leftBarButtonItem.setImage(UIImage(named: "icn_add"), for: .normal)
+//        inputToolbar.contentView.leftBarButtonItem.setImage(UIImage(named: "icn_add"), for: .highlighted)
+//        inputToolbar.contentView.leftBarButtonItem.contentMode = .scaleAspectFit
         
         collectionView.collectionViewLayout.incomingAvatarViewSize = .zero
         collectionView.collectionViewLayout.outgoingAvatarViewSize = .zero
